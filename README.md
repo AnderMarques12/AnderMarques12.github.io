@@ -552,7 +552,7 @@ iframe {
         }
 
         .white-square {
-    width: 595px; /* Ajustado para incluir espaço */
+    width: 370px; /* Ajustado para incluir espaço */
     height: 657px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */

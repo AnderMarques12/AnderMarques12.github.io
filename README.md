@@ -265,14 +265,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        .btn-primary1 {
-            background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-        }
-
         .btn-primary2 {
             background-color: #000000;
             display: flex;
@@ -281,11 +273,19 @@
             justify-content: center;
         }
 
-        .btn-primary1:hover {
-            background-color: #ff0000;
+        .btn-primary3 {
+            background-color: #000000;
+            display: flex;
+            border-color: #ffffff;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-primary2:hover {
+            background-color: #ff0000;
+        }
+
+        .btn-primary3:hover {
             background-color: #15ff00;
         }
 
@@ -329,7 +329,7 @@ iframe {
 .iframe-button {
     display: block; /* Ajuste conforme necessário */
     position: absolute;
-    top: 10px; /* Ajuste conforme necessário */
+    top: 1990px; /* Ajuste conforme necessário */
     right: 10px; /* Ajuste conforme necessário */
     background-color: #ff0000;
     color: #ffffff;
@@ -577,18 +577,6 @@ iframe {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
     border: 6px solid #00000000; /* Borda preta */
 }
-.btn-primary1 {
-    background-color: #000000;
-    display: flex;
-    border-color: #000000;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.btn-primary1:hover {
-    background-color: #74ff00;
-}
 
 
         
@@ -663,8 +651,10 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
-                        <img src="https://i.ibb.co/SQ8jT8w/jonbet-logo-removebg-preview.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                        <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                            <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>

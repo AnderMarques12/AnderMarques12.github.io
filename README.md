@@ -87,7 +87,7 @@
             display: block;
             padding: 12px 20px;
             margin-bottom: 10px;
-            background-color: rgb(25 0 255);
+            background-color: rgb(255, 0, 0);
             /* Preto transparente */
             border-radius: 5px;
             color: #ffffff;
@@ -651,7 +651,7 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
                         <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                         <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
                             <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
@@ -661,7 +661,7 @@ color: #00ff00;
                    
 
 
-                </form>
+              
                 <!-- Social Icons -->
                 <div class="social-icons">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
@@ -669,9 +669,7 @@ color: #00ff00;
                     <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
                             class="bi bi-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
+                
     </div>
     <!-- Iframe Container -->
 
@@ -687,7 +685,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz [v5.0]</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -696,7 +694,7 @@ color: #00ff00;
             
 
             <span class="context-option closeContextOptions" onclick="closeContextOptions()">
-               Hacker Double
+               Hackear Double
             </span>
             
             
@@ -769,70 +767,17 @@ color: #00ff00;
        // Variável global para rastrear o valor da assertividade
 let currentAssertividade = 44.23; // Valor inicial
 
-// Função para exibir e ocultar elementos com assertividade e imagem
 function stopScroll() {
-        // Exibe a animação de carregamento
-        document.getElementById('loading-animation').classList.remove('loading-hidden');
-        document.getElementById('loading-animation').classList.add('loading-visible');
-
-        // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
-        setTimeout(function() {
-            // Oculta a animação de carregamento
-            document.getElementById('loading-animation').classList.remove('loading-visible');
-            document.getElementById('loading-animation').classList.add('loading-hidden');
-
-            // Gera um valor percentual aleatório entre 0 e 100
-            const assertividade = (Math.random() * 100).toFixed(2) + '%';
-
-            // Seleciona o menu contextOptions
-            const contextOptions = document.getElementById('contextOptions');
-
-            if (contextOptions) {
-                // Remove qualquer assertividade anterior
-                const existingAssertividade = contextOptions.querySelector('.assertividade');
-                if (existingAssertividade) {
-                    contextOptions.removeChild(existingAssertividade);
-                }
-
-                // Cria um elemento para exibir a assertividade
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-
-                // Define a cor com base no valor da assertividade
-                assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
-
-                // Adiciona a assertividade ao menu contextOptions
-                contextOptions.appendChild(assertividadeElement);
-
-                // Adiciona a imagem aos 5 primeiros itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-                const itemsToChange = shuffledItems.slice(0, 5);
-                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-                itemsToChange.forEach(item => item.innerHTML += imageElement);
-            }
-
-            // Aguarda 5 segundos e então reverte as mudanças
-            setTimeout(function() {
-                if (contextOptions) {
-                    // Remove assertividade
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
-                    // Remove as imagens dos itens do grid
-                    const gridItems = document.querySelectorAll('.grid-item');
-                    gridItems.forEach(item => item.innerHTML = '');
-                }
-            }, 5000); // Tempo de espera para reverter as mudanças (5 segundos)
-        }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
     }
+
+    
+}
+
 
 
         function toggleContextOptions() {      
@@ -849,85 +794,14 @@ function stopScroll() {
 
        function closeContextOptions() {
     // Exibe a animação de carregamento
-    var loadingAnimation = document.getElementById('loading-animation');
+    const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
-
-    // Aguarda 5 segundos e então executa a função principal
-    setTimeout(function() {
-        if (loadingAnimation) {
-            // Oculta a animação de carregamento
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Exibe a assertividade e a imagem aleatória
-        var contextOptions = document.getElementById('contextOptions');
-        if (contextOptions) {
-            // Remove qualquer assertividade ou imagem anterior
-            var existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
-            var existingImage = contextOptions.querySelector('.random-image');
-            if (existingImage) {
-                contextOptions.removeChild(existingImage);
-            }
-
-            // Cria um elemento para exibir a assertividade
-            const assertividade = (Math.random() * 100).toFixed(2) + '%';
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = parseFloat(assertividade) > 90 ? 'green' : 'red';
-
-            // Adiciona a assertividade ao menu contextOptions
-            contextOptions.appendChild(assertividadeElement);
-
-            // Lista de URLs das imagens
-            const imageUrls = [
-                'https://i.ibb.co/R7XCt2q/Captura-de-tela-2024-08-29-210854.png',
-                'https://i.ibb.co/7Q4mSbv/Captura-de-tela-2024-08-29-210831.png',
-                'https://i.ibb.co/wJ3WdJK/Captura-de-tela-2024-08-29-210805.png'
-            ];
-
-            // Escolhe uma imagem aleatória da lista
-            const randomIndex = Math.floor(Math.random() * imageUrls.length);
-            const imageUrl = imageUrls[randomIndex];
-
-            // Cria e adiciona a imagem aleatória ao menu contextOptions
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.alt = 'Random Image';
-            imageElement.style.width = '100px'; // Ajuste o tamanho conforme necessário
-            imageElement.style.height = 'auto';
-            imageElement.className = 'random-image';
-
-            contextOptions.appendChild(imageElement);
-
-            // Reverte para o estado inicial após mais 5 segundos
-            setTimeout(function() {
-                if (contextOptions) {
-                    // Remove a assertividade e a imagem
-                    var assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
-                    var randomImageElement = contextOptions.querySelector('.random-image');
-                    if (randomImageElement) {
-                        contextOptions.removeChild(randomImageElement);
-                    }
-                }
-            }, 5000); // Tempo para reverter as mudanças (5 segundos)
-        }
-    }, 5000); // Tempo de espera antes de exibir a assertividade e a imagem (5 segundos)
-}
+       }
+       
+    
 
 
 

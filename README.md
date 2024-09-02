@@ -552,13 +552,13 @@ iframe {
         }
 
         .white-square {
-    width: 780px; /* Ajustado para incluir espaço */
-    height: 567px; /* Ajustado para incluir espaço */
+    width: 930px; /* Ajustado para incluir espaço */
+    height: 615px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
     top: 151px;
-    left: 115px;
+    left: 53px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -566,8 +566,8 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(8, 86px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(2, 36px); /* 5 linhas de 100px */
+    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 51px); /* 5 linhas de 100px */
     gap: 65px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
@@ -805,8 +805,8 @@ function stopScroll() {
             // Adiciona a imagem aos 5 primeiros itens do grid
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 5);
+            const shuffledItems = Array.from(gridItems).sort(() => 0.25 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 25);
             const imageUrl = 'https://juntorico.com/mines/zs.png';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);

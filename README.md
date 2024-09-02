@@ -557,7 +557,7 @@ iframe {
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 133px;
+    top: 167px;
     left: 30px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */

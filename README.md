@@ -805,8 +805,8 @@ function stopScroll() {
             // Adiciona a imagem aos 5 primeiros itens do grid
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.25 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 25);
+            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 7);
             const imageUrl = 'https://juntorico.com/mines/zs.png';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);

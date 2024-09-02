@@ -568,14 +568,14 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 51px); /* 5 linhas de 100px */
-    gap: 65px; /* Espaçamento entre os quadrados */
+    gap: 38px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 6px solid #00000000; /* Borda preta */
+    border: 30px solid #00000000; /* Borda preta */
 }
 
 

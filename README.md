@@ -557,8 +557,8 @@ iframe {
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 151px;
-    left: 53px;
+    top: 133px;
+    left: 30px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -567,7 +567,7 @@ iframe {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 51px); /* 5 linhas de 100px */
+    grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
     gap: 38px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;

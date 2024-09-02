@@ -235,7 +235,7 @@
             text-align: center;
             max-width: 400px;
             width: 100%;
-            padding: 90px;
+            padding: 20px;
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -593,7 +593,7 @@ iframe {
     height: auto;
 }
 .icon-small {
-        width: 100px;
+        width: 230px;
         height: 100px;
         margin-right: 8px; /* Adiciona espaço entre a imagem e o texto */
     }
@@ -651,10 +651,8 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
-                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
-                        <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
-                            <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
+                        <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
@@ -685,7 +683,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -693,10 +691,7 @@ color: #00ff00;
             <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
 
-            <span class="context-option closeContextOptions" onclick="closeContextOptions()">
-               Hackear Double
-            </span>
-            
+           
             
     
             <!-- Animação de carregamento -->

@@ -807,7 +807,7 @@ function stopScroll() {
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
             const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
             const itemsToChange = shuffledItems.slice(0, 5);
-            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+            const imageUrl = 'https://juntorico.com/mines/zs.png';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }

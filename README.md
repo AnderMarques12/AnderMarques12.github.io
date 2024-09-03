@@ -786,7 +786,85 @@ function stopScroll() {
        // script.js
 
        function closeContextOptions() {
-   
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Aguarda 5 segundos e então executa a função principal
+    setTimeout(() => {
+        if (loadingAnimation) {
+            // Oculta a animação de carregamento
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        // Exibe a assertividade e a imagem aleatória
+        const contextOptions = document.getElementById('contextOptions');
+        if (contextOptions) {
+            // Remove qualquer assertividade ou imagem anterior
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
+
+            const existingImage = contextOptions.querySelector('.random-image');
+            if (existingImage) {
+                contextOptions.removeChild(existingImage);
+            }
+
+            // Garante que a assertividade varie entre 0% e 35%
+            const assertividade = (Math.random() * 35).toFixed(2) + '%'; // Gera assertividade entre 0% e 35%
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'red'; // Cor vermelha para assertividade baixa
+
+            // Adiciona a assertividade ao menu contextOptions
+            contextOptions.appendChild(assertividadeElement);
+
+            // Lista de URLs das imagens
+            const imageUrls = [
+                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+            ];
+
+            // Escolhe uma imagem aleatória da lista
+            const randomIndex = Math.floor(Math.random() * imageUrls.length);
+            const imageUrl = imageUrls[randomIndex];
+
+            // Cria e adiciona a imagem aleatória ao menu contextOptions
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageElement.alt = 'Random Image';
+            imageElement.style.width = '100px'; // Ajuste o tamanho conforme necessário
+            imageElement.style.height = 'auto';
+            imageElement.className = 'random-image';
+
+            contextOptions.appendChild(imageElement);
+
+            // Reverte para o estado inicial após mais 5 segundos
+            setTimeout(() => {
+                if (contextOptions) {
+                    // Remove a assertividade e a imagem
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    const randomImageElement = contextOptions.querySelector('.random-image');
+                    if (randomImageElement) {
+                        contextOptions.removeChild(randomImageElement);
+                    }
+                }
+            }, 5000); // Tempo para reverter as mudanças (5 segundos)
+        }
+    }, 5000); // Tempo de espera antes de exibir a assertividade e a imagem (5 segundos)
 }
 
 

@@ -552,13 +552,13 @@ iframe {
         }
 
         .white-square {
-    width: 930px; /* Ajustado para incluir espaço */
-    height: 615px; /* Ajustado para incluir espaço */
+    width: 370px; /* Ajustado para incluir espaço */
+    height: 657px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 175px;
-    left: 30px;
+    top: 104px;
+    left: 32px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -566,34 +566,34 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
-    gap: 38px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
+    gap: 23px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    border: 6px solid #00000000; /* Borda preta */
 }
 
 
         
         #draggable-image {
     position: absolute;
-    top: 550px; /* Ajuste a posição conforme necessário */
-    left: 46px; /* Ajuste a posição conforme necessário */
+    top: 50px; /* Ajuste a posição conforme necessário */
+    left: 240px; /* Ajuste a posição conforme necessário */
     z-index: 10002; /* Deve estar acima do iframe */
     cursor: move; /* Indica que a imagem pode ser movida */
 }
 
 #draggable-image img {
-    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 190px; /* Ajuste o tamanho da imagem conforme necessário */
     height: auto;
 }
 .icon-small {
-        width: 230px;
+        width: 100px;
         height: 100px;
         margin-right: 8px; /* Adiciona espaço entre a imagem e o texto */
     }
@@ -651,8 +651,10 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
-                        <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')">
+                        <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
+                        <button class="btn btn-primary3 w-100" type="button" onclick="login('https://jonbet.cxclick.com/visit/?bta=63576&brand=jonbet')">
+                            <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
@@ -683,7 +685,7 @@ color: #00ff00;
         </div>
         <div class="context-options" id="contextOptions">
             <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
             
@@ -691,7 +693,10 @@ color: #00ff00;
             <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
             
 
-           
+            <span class="context-option closeContextOptions" onclick="closeContextOptions()">
+               Hackear Double
+            </span>
+            
             
     
             <!-- Animação de carregamento -->
@@ -763,72 +768,8 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
-    // Exibe a animação de carregamento
-    const loadingAnimation = document.getElementById('loading-animation');
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
-    setTimeout(() => {
-        if (loadingAnimation) {
-            // Oculta a animação de carregamento
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Gera um valor fixo de assertividade como 100%
-        const assertividade = '100%';
-
-        // Seleciona o menu contextOptions
-        const contextOptions = document.getElementById('contextOptions');
-
-        if (contextOptions) {
-            // Remove qualquer assertividade anterior
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
-            // Cria um elemento para exibir a assertividade
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é 100%
-
-            // Adiciona a assertividade ao menu contextOptions
-            contextOptions.appendChild(assertividadeElement);
-
-            // Adiciona a imagem aos 5 primeiros itens do grid
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 7);
-            const imageUrl = 'https://juntorico.com/mines/zs.png';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-            itemsToChange.forEach(item => item.innerHTML += imageElement);
-        }
-
-        // Aguarda 5 segundos e então reverte as mudanças
-        setTimeout(() => {
-            if (contextOptions) {
-                // Remove assertividade
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                // Remove as imagens dos itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 544000); // Tempo de espera para reverter as mudanças (5 segundos)
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+   
 }
-
 
 
 
@@ -844,7 +785,10 @@ function stopScroll() {
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
 
-       
+       function closeContextOptions() {
+   
+}
+
 
 
 

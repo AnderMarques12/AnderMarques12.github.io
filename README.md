@@ -49,8 +49,8 @@
 .context-options {
     display: none; 
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 58%;
+    left: 45%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -330,7 +330,7 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 66px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 83px); /* 5 linhas de 100px */
-    gap: 23px; /* Espaçamento entre os quadrados */
+    gap: 52px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }

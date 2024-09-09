@@ -314,13 +314,13 @@ iframe {
         }
 
  .white-square {
-    width: 700px; 
-    height: 700px; 
+    width: 620px; 
+    height: 649px; 
     background-color: #ffffff00; 
     border: 1px solid #00000000; 
     position: absolute;
-    top: 104px;
-    left: 32px;
+    top: 150px;
+    left: 970px;
     z-index: 10000;
     overflow: hidden; 
     pointer-events: none;
@@ -328,8 +328,8 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 50px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 50px); /* 5 linhas de 100px */
+    grid-template-columns: repeat(5, 66px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 83px); /* 5 linhas de 100px */
     gap: 23px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;

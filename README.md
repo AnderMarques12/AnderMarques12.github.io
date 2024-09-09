@@ -552,13 +552,13 @@ iframe {
         }
 
         .white-square {
-    width: 930px; /* Ajustado para incluir espaço */
-    height: 615px; /* Ajustado para incluir espaço */
+    width: 1800px; /* Ajustado para incluir espaço */
+    height: 520px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 167px;
-    left: 30px;
+    top: 127px;
+    left: 97px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -566,16 +566,16 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
-    gap: 38px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 183px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 0px); /* 5 linhas de 100px */
+    gap: 189px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    border: 45px solid #00000000; /* Borda preta */
 }
 
 

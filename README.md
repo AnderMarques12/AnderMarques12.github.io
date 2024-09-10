@@ -803,7 +803,7 @@ function stopScroll() {
         }
 
         // Exibe um alerta
-        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$50!');
+        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
 
         
 

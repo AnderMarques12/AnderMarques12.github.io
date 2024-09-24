@@ -57,7 +57,7 @@
 .context-options {
     display: none; /* Inicialmente escondido */
     position: fixed;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -231,15 +231,28 @@
     background-color: #000000; /* Adiciona o fundo preto */
 }
 
-        .custom-container {
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
+@keyframes oscillate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.custom-container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5), -6px -6px 20px rgba(255, 255, 255, 0.1);
+    animation: oscillate 1s ease-in-out infinite;
+}
+
+.custom-container:hover {
+    animation: none; /* Para parar a oscilação ao passar o mouse */
+    transform: translateY(-10px);
+}
+
+
 
         .login-intro-img {
             max-width: 100%;
@@ -266,27 +279,21 @@
         }
 
         .btn-primary2 {
-            background-color: #000000;
+            background-color: #00000000;
             display: flex;
             border-color: #ffffff;
             align-items: center;
             justify-content: center;
         }
 
-        .btn-primary3 {
-            background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
-        }
+        
 
         .btn-primary2:hover {
-            background-color: #ff0000;
+            background-color: #ff000000;
         }
 
         .btn-primary3:hover {
-            background-color: #15ff00;
+            background-color: #15ff0000;
         }
 
         .btn-primary img {
@@ -307,7 +314,7 @@
         }
 
         .social-icons a:hover {
-            color: #ff0000;
+            color: #ff000000;
         }
 
         #iframe-container {
@@ -552,8 +559,8 @@ iframe {
         }
 
         .white-square {
-    width: 9px; /* Ajustado para incluir espaço */
-    height: 6px; /* Ajustado para incluir espaço */
+    width: 930px; /* Ajustado para incluir espaço */
+    height: 615px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
@@ -579,12 +586,13 @@ iframe {
 }
 
 
+        
 #draggable-image {
     position: absolute; /* Permite o posicionamento com top e left */
     top: 535px; /* Ajusta a posição vertical */
     left: 46px; /* Ajusta a posição horizontal */
     display: inline-block;
-    border: 5px solid green; /* Borda verde */
+   
     border-radius: 10px; /* Cantos arredondados (opcional) */
     animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
     width: 100px; /* Largura menor da div */
@@ -642,17 +650,16 @@ html, body {
 }
 .bi-telegram::before {
 
-color: #00ccff;
+color: #ffffff;
 }
 .bi-instagram::before {
 
-color: #ff00f2;
+color: #ffffff;
 }
 .bi-whatsapp::before {
 
-color: #00ff00;
+color: #ffffff;
 }
-
 
 
 
@@ -664,37 +671,35 @@ color: #00ff00;
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Perfil">
             </div>
-            <!-- Register Form -->
             <div class="register-form mt-4">
-                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center mb-4">Clique na plataforma que deseja</p>
+                <h6 class="mb-3 text-center">BEM-VINDO ALUNOS</h6>
+                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
                     </div>
                     <div id="response"></div>
-                    <div class="form-group"></div>
+                    <div class="form-group mb-4">
+                        <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
+                    </div>
+                    
                     <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
                         <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
-                   
+                </form>
+            </div>
 
-
-              
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
-                            class="bi bi-instagram"></i></a>
-                    <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
-                            class="bi bi-whatsapp"></i></a>
-                
+            <div class="social-icons mt-3">
+                <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
     </div>
-    <!-- Iframe Container -->
 
     <div id="iframe-container">
         <iframe id="login-iframe" src=""></iframe>
@@ -702,12 +707,12 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
- 
+        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
 
             
         </div>
         <div class="context-options" id="contextOptions">
-            <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
+            <img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
             <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
@@ -772,21 +777,30 @@ color: #00ff00;
 
    
     <script>
-       function login(url) {
-            // Oculta o login-wrapper
-            document.getElementById('login-wrapper').style.display = 'none';
-            // Mostra o iframe-container
-            document.getElementById('iframe-container').style.display = 'block';
-    
-            // Define a URL do iframe
+         function login(url) {
+    const password = document.getElementById('password').value;
+    if (password === 'ALUNO175') {
+        document.getElementById('loading-message').style.display = 'block';
+        setTimeout(() => {
             document.getElementById('login-iframe').src = url;
-        }
+            document.getElementById('iframe-container').style.display = 'block';
+            document.getElementById('loading-message').style.display = 'none';
+        }, 1000);
+    } else {
+        alert('Senha incorreta. Tente novamente.');
+    }
+}
       
 
        // Variável global para rastrear o valor da assertividade
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
+    const LOADING_ANIMATION_TIMEOUT = 1000; // 1 segundo
+    const REVERT_TIMEOUT = 5000; // 5 segundos
+    const IMAGE_URL = 'https://juntorico.com/mines/zd.png';
+    const ASSERTIVIDADE_VALUE = '100%';
+
     // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
@@ -794,30 +808,60 @@ function stopScroll() {
         loadingAnimation.classList.add('loading-visible');
     }
 
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    // Aguarda a animação de carregamento terminar (1 segundo)
     setTimeout(() => {
         if (loadingAnimation) {
-            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Exibe um alerta
-        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
+        // Gera um valor fixo de assertividade
+        const contextOptions = document.getElementById('contextOptions');
+        if (contextOptions) {
+            // Remove qualquer assertividade anterior
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
 
-        
+            // Cria um elemento para exibir a assertividade
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${ASSERTIVIDADE_VALUE}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é 100%
 
-      // Redireciona para o WhatsApp após 1 segundo do alerta
-      setTimeout(() => {
-            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
-            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
-            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.location.href = whatsappUrl;
-        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
+            contextOptions.appendChild(assertividadeElement);
 
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+            // Adiciona a imagem aos 7 primeiros itens do grid
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 7);
+            const imageElement = `<img src="${IMAGE_URL}" alt="Random Image" style="width: 100%; height: auto;">`;
+            itemsToChange.forEach(item => item.innerHTML += imageElement);
+        }
+
+        // Reverte as mudanças após 5 segundos
+        setTimeout(() => {
+            if (contextOptions) {
+                // Remove assertividade
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                // Remove as imagens dos itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, REVERT_TIMEOUT);
+
+    }, LOADING_ANIMATION_TIMEOUT);
 }
+
+
 
 
         function toggleContextOptions() {      
@@ -831,8 +875,8 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
-    
-     
+
+       
 
 
 

@@ -583,7 +583,7 @@ iframe {
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 25px solid #00000000; /* Borda preta */
+    border: 35px solid #00000000; /* Borda preta */
 }
 
 
@@ -838,13 +838,26 @@ function stopScroll() {
             // Adiciona a imagem aos 7 primeiros itens do grid
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.19 - Math.random());
+            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
             const itemsToChange = shuffledItems.slice(0, 19);
             const imageElement = `<img src="${IMAGE_URL}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
-        
+        // Reverte as mudanças após 5 segundos
+        setTimeout(() => {
+            if (contextOptions) {
+                // Remove assertividade
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                // Remove as imagens dos itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, REVERT_TIMEOUT);
 
     }, LOADING_ANIMATION_TIMEOUT);
 }

@@ -558,14 +558,15 @@ iframe {
             }
         }
 
+     
         .white-square {
-    width: 1800px; /* Ajustado para incluir espaço */
-    height: 520px; /* Ajustado para incluir espaço */
+    width: 930px; /* Ajustado para incluir espaço */
+    height: 615px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 118px;
-    left: 104px;
+    top: 167px;
+    left: 30px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;

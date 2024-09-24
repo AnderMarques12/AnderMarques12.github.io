@@ -574,7 +574,7 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 160px); /* 5 colunas de 100px */
+    grid-template-columns: repeat(5, 150px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
     gap: 38px; /* Espaçamento entre os quadrados */
     height: 100%;
@@ -583,7 +583,7 @@ iframe {
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    border: 35px solid #00000000; /* Borda preta */
 }
 
 
@@ -844,20 +844,7 @@ function stopScroll() {
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
-        // Reverte as mudanças após 5 segundos
-        setTimeout(() => {
-            if (contextOptions) {
-                // Remove assertividade
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                // Remove as imagens dos itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, REVERT_TIMEOUT);
+        
 
     }, LOADING_ANIMATION_TIMEOUT);
 }

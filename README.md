@@ -231,28 +231,15 @@
     background-color: #000000; /* Adiciona o fundo preto */
 }
 
-@keyframes oscillate {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-.custom-container {
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
-    border-radius: 10px;
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5), -6px -6px 20px rgba(255, 255, 255, 0.1);
-    animation: oscillate 1s ease-in-out infinite;
-}
-
-.custom-container:hover {
-    animation: none; /* Para parar a oscilação ao passar o mouse */
-    transform: translateY(-10px);
-}
-
-
+        .custom-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
 
         .login-intro-img {
             max-width: 100%;
@@ -279,21 +266,27 @@
         }
 
         .btn-primary2 {
-            background-color: #00000000;
+            background-color: #000000;
             display: flex;
             border-color: #ffffff;
             align-items: center;
             justify-content: center;
         }
 
-        
+        .btn-primary3 {
+            background-color: #000000;
+            display: flex;
+            border-color: #ffffff;
+            align-items: center;
+            justify-content: center;
+        }
 
         .btn-primary2:hover {
-            background-color: #ff000000;
+            background-color: #ff0000;
         }
 
         .btn-primary3:hover {
-            background-color: #15ff0000;
+            background-color: #15ff00;
         }
 
         .btn-primary img {
@@ -314,7 +307,7 @@
         }
 
         .social-icons a:hover {
-            color: #ff000000;
+            color: #ff0000;
         }
 
         #iframe-container {
@@ -558,7 +551,6 @@ iframe {
             }
         }
 
-     
         .white-square {
     width: 930px; /* Ajustado para incluir espaço */
     height: 615px; /* Ajustado para incluir espaço */
@@ -566,7 +558,7 @@ iframe {
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
     top: 167px;
-    left: 25px;
+    left: 30px;
     z-index: 10000;
     overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
@@ -574,7 +566,7 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 150px); /* 5 colunas de 100px */
+    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
     gap: 38px; /* Espaçamento entre os quadrados */
     height: 100%;
@@ -583,7 +575,7 @@ iframe {
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 35px solid #00000000; /* Borda preta */
+    border: 30px solid #00000000; /* Borda preta */
 }
 
 
@@ -651,16 +643,17 @@ html, body {
 }
 .bi-telegram::before {
 
-color: #ffffff;
+color: #00ccff;
 }
 .bi-instagram::before {
 
-color: #ffffff;
+color: #ff00f2;
 }
 .bi-whatsapp::before {
 
-color: #ffffff;
+color: #00ff00;
 }
+
 
 
 
@@ -672,35 +665,37 @@ color: #ffffff;
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Perfil">
+                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
+            <!-- Register Form -->
             <div class="register-form mt-4">
-                <h6 class="mb-3 text-center">BEM-VINDO ALUNOS</h6>
-                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
+                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
+                <p class="text-center mb-4">Clique na plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
                     </div>
                     <div id="response"></div>
-                    <div class="form-group mb-4">
-                        <input type="password" id="password" placeholder="Digite sua senha" class="form-control" required>
-                    </div>
-                    
+                    <div class="form-group"></div>
                     <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
                         <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
-                </form>
-            </div>
+                   
 
-            <div class="social-icons mt-3">
-                <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i class="bi bi-whatsapp"></i></a>
-            </div>
-        </div>
+
+              
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
+                            class="bi bi-whatsapp"></i></a>
+                
     </div>
+    <!-- Iframe Container -->
 
     <div id="iframe-container">
         <iframe id="login-iframe" src=""></iframe>
@@ -778,19 +773,16 @@ color: #ffffff;
 
    
     <script>
-         function login(url) {
-    const password = document.getElementById('password').value;
-    if (password === 'ALUNO175') {
-        document.getElementById('loading-message').style.display = 'block';
-        setTimeout(() => {
-            document.getElementById('login-iframe').src = url;
+       function login(url) {
+            // Oculta o login-wrapper
+            document.getElementById('login-wrapper').style.display = 'none';
+            // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-            document.getElementById('loading-message').style.display = 'none';
-        }, 1000);
-    } else {
-        alert('Senha incorreta. Tente novamente.');
-    }
-}
+            // Mostra o botão dentro do iframe
+            document.querySelector('.iframe-button').style.display = 'block';
+            // Define a URL do iframe
+            document.getElementById('login-iframe').src = url;
+        }
       
 
        // Variável global para rastrear o valor da assertividade
@@ -839,7 +831,7 @@ function stopScroll() {
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
             const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 19);
+            const itemsToChange = shuffledItems.slice(0, 7);
             const imageElement = `<img src="${IMAGE_URL}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
@@ -861,10 +853,6 @@ function stopScroll() {
 
     }, LOADING_ANIMATION_TIMEOUT);
 }
-
-
-    
-
 
 
 

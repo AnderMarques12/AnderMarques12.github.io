@@ -581,16 +581,15 @@ iframe {
 
         
 #draggable-image {
-    position: absolute; /* Permite o posicionamento com top e left */
-    top: 535px; /* Ajusta a posição vertical */
-    left: 46px; /* Ajusta a posição horizontal */
+    position: absolute;
+    top: 36px;
+    left: 501px;
     display: inline-block;
-   
-    border-radius: 10px; /* Cantos arredondados (opcional) */
-    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
-    width: 100px; /* Largura menor da div */
-    height: 100px; /* Altura menor da div */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+    border-radius: 10px;
+    animation: heartbeat 1s infinite;
+    width: 185px;
+    height: 108px;
+    overflow: hidden;
 }
 
 /* Ajusta a imagem dentro da div */
@@ -791,7 +790,7 @@ let currentAssertividade = 44.23; // Valor inicial
 function stopScroll() {
     const LOADING_ANIMATION_TIMEOUT = 1000; // 1 segundo
     const REVERT_TIMEOUT = 5000; // 5 segundos
-    const IMAGE_URL = 'https://juntorico.com/mines/zd.png';
+    const IMAGE_URL = 'https://juntorico.com/mines/zs.png';
     const ASSERTIVIDADE_VALUE = '100%';
 
     // Exibe a animação de carregamento

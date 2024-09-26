@@ -568,7 +568,7 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
-    gap: 38px; /* Espaçamento entre os quadrados */
+    gap: 36px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }

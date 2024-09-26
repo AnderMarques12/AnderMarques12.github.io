@@ -567,7 +567,7 @@ iframe {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 155px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 61px); /* 5 linhas de 100px */
+    grid-template-rows: repeat(5, 62px); /* 5 linhas de 100px */
     gap: 36px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;

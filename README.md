@@ -57,7 +57,7 @@
 .context-options {
     display: none; /* Inicialmente escondido */
     position: fixed;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -552,8 +552,8 @@ iframe {
         }
 
         .white-square {
-    width: 9px; /* Ajustado para incluir espaço */
-    height: 6px; /* Ajustado para incluir espaço */
+    width: 930px; /* Ajustado para incluir espaço */
+    height: 615px; /* Ajustado para incluir espaço */
     background-color: #ffffff00; /* Branco com transparência */
     border: 1px solid #00000000; /* Borda preta */
     position: absolute;
@@ -566,9 +566,9 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
-    gap: 38px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 155px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 62px); /* 5 linhas de 100px */
+    gap: 36px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
@@ -579,17 +579,17 @@ iframe {
 }
 
 
+        
 #draggable-image {
-    position: absolute; /* Permite o posicionamento com top e left */
-    top: 535px; /* Ajusta a posição vertical */
-    left: 46px; /* Ajusta a posição horizontal */
+    position: absolute;
+    top: 36px;
+    left: 501px;
     display: inline-block;
-    border: 5px solid green; /* Borda verde */
-    border-radius: 10px; /* Cantos arredondados (opcional) */
-    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
-    width: 100px; /* Largura menor da div */
-    height: 100px; /* Altura menor da div */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
+    border-radius: 10px;
+    animation: heartbeat 1s infinite;
+    width: 185px;
+    height: 108px;
+    overflow: hidden;
 }
 
 /* Ajusta a imagem dentro da div */
@@ -702,12 +702,12 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
- 
+        <a class="iframe-button" onclick="toggleContextOptions()">Hackear Plataforma</a>
 
             
         </div>
         <div class="context-options" id="contextOptions">
-            <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
+            <img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
             <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
             <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
             <div id="result"></div>
@@ -777,7 +777,8 @@ color: #00ff00;
             document.getElementById('login-wrapper').style.display = 'none';
             // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-    
+            // Mostra o botão dentro do iframe
+            document.querySelector('.iframe-button').style.display = 'block';
             // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
@@ -787,6 +788,11 @@ color: #00ff00;
 let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
+    const LOADING_ANIMATION_TIMEOUT = 1000; // 1 segundo
+    const REVERT_TIMEOUT = 5000; // 5 segundos
+    const IMAGE_URL = 'https://juntorico.com/mines/zs.png';
+    const ASSERTIVIDADE_VALUE = '100%';
+
     // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
@@ -794,30 +800,60 @@ function stopScroll() {
         loadingAnimation.classList.add('loading-visible');
     }
 
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    // Aguarda a animação de carregamento terminar (1 segundo)
     setTimeout(() => {
         if (loadingAnimation) {
-            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Exibe um alerta
-        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
+        // Gera um valor fixo de assertividade
+        const contextOptions = document.getElementById('contextOptions');
+        if (contextOptions) {
+            // Remove qualquer assertividade anterior
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
 
-        
+            // Cria um elemento para exibir a assertividade
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${ASSERTIVIDADE_VALUE}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é 100%
 
-      // Redireciona para o WhatsApp após 1 segundo do alerta
-      setTimeout(() => {
-            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
-            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
-            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.location.href = whatsappUrl;
-        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
+            contextOptions.appendChild(assertividadeElement);
 
-    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+            // Adiciona a imagem aos 7 primeiros itens do grid
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 7);
+            const imageElement = `<img src="${IMAGE_URL}" alt="Random Image" style="width: 100%; height: auto;">`;
+            itemsToChange.forEach(item => item.innerHTML += imageElement);
+        }
+
+        // Reverte as mudanças após 5 segundos
+        setTimeout(() => {
+            if (contextOptions) {
+                // Remove assertividade
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                // Remove as imagens dos itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, REVERT_TIMEOUT);
+
+    }, LOADING_ANIMATION_TIMEOUT);
 }
+
+
 
 
         function toggleContextOptions() {      
@@ -831,8 +867,8 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
-    
-     
+
+       
 
 
 

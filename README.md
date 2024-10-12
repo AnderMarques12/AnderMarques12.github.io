@@ -162,9 +162,9 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0);
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
             position: relative; /* Mantenha o container no fluxo do documento */
             z-index: 1; /* Coloque o container acima do vídeo */
         }

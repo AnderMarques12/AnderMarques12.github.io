@@ -496,8 +496,8 @@ Dito por si:
             <div class="text-center px-4">
                 <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">912 alunos</span> / 
-                    <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
+                    <span style="font-weight: bold;">972 ALUNOS</span> / 
+                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
                 
                     

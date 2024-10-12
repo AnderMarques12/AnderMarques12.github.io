@@ -622,6 +622,13 @@ window.addEventListener('load', () => {
         console.error('Erro ao tentar reproduzir o vídeo:', error);
     });
 });
+
+// Tenta reproduzir o vídeo se ele for pausado
+video.addEventListener('pause', () => {
+    video.play().catch(error => {
+        console.error('Erro ao tentar reproduzir o vídeo:', error);
+    });
+});
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

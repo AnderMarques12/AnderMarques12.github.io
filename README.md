@@ -594,17 +594,17 @@ Dito por si:
 
 
 document.addEventListener('DOMContentLoaded', function () {
-        var video = document.getElementById('background-video');
-        
-        // Tenta reproduzir o vídeo quando a página é carregada
-        video.play().then(() => {
-            // Sucesso, o vídeo está sendo reproduzido
-        }).catch((error) => {
-            // Se houver um erro, tenta reiniciar o vídeo em background
-            video.muted = true;
-            video.play();
+            var video = document.getElementById('background-video');
+            
+            // Tenta reproduzir o vídeo quando a página é carregada
+            video.play().then(() => {
+                // Sucesso, o vídeo está sendo reproduzido
+            }).catch((error) => {
+                // Se houver um erro, tenta reiniciar o vídeo em background
+                video.muted = true;
+                video.play();
+            });
         });
-    });
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

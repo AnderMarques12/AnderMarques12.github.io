@@ -148,7 +148,7 @@ Dito por si:
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 163vh;
+    height: 155vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -485,7 +485,7 @@ Dito por si:
 <body>
     <div class="video-background">
         <video autoplay muted loop id="background-video">
-            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2021/09/02/87273-601148577_large.mp4" type="video/mp4">
             Seu navegador não suporta o elemento de vídeo.
         </video>
     </div>

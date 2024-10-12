@@ -484,11 +484,12 @@ Dito por si:
 
 <body>
     <div class="video-background">
-        <video autoplay muted loop id="background-video">
+        <video autoplay muted loop playsinline id="background-video">
             <source src="https://cdn.pixabay.com/video/2021/09/02/87273-601148577_large.mp4" type="video/mp4">
             Seu navegador não suporta o elemento de vídeo.
         </video>
     </div>
+    
     
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">

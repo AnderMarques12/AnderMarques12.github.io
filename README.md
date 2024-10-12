@@ -161,7 +161,6 @@
             text-align: center;
             max-width: 400px;
             width: 100%;
-            padding: 20px;
             background-color: rgba(0, 0, 0, 0);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0);
@@ -474,10 +473,27 @@
 
 #studentCount {
     position: fixed;
-    top: 10px; /* Ajuste a distância do topo conforme necessário */
+    top: 10px;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
-    z-index: 1000; /* Certifique-se de que fique acima de outros elementos */
+    z-index: 1000;
+}
+#studentCount {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+#loginForm {
+    position: fixed;
+    top: 445px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
 

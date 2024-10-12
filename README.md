@@ -518,7 +518,7 @@
                 
                 
             <div class="register-form mt-4">
-                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
+                
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
@@ -607,6 +607,21 @@
 
     <div class="black-background"></div>
     <script>
+         const video = document.getElementById('background-video');
+    
+    // Tenta reproduzir o vídeo ao carregar a página
+    window.addEventListener('load', () => {
+        video.play().catch(error => {
+            console.error('Erro ao tentar reproduzir o vídeo:', error);
+        });
+    });
+
+    // Tenta reproduzir o vídeo se ele for pausado
+    video.addEventListener('pause', () => {
+        video.play().catch(error => {
+            console.error('Erro ao tentar reproduzir o vídeo:', error);
+        });
+    });
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

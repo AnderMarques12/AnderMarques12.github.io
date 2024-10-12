@@ -145,17 +145,17 @@ Dito por si:
         }
 
         .login-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            background-color: #00000000;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 163vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00000000;
+}
 
         .custom-container {
             text-align: center;

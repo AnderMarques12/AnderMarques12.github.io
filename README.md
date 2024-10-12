@@ -1,3 +1,7 @@
+Partilhar
+
+
+Dito por si:
 <html lang="en">
 
 <head>
@@ -10,13 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
- 
+
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
         .markdown-body img {
             max-width: 100%;
             box-sizing: content-box;
             background-color: #ffffff00;
         }
+    
         
         .loading-visible {
             display: block;
@@ -113,7 +118,7 @@
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s;
-    
+
 }
 
 .context-options .context-option:hover {
@@ -123,7 +128,7 @@
 
 .context-options .closeContextOptions:hover {
     background-color: rgb(255 0 0 / 80%);
-    
+
 }
         .dev-by {
             font-size: 14px;
@@ -149,23 +154,7 @@
             top: 0;
             left: 0;
             z-index: 1;
-            background-color: #000000;
-        }
-
-        video-background {
-            position: fixed; /* Permite que o vídeo fique fixo na tela */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0; /* Coloque o vídeo atrás do container */
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Faz com que o vídeo cubra todo o container */
+            background-color: #00000000;
         }
 
         .custom-container {
@@ -173,26 +162,10 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-            position: relative; /* Mantenha o container no fluxo do documento */
-            z-index: 1; /* Coloque o container acima do vídeo */
         }
-
-        .login-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1; /* Mantenha o wrapper acima do vídeo */
-            background-color: #00000000;
-        }
-
 
         .login-intro-img {
             max-width: 100%;
@@ -306,7 +279,7 @@
 }
 .social-icons a.instagram {
     color: #C13584; /* Cor personalizada para Instagram */
-    
+
 }
 
 .social-icons a.instagram:hover {
@@ -316,7 +289,7 @@
 
 .social-icons a.telegram {
     color: #0088cc; /* Cor personalizada para Telegram */
-   
+
 }
 
 .social-icons a.telegram:hover {
@@ -326,7 +299,7 @@
 
 .social-icons a.whatsapp {
     color: #25D366; /* Cor personalizada para WhatsApp */
-    
+
 }
 
 .social-icons a.whatsapp:hover {
@@ -346,7 +319,7 @@
     margin: 0 15px;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
-    
+
 }
 .social-icons a:hover {
     color: #ff0000; 
@@ -483,16 +456,36 @@
     width: 111px;
     height: 53px;
 }
+.video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
 
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
 
     </style>
 </head>
 
 <body>
-    
     <div class="video-background">
-        <video autoplay muted loop>
-            <source src="https://cdn.pixabay.com/video/2021/09/02/87273-601148577_large.mp4" type="video/mp4">
+        <video autoplay muted loop id="background-video">
+            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
             Seu navegador não suporta o elemento de vídeo.
         </video>
     </div>
@@ -502,13 +495,14 @@
             <div class="text-center px-4">
                 <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">912 alunos</span> / 
-                    <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
+                    <span style="font-weight: bold;">912 ALUNOS</span> / 
+                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
-                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
+                
+                    
             </div>
             <div class="register-form mt-4">
-                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
+                
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
@@ -586,7 +580,7 @@
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         
-   
+
 </div>                         
 <div id="image-container"></div>
 <div id="assertividade" class="assertivity-hidden"></div>
@@ -612,8 +606,8 @@
 }
 
 function stopScroll() {
-   
-    
+
+
 }
 
 
@@ -628,81 +622,8 @@ function stopScroll() {
         }
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-       
-        function closeContextOptions() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        if (contextOptions) {
-
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            const existingImage = contextOptions.querySelector('.random-image');
-            
-            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
-            if (existingImage) contextOptions.removeChild(existingImage);
-
-            // Gera um valor de assertividade entre 1,00% e 60,00%
-const assertividadeValue = (Math.random() * 59 + 1).toFixed(2); 
-const assertividade = `${assertividadeValue}%`;
-
-
-            // Cria e exibe a imagem
-            const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
-            ];
-            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.alt = 'Random Image';
-            imageElement.style.width = '75px';
-            imageElement.style.height = 'auto';
-            imageElement.className = 'random-image';
-            contextOptions.appendChild(imageElement);
-
-            // Cria e exibe o valor de assertividade abaixo da imagem
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '15px';
-            assertividadeElement.style.marginTop = '4px'; // Para ficar abaixo da imagem
-
-            // Define a cor da assertividade
-            if (parseFloat(assertividadeValue) >= 90) {
-                assertividadeElement.style.color = 'green'; // Verde para valores acima de 90%
-            } else {
-                assertividadeElement.style.color = 'red'; // Vermelho para valores abaixo de 90%
-            }
-
-            contextOptions.appendChild(assertividadeElement);
-
-            // Remove a imagem e a assertividade após 5 segundos
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    const randomImageElement = contextOptions.querySelector('.random-image');
-
-                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
-                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
-                }
-            }, 5000);
-        }
-    }, 6000);
-}
+     
 
 
 
     </script>
-

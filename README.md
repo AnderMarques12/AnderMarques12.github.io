@@ -135,30 +135,6 @@
 
         html,
         body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .video-background {
-            position: fixed; /* Permite que o vídeo fique fixo na tela */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0; /* Coloque o vídeo atrás do container */
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Faz com que o vídeo cubra todo o container */
-        }
-
-        html,
-        body {
             margin: 0; 
             padding: 0; 
             overflow: hidden; 
@@ -174,7 +150,7 @@
             top: 0;
             left: 0;
             z-index: 1;
-            background-color: #000000;
+            background-color: #00000000;
         }
 
         .custom-container {
@@ -182,9 +158,9 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0);
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
         }
 
         .login-intro-img {
@@ -476,53 +452,52 @@
     width: 111px;
     height: 53px;
 }
+.video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
 
-#studentCount {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-#studentCount {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-#loginForm {
-    position: fixed;
-    top: 427px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
 
     </style>
 </head>
 
 <body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
-        <div class="video-background">
-            <video autoplay muted loop id="background-video">
-                <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
-        </div>
-        <div class="custom-container">
+        <div class="custom-container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
             <div class="text-center px-4">
-                <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">972 ALUNOS</span> / 
+                    <span style="font-weight: bold;">912 ALUNOS</span> / 
                     <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
                 
                 
+                    
+            </div>
             <div class="register-form mt-4">
                 
                 <form id="loginForm">
@@ -613,22 +588,6 @@
 
     <div class="black-background"></div>
     <script>
-         
-         const video = document.getElementById('background-video');
-
-// Tenta reproduzir o vídeo ao carregar a página
-window.addEventListener('load', () => {
-    video.play().catch(error => {
-        console.error('Erro ao tentar reproduzir o vídeo:', error);
-    });
-});
-
-// Tenta reproduzir o vídeo se ele for pausado
-video.addEventListener('pause', () => {
-    video.play().catch(error => {
-        console.error('Erro ao tentar reproduzir o vídeo:', error);
-    });
-});
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {
@@ -660,10 +619,8 @@ function stopScroll() {
         }
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-       
-       
+     
+
 
 
     </script>
- 
-

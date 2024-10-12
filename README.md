@@ -497,7 +497,7 @@
     position: fixed;
     top: 427px;
     left: 50%;
-   
+    width: 100%;
     transform: translateX(-50%);
     z-index: 1000;
 }

@@ -177,7 +177,7 @@
     box-sizing: border-box;
 }
 #background-video {
-    position: relative; /* Define a posição do elemento para permitir o uso de 'left' */
+    
     left: -20px; /* Desloca o vídeo 20px para a esquerda */
   }
         .login-intro-img {

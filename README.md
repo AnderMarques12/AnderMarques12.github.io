@@ -587,10 +587,24 @@ Dito por si:
                         
 </div>
 
-        
-
     <div class="black-background"></div>
     <script>
+
+
+const video = document.getElementById('myVideo');
+
+function togglePlay() {
+    if (video.paused) {
+        video.play(); // Você pode comentar esta linha para que o vídeo fique sempre pausado
+    } else {
+        video.pause();
+    }
+}
+
+// Para garantir que o vídeo comece pausado
+window.onload = function() {
+    video.pause();
+};
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

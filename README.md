@@ -147,7 +147,7 @@
             height: 100vh;
             width: 100vw;
             position: absolute;
-            top: 0;
+            top: -26;
             left: 0;
             z-index: 1;
             background-color: #00000000;

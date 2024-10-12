@@ -503,7 +503,7 @@
 <body>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="video-background">
-            <video autoplay muted loop>
+            <video autoplay muted loop id="background-video">
                 <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
@@ -607,6 +607,7 @@
 
     <div class="black-background"></div>
     <script>
+         
          const video = document.getElementById('background-video');
     
     // Tenta reproduzir o vídeo ao carregar a página

@@ -148,7 +148,7 @@ Dito por si:
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 155vh;
+    height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;

@@ -472,6 +472,21 @@
     height: 53px;
 }
 
+#studentCount {
+    position: fixed;
+    top: 10px; /* Ajuste a distância do topo conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Certifique-se de que fique acima de outros elementos */
+}
+
+#loginForm {
+    position: fixed;
+    top: 500px;
+    left: 56%;
+    transform: translateX(-61%);
+    z-index: 1000;
+}
 
     </style>
 </head>
@@ -492,9 +507,7 @@
                     <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
                 </p>
                 
-                    
-                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
-            </div>
+                
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">

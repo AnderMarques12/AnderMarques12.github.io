@@ -164,9 +164,9 @@
     position: absolute;
     top: 390px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
         .login-wrapper {
             display: flex;
@@ -176,7 +176,10 @@
     padding: 20px;
     box-sizing: border-box;
 }
-
+#background-video {
+    position: relative; /* Define a posição do elemento para permitir o uso de 'left' */
+    left: -20px; /* Desloca o vídeo 20px para a esquerda */
+  }
         .login-intro-img {
             max-width: 100%;
             height: auto;
@@ -276,13 +279,13 @@
 }
 
 .btn-primary1:hover {
-    background-color: #ff000000;
+    background-color: #000000;
     color: #000;
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
     transform: scale(1.05);
 }
 .btn-primary2:hover {
-    background-color: #37ff0000;
+    background-color: #000000;
     color: #000;
     box-shadow: 0 0 30px rgb(44 255 0 / 80%);
     transform: scale(1.05);
@@ -501,8 +504,8 @@
             <div class="text-center px-4">
                 <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">912 alunos</span> / 
-                    <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
+                    <span style="font-weight: bold;">966 ALUNOS</span> / 
+                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
                 
                 
@@ -596,14 +599,21 @@
 
     <div class="black-background"></div>
     <script>
-      const video = document.getElementById('background-video');
-
-// Tenta reproduzir o vídeo ao carregar a página
-window.addEventListener('load', () => {
-    video.play().catch(error => {
-        console.error('Erro ao tentar reproduzir o vídeo:', error);
+  const video = document.getElementById('background-video');
+    
+    // Tenta reproduzir o vídeo ao carregar a página
+    window.addEventListener('load', () => {
+        video.play().catch(error => {
+            console.error('Erro ao tentar reproduzir o vídeo:', error);
+        });
     });
-});
+
+    // Tenta reproduzir o vídeo se ele for pausado
+    video.addEventListener('pause', () => {
+        video.play().catch(error => {
+            console.error('Erro ao tentar reproduzir o vídeo:', error);
+        });
+    });
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

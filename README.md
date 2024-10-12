@@ -592,20 +592,18 @@ Dito por si:
     <script>
 
 
-const video = document.getElementById('myVideo');
-
-function togglePlay() {
-    if (video.paused) {
-        video.play(); // Você pode comentar esta linha para que o vídeo fique sempre pausado
-    } else {
-        video.pause();
-    }
-}
-
-// Para garantir que o vídeo comece pausado
-window.onload = function() {
-    video.pause();
-};
+document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('background-video');
+        
+        // Tenta reproduzir o vídeo quando a página é carregada
+        video.play().then(() => {
+            // Sucesso, o vídeo está sendo reproduzido
+        }).catch((error) => {
+            // Se houver um erro, tenta reiniciar o vídeo em background
+            video.muted = true;
+            video.play();
+        });
+    });
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

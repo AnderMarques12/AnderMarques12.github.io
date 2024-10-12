@@ -480,13 +480,6 @@
     z-index: 1000; /* Certifique-se de que fique acima de outros elementos */
 }
 
-#loginForm {
-    position: fixed;
-    top: 500px;
-    left: 56%;
-    transform: translateX(-61%);
-    z-index: 1000;
-}
 
     </style>
 </head>

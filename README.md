@@ -485,7 +485,7 @@ Dito por si:
 <body>
     <div class="video-background">
         <video autoplay muted loop playsinline id="background-video">
-            <source src="https://cdn.pixabay.com/video/2021/09/02/87273-601148577_large.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2022/02/24/108813-681686688_large.mp4" type="video/mp4">
             Seu navegador não suporta o elemento de vídeo.
         </video>
     </div>
@@ -496,14 +496,15 @@ Dito por si:
             <div class="text-center px-4">
                 <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">912 ALUNOS</span> / 
-                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
+                    <span style="font-weight: bold;">912 alunos</span> / 
+                    <span style="color: #ff0000; font-weight: bold;">Limite: 1000</span>
                 </p>
                 
                     
+                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
             </div>
             <div class="register-form mt-4">
-                
+                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...

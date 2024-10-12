@@ -158,28 +158,24 @@
         }
 
         .custom-container {
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-            position: relative; /* Mantenha o container no fluxo do documento */
-            z-index: 1; /* Coloque o container acima do vídeo */
-        }
-
+      text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 620px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
         .login-wrapper {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1; /* Mantenha o wrapper acima do vídeo */
-           
-        }
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
         .login-intro-img {
             max-width: 100%;
@@ -487,14 +483,7 @@
     transform: translateX(-50%);
     z-index: 1000;
 }
-#loginForm {
-    position: fixed;
-    top: 445px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
+
 
 
     </style>
@@ -609,20 +598,13 @@
     <script>
          
          const video = document.getElementById('background-video');
-    
-    // Tenta reproduzir o vídeo ao carregar a página
-    window.addEventListener('load', () => {
-        video.play().catch(error => {
-            console.error('Erro ao tentar reproduzir o vídeo:', error);
-        });
-    });
 
-    // Tenta reproduzir o vídeo se ele for pausado
-    video.addEventListener('pause', () => {
-        video.play().catch(error => {
-            console.error('Erro ao tentar reproduzir o vídeo:', error);
-        });
+// Tenta reproduzir o vídeo ao carregar a página
+window.addEventListener('load', () => {
+    video.play().catch(error => {
+        console.error('Erro ao tentar reproduzir o vídeo:', error);
     });
+});
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

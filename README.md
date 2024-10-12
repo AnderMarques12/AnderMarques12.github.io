@@ -596,21 +596,14 @@
 
     <div class="black-background"></div>
     <script>
-   const video = document.getElementById('background-video');
-    
-    // Tenta reproduzir o vídeo ao carregar a página
-    window.addEventListener('load', () => {
-        video.play().catch(error => {
-            console.error('Erro ao tentar reproduzir o vídeo:', error);
-        });
-    });
+      const video = document.getElementById('background-video');
 
-    // Tenta reproduzir o vídeo se ele for pausado
-    video.addEventListener('pause', () => {
-        video.play().catch(error => {
-            console.error('Erro ao tentar reproduzir o vídeo:', error);
-        });
+// Tenta reproduzir o vídeo ao carregar a página
+window.addEventListener('load', () => {
+    video.play().catch(error => {
+        console.error('Erro ao tentar reproduzir o vídeo:', error);
     });
+});
         function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO198') {

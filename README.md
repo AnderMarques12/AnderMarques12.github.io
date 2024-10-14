@@ -660,8 +660,8 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-         // Gera um valor de assertividade entre 90,00% e 100,00%
-const assertividadeValue = (Math.random() * 10 + 90).toFixed(2);
+         // Gera um valor de assertividade entre 1,00% e 100,00%
+const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
 
 
             const assertividade = `${assertividadeValue}%`;

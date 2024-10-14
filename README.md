@@ -660,8 +660,8 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-           // Gera um valor de assertividade entre 1,00% e 100,00%
-const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
+         // Gera um valor de assertividade entre 90,00% e 100,00%
+const assertividadeValue = (Math.random() * 10 + 90).toFixed(2);
 
 
             const assertividade = `${assertividadeValue}%`;
@@ -669,10 +669,11 @@ const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
 
             // Cria e exibe a imagem
             const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+                 'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
+                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
             ];
+
             const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;

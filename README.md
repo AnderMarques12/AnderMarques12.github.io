@@ -607,7 +607,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO198') {
+    if (password === 'ALUNO1098') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;

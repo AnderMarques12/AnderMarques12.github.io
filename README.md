@@ -138,7 +138,6 @@
             margin: 0; 
             padding: 0; 
             overflow: hidden; 
-            overflow-y: scroll;
         }
 
         .login-wrapper {
@@ -476,7 +475,6 @@
             z-index: 1;
         }
 
-
     </style>
 </head>
 
@@ -484,6 +482,7 @@
     <div class="video-background">
         <video autoplay="" loop="" muted="">
           <source src="https://doublewhiteapp.com/3585079191-preview.mp4_1728018529513.mp4" type="video/mp4">
+          <source src="https://static.vecteezy.com/system/resources/previews/001/785/195/mp4/hacker-code-running-down-free-video.mp4" type="video/mp4">
           Seu navegador não suporta a tag de vídeo.
         </video>
       </div>
@@ -524,27 +523,15 @@
                           <i class="fa fa-arrow-right"></i>
                         </button>
                   </div>
-                
+                      
                     
                   <div class="social-icons mt-3">
                     <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
                     <a href="https://t.me/hackermarquesz" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
-              
-                <div class="video-login" style="display: none;">
-                <div class="title-overlay">
-                    <h1 class="elementor-heading-title elementor-size-default">
-                        HACKER DO MINES<br>
-                    </h1>
-                </div>
-                <div class="video-login">
-                    <video autoplay loop muted>
-                        <source src="https://static.vecteezy.com/system/resources/previews/001/785/195/mp4/hacker-code-running-down-free-video.mp4" type="video/mp4">
-                        Seu navegador não suporta a tag de vídeo.
-                    </video>
-                </div>
-                         
+                
+                        
 
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
@@ -602,16 +589,6 @@
     <div class="black-background"></div>
     <script>
 
-window.addEventListener('scroll', function() {
-    const videoLogin = document.querySelector('.video-login');
-    const scrollY = window.scrollY;
-    // Verifica se a página foi rolada para baixo
-    if (scrollY > 100) { // Ajuste o valor conforme necessário
-        videoLogin.style.display = 'block'; // Exibe o vídeo
-    } else {
-        videoLogin.style.display = 'none'; // Esconde o vídeo se voltar para cima
-    }
-});
 
 document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('background-video');
@@ -627,7 +604,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO198') {
+    if (password === 'ALUNO1098') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -680,18 +657,20 @@ function stopScroll() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-            // Gera um valor de assertividade entre 90,00% e 100,00%
-const assertividadeValue = (Math.random() * 10 + 90).toFixed(2);
+         // Gera um valor de assertividade entre 1,00% e 100,00%
+const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
+
 
             const assertividade = `${assertividadeValue}%`;
         
 
             // Cria e exibe a imagem
             const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+                 'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
+                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
             ];
+
             const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;

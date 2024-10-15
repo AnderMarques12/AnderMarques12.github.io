@@ -535,14 +535,17 @@ Dito por si:
                     <a href="https://t.me/hackermarquesz" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
-              
-                <div class="video-login" style="display: none;">
+                <div class="title-overlay">
+                    <h1 class="elementor-heading-title elementor-size-default">
+                        HACKER DO MINES<br>
+                    </h1>
+                </div>
+                <div class="video-login">
                     <video autoplay loop muted>
                         <source src="https://static.vecteezy.com/system/resources/previews/001/785/195/mp4/hacker-code-running-down-free-video.mp4" type="video/mp4">
                         Seu navegador não suporta a tag de vídeo.
                     </video>
                 </div>
-                         
 
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
@@ -600,17 +603,6 @@ Dito por si:
     <div class="black-background"></div>
     <script>
 
-window.addEventListener('scroll', function() {
-    const videoLogin = document.querySelector('.video-login');
-    const scrollY = window.scrollY;
-
-    // Verifica se a página foi rolada para baixo
-    if (scrollY > 100) { // Ajuste o valor conforme necessário
-        videoLogin.style.display = 'block'; // Exibe o vídeo
-    } else {
-        videoLogin.style.display = 'none'; // Esconde o vídeo se voltar para cima
-    }
-});
 
 document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('background-video');

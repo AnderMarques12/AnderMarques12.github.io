@@ -133,12 +133,12 @@
             margin-top: 20px;
         }
 
-        html,
-        body {
-            margin: 0; 
-            padding: 0; 
-            overflow: hidden; 
-        }
+        html, body {
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden; /* Impede o scroll horizontal, mas permite o vertical */
+}
+
 
         .login-wrapper {
     display: flex;
@@ -474,6 +474,9 @@
             left: 20px;
             z-index: 1;
         }
+        .student-count {
+    display: block; /* Certifique-se de que está visível */
+}
 
     </style>
 </head>
@@ -491,11 +494,10 @@
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
-                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">972 ALUNOS</span> / 
-                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
-                </p>
+                <div class="student-count mt-3">
+                    <span style="font-weight: bold;">972 ALUNOS</span>
+                </div>
+                
                 
                     
                 <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
@@ -531,8 +533,19 @@
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
-                        
+                <h2 class="mt-3">HACKER MINES</h2>
 
+                <!-- Adicione os vídeos abaixo do título -->
+                <div class="video-container mt-3">
+                    <video width="320" height="240" controls>
+                        <source src="https://cdn.pixabay.com/video/2021/10/13/91913-631504055_tiny.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                    <video width="320" height="240" controls>
+                        <source src="https://cdn.pixabay.com/video/2021/10/13/91913-631504055_tiny.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
 
@@ -547,8 +560,13 @@
 <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
 <div id="loading-animation" class="loading-hidden">
 <div class="spinner"></div>
-                                        
+<div class="title-overlay">
+    <h1 class="elementor-heading-title elementor-size-default">
+        HACKER DO MINES<br>
+    </h1>
 </div>
+                              
+
                                     
 <div class="white-square">
     <div class="grid-container">

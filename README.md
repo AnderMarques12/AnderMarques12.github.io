@@ -749,60 +749,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
-function stopScroll() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-    const gridItems = document.querySelectorAll('.grid-item');
-    const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
 
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        const assertividadeValue = (Math.random() * 99 + 1).toFixed(2) + '%';
-        const assertividadeColor = parseFloat(assertividadeValue) > 90 ? 'green' : 'red';
-
-        if (contextOptions) {
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) existingAssertividade.remove();
-
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividadeValue}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.color = assertividadeColor;
-            contextOptions.appendChild(assertividadeElement);
-
-            const numDiamantes = Math.floor(Math.random() * 6) + 2;
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random()).slice(0, numDiamantes);
-
-            shuffledItems.forEach(item => {
-                item.innerHTML = '';
-                const imageElement = document.createElement('img');
-                imageElement.src = imageUrl;
-                imageElement.alt = 'Random Diamond';
-                imageElement.style.width = '100%';
-                imageElement.style.height = 'auto';
-                item.appendChild(imageElement);
-            });
-        }
-
-        // Cleanup after 5 seconds
-        setTimeout(() => {
-            if (contextOptions) {
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) assertividadeElement.remove();
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 5000);
-    }, 1000);
-}
 
 
 
@@ -860,9 +807,8 @@ function toggleContextOptions() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-            // Gera um valor de assertividade entre 90,00% e 100,00%
-const assertividadeValue = (Math.random() * 10 + 90).toFixed(2);
-console.log(assertividadeValue);
+// Gera um valor de assertividade entre 1,00% e 100,00%
+const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
 
             const assertividade = `${assertividadeValue}%`;
         

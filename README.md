@@ -414,7 +414,7 @@
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: -353px;
+    top: -228px;
     left: -169px;
     z-index: 10000;
     overflow: hidden;

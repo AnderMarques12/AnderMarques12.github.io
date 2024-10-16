@@ -155,15 +155,15 @@
         background-color: rgba(0, 0, 0, 0); 
     }
 
-        .custom-container {
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-        }
+    .custom-container {
+    text-align: center;
+    max-width: 388px;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 23px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
 
         .login-intro-img {
             max-width: 100%;
@@ -592,15 +592,14 @@ h2.mt-3 {
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <p id="studentCount" class="mb-0" style="font-size: 18px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
                     <span style="font-weight: bold;">1000 ALUNOS</span> / 
                     <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
                 
 
-                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
-            </div>
+            
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">

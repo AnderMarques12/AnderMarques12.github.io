@@ -620,7 +620,7 @@ h2.mt-3 {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           <i class="fa fa-arrow-right"></i>
                         </button>
@@ -860,9 +860,9 @@ function toggleContextOptions() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-         // Gera um valor de assertividade entre 1,00% e 100,00%
-const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
-
+            // Gera um valor de assertividade entre 90,00% e 100,00%
+const assertividadeValue = (Math.random() * 10 + 90).toFixed(2);
+console.log(assertividadeValue);
 
             const assertividade = `${assertividadeValue}%`;
         
@@ -873,6 +873,7 @@ const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
                 'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
                 'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
             ];
+
 
             const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
             const imageElement = document.createElement('img');

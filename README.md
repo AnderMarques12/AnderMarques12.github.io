@@ -79,7 +79,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -414,7 +414,7 @@
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: -228px;
+    top: -676px;
     left: -169px;
     z-index: 10000;
     overflow: hidden;

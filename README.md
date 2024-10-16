@@ -587,7 +587,7 @@ h2.mt-3 {
           Seu navegador não suporta a tag de vídeo.
         </video>
       </div>
-
+      
 
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
@@ -598,7 +598,8 @@ h2.mt-3 {
                     <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
                 
-
+                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
+            </div>
             
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>

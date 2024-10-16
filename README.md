@@ -409,13 +409,13 @@
         }
         
         .white-square {
-    width: 375px;
-    height: 663px;
+    width: 593px;
+    height: 646px;
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: -191px;
-    left: -55px;
+    top: -353px;
+    left: -169px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
@@ -423,17 +423,16 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 50px); 
-    grid-template-rows: repeat(5, 50px); 
-    gap: 23px; 
+    grid-template-columns: repeat(5, 95px);
+    grid-template-rows: repeat(5, 101px);
+    gap: 21px;
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
-    background-color: #ffffff00; 
-    border: 6px solid #00000000; 
-
+    background-color: #ffffff00;
+    border: 11px solid #00000000;
 }
 .loading-hidden {
     display: none; 
@@ -915,7 +914,7 @@ function stopScroll() {
             if (contextOptions) {
                 // Remove assertividade
                 const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
+                if (assertividadeElement) { 
                     contextOptions.removeChild(assertividadeElement);
                 }
 

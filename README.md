@@ -77,18 +77,18 @@
 }
 
 .context-options {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(0, 0, 0);
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'M PLUS 1 Code', sans-serif;
-            color: #ffffff;
-            z-index: 10000;
-        }
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #ffffff;
+    z-index: 10000;
+}
 
         .context-options img {
             width: 100px;
@@ -392,12 +392,12 @@
         }
 
         #draggable-image {
-            position: absolute;
-            top: 50px;
-            left: 240px;
-            z-index: 10002;
-            cursor: move;
-        }
+    position: absolute;
+    top: 50px;
+    left: 33px;
+    z-index: 10002;
+    cursor: move;
+}
 
         #draggable-image img {
             width: 100px;

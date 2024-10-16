@@ -134,200 +134,6 @@
         }
 
         html, body {
-    margin: 0; 
-    padding: 0;
-    overflow-x: hidden; /* Impede o scroll horizontal, mas permite o vertical */
-}
-
-
-        .login-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #00000000;
-}
-
-        .custom-container {
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-        }
-
-        .login-intro-img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 7px;
-        }
-
-        .register-form h6 {
-            color: #ffffff;
-        }
-
-        .register-form p {
-            color: rgb(255, 255, 255);
-        }
-        .form-group {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.form-control {
-    background-color: #000; 
-    border: 2px solid #686868; 
-    color: #ffffff; 
-    padding: 15px 20px;
-    border-radius: 5px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    font-size: 16px;
-    box-shadow: 0 0 10px rgba(0, 255, 68, 0); 
-}
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Mines</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
-        .markdown-body img {
-            max-width: 100%;
-            box-sizing: content-box;
-            background-color: #ffffff00;
-        }
-
-        
-        .loading-visible {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .spinner {
-    border: 8px solid #222;
-    border-radius: 50%;
-    border-top: 8px solid #ff0000;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-}
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        #image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .feedback-hidden {
-    display: none;
-    color: #ffffff;
-    font-family: 'M PLUS 1 Code', monospace;
-    margin-top: 10px;
-}
-
-#hack-feedback {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 20px;
-    color: #00ff3d;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    display: none; 
-}
-
-.context-options {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(0, 0, 0);
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'M PLUS 1 Code', sans-serif;
-            color: #ffffff;
-            z-index: 10000;
-        }
-
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        .context-options .bot-title {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.context-options .context-option {
-    font-size: 14px;
-    display: block;
-    padding: 12px 20px;
-    margin-bottom: 5px;
-    background-color: rgb(25, 0, 255); 
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.1s;
-
-}
-
-.context-options .context-option:hover {
-    background-color: rgb(27 0 255 / 56%);
-    transform: scale(1.05);
-}
-
-.context-options .closeContextOptions:hover {
-    background-color: rgb(255 0 0 / 80%);
-
-}
-        .dev-by {
-            font-size: 14px;
-            text-align: center;
-            color: #00ff3d;
-            margin-top: 20px;
-        }
-
-        html, body {
         margin: 0;
         padding: 0;
         overflow-x: hidden; 
@@ -808,7 +614,7 @@ h2.mt-3 {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
@@ -1000,10 +806,7 @@ function stopScroll() {
 
 
 
-
-
-
-        function toggleContextOptions() {      
+function toggleContextOptions() {      
             var menu = document.getElementById('contextOptions');
             if (menu.style.display === 'none' || menu.style.display === '') {
                 menu.style.display = 'block';
@@ -1014,6 +817,25 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        // script.js
+
+       function closeContextOptions() {
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Show loading animation for 5 seconds, then update content
+    setTimeout(() => {
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }   } ) }
+
+
+       
 
        function closeContextOptions() {
     const loadingAnimation = document.getElementById('loading-animation');
@@ -1090,130 +912,5 @@ const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
         }
     }, 6000);
 }
-
-    </script>
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-            var video = document.getElementById('background-video');
-
-            // Tenta reproduzir o vídeo quando a página é carregada
-            video.play().then(() => {
-                // Sucesso, o vídeo está sendo reproduzido
-            }).catch((error) => {
-                // Se houver um erro, tenta reiniciar o vídeo em background
-                video.muted = true;
-                video.play();
-            });
-        });
-        function login(url) {
-    const password = document.getElementById('password').value;
-    if (password === 'ALUNO1098') {
-        document.getElementById('loading-message').style.display = 'block';
-        setTimeout(() => {
-            document.getElementById('login-iframe').src = url;
-            document.getElementById('iframe-container').style.display = 'block';
-            document.getElementById('loading-message').style.display = 'none';
-        }, 1000);
-    } else {
-        alert('Senha incorreta. Tente novamente.');
-    }
-}
-
-function stopScroll() {
-
-
-}
-
-
-
-        function toggleContextOptions() {      
-            var menu = document.getElementById('contextOptions');
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
-        }
-        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
-        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-     
-        function closeContextOptions() {
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
-
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    setTimeout(() => {
-        if (loadingAnimation) {
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        if (contextOptions) {
-
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            const existingImage = contextOptions.querySelector('.random-image');
-            
-            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
-            if (existingImage) contextOptions.removeChild(existingImage);
-
-         // Gera um valor de assertividade entre 1,00% e 100,00%
-const assertividadeValue = (Math.random() * 99 + 1).toFixed(2);
-
-
-            const assertividade = `${assertividadeValue}%`;
-        
-
-            // Cria e exibe a imagem
-            const imageUrls = [
-                 'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
-                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
-                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
-            ];
-
-            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.alt = 'Random Image';
-            imageElement.style.width = '75px';
-            imageElement.style.height = 'auto';
-            imageElement.className = 'random-image';
-            contextOptions.appendChild(imageElement);
-
-            // Cria e exibe o valor de assertividade abaixo da imagem
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '15px';
-            assertividadeElement.style.marginTop = '4px'; // Para ficar abaixo da imagem
-
-            // Define a cor da assertividade
-            if (parseFloat(assertividadeValue) >= 90) {
-                assertividadeElement.style.color = 'green'; // Verde para valores acima de 90%
-            } else {
-                assertividadeElement.style.color = 'red'; // Vermelho para valores abaixo de 90%
-            }
-
-            contextOptions.appendChild(assertividadeElement);
-
-            // Remove a imagem e a assertividade após 5 segundos
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    const randomImageElement = contextOptions.querySelector('.random-image');
-
-                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
-                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
-                }
-            }, 5000);
-        }
-    }, 6000);
-}
-
 
     </script>

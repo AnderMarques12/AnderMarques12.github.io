@@ -79,7 +79,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);

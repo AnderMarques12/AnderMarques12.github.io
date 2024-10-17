@@ -613,7 +613,7 @@ h2.mt-3 {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 <i class="fa fa-arrow-right"></i>
                             </button>
@@ -922,7 +922,7 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 566000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 8000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
 

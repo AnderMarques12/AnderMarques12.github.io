@@ -624,25 +624,7 @@ h2.mt-3 {
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
-                <h2 class="mt-3">HACKER MINES</h2>
-
-        
-                <div class="video-container mt-3">
-                    <video controls>
-                        <source src="https://static.vecteezy.com/system/resources/previews/001/785/195/mp4/hacker-code-running-down-free-video.mp4" type="video/mp4">
-                        Seu navegador não suporta a tag de vídeo.
-                    </video>
-                </div>
-                
-                    <h2 class="mt-3">HACKER DOUBLE</h2>
-
                
-                    <div class="video-container mt-3">
-                        <video controls>
-                            <source src="https://www.instagram.com/p/DBQIYDjxG3s/?hl=pt-br" type="video/mp4">
-                            Seu navegador não suporta a tag de vídeo.
-                        </video>
-                    </div>
                     
                     <h2 class="mt-3">COMPRE AQUI!</h2>
                     <div class="promo-banner mt-3">
@@ -651,7 +633,7 @@ h2.mt-3 {
                         <p>De <span class="preco-antigo">R$ 549,99</span> por <span class="preco-novo">R$ 279,99</span></p>
                         <p><strong>Garanta já a sua vaga com esse super desconto!</strong></p>
                         <p>Restam apenas 300 vagas disponíveis, não perca!</p>
-                        <a href="https://seulinkdeproduto.com" class="promo-btn">Aproveitar Agora</a>
+                        <a href="https://pay.sumup.com/b2c/Q711USGD" class="promo-btn">Aproveitar Agora</a>
                     </div>
                     
 <div id="iframe-container">

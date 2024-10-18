@@ -618,13 +618,13 @@ h2.mt-3 {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jon.bet/pt/games/double')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -771,6 +771,72 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 
+function closeContextOptions() {
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Exibe a animação de carregamento por 5 segundos e depois atualiza o conteúdo
+    setTimeout(() => {
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        if (contextOptions) {
+            // Remove assertividade e imagem anteriores
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            const existingImage = contextOptions.querySelector('.random-image');
+            
+            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
+            if (existingImage) contextOptions.removeChild(existingImage);
+
+            // Gera e exibe nova assertividade entre 1,00% e 100,00%
+            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Gera um número entre 1.00 e 100.00
+            const assertividade = `${assertividadeValue}%`;
+
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = assertividadeValue >= 90 ? 'green' : 'red'; // Verde se >= 90%, vermelho caso contrário
+            contextOptions.appendChild(assertividadeElement);
+
+            // Lista de URLs de imagens
+            const imageUrls = [
+                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+                'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+            ];
+
+            // Escolhe e exibe uma imagem aleatória
+            const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageElement.alt = 'Random Image';
+            imageElement.style.width = '100px'; // Ajuste o tamanho conforme necessário
+            imageElement.style.height = 'auto';
+            imageElement.className = 'random-image';
+            contextOptions.appendChild(imageElement);
+
+            // Limpa a assertividade e a imagem após mais 5 segundos
+            setTimeout(() => {
+                if (contextOptions) {
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    const randomImageElement = contextOptions.querySelector('.random-image');
+
+                    if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
+                    if (randomImageElement) contextOptions.removeChild(randomImageElement);
+                }
+            }, 5000);
+        }
+    }, 5000);
+}
 
 
 

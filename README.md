@@ -479,7 +479,7 @@
     display: block; 
 }
 .promo-banner {
-    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    background-color: rgb(0, 0, 0); /* Fundo escuro semi-transparente */
     border: 2px solid rgba(255, 0, 0, 0.3); /* Borda em vermelho */
     padding: 30px;
     text-align: center;

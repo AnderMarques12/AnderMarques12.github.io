@@ -839,6 +839,16 @@ function closeContextOptions() {
 }
 
 
-
+function toggleContextOptions() {      
+            var menu = document.getElementById('contextOptions');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
+        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
+       // script.js
 
     </script>

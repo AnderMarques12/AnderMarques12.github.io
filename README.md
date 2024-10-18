@@ -483,33 +483,33 @@
     display: block; 
 }
 .promo-banner {
-    background-color: rgb(0, 0, 0); /* Fundo escuro semi-transparente */
-    border: 2px solid rgba(255, 0, 0, 0.3); /* Borda em vermelho */
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borda clara */
     padding: 30px;
     text-align: center;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4); /* Sombra vermelha suave */
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4); /* Sombra neon suave */
     color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .promo-banner:hover {
     transform: translateY(-5px); /* Efeito de elevação */
-    box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.7); /* Sombra vermelha mais forte no hover */
+    box-shadow: 0px 0px 30px rgba(0, 255, 0, 0.7); /* Sombra neon mais forte no hover */
 }
 
 .promo-banner img {
     width: 130px;
     border-radius: 50%; /* Forma circular para a imagem */
     margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Sombra vermelha na imagem */
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); /* Sombra neon na imagem */
 }
 
 .promo-banner h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #ff3333; /* Vermelho claro */
+    color: #00ff00; /* Verde neon */
 }
 
 .promo-banner p {
@@ -524,27 +524,36 @@
 }
 
 .preco-novo {
-    color: #ff0000; /* Vermelho vibrante para o novo preço */
+    color: #00ff00; /* Verde neon para o novo preço */
     font-size: 24px;
     font-weight: bold;
 }
 
 .promo-btn {
-    background-color: #ff0000; /* Vermelho vibrante */
-    color: #fff;
+    background-color: #00ff00; /* Verde neon */
+    color: #000;
     padding: 12px 30px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7); /* Sombra vermelha */
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.7); /* Sombra neon */
     transition: 0.3s ease;
 }
 
 .promo-btn:hover {
-    background-color: #cc0000; /* Escurece o vermelho no hover */
-    box-shadow: 0px 0px 40px rgba(255, 0, 0, 1); /* Efeito de sombra mais intenso */
+    background-color: #00cc00; /* Escurece o verde no hover */
+    box-shadow: 0px 0px 40px rgba(0, 255, 0, 1); /* Efeito de sombra mais intenso */
     transform: scale(1.05); /* Aumenta levemente no hover */
+}
+
+/* Margens realistas */
+.mt-3 {
+    margin-top: 20px;
+}
+
+.mt-3:hover {
+    box-shadow: 0px 0px 25px rgba(0, 255, 0, 0.6); /* Efeito hover nas margens */
 }
 
 

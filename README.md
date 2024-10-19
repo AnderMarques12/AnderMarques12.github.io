@@ -552,9 +552,7 @@
     margin-top: 20px;
 }
 
-.mt-3:hover {
-    box-shadow: 0px 0px 25px rgba(0, 255, 0, 0.6); /* Efeito hover nas margens */
-}
+
 
 
 .video-container {

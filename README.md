@@ -367,14 +367,14 @@
 }
 
 #iframe-container {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -12px;
-    z-index: 9999;
-}
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        background-color: #000; /* Opcional, para criar um efeito de fundo antes de carregar o iframe */
+    }
 
     iframe {
         width: 100vw; 
@@ -483,71 +483,71 @@
     display: block; 
 }
 .promo-banner {
-    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Borda clara */
+    background-color: rgba(0, 0, 0, 0.85); 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
     padding: 30px;
     text-align: center;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4); /* Sombra neon suave */
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4); 
     color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .promo-banner:hover {
-    transform: translateY(-5px); /* Efeito de elevação */
-    box-shadow: 0px 0px 30px rgba(0, 255, 0, 0.7); /* Sombra neon mais forte no hover */
+    transform: translateY(-5px); 
+    box-shadow: 0px 0px 30px rgba(0, 255, 0, 0.7); 
 }
 
 .promo-banner img {
     width: 130px;
-    border-radius: 50%; /* Forma circular para a imagem */
+    border-radius: 50%; 
     margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); /* Sombra neon na imagem */
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); 
 }
 
 .promo-banner h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #00ff00; /* Verde neon */
+    color: #00ff00; 
 }
 
 .promo-banner p {
     font-size: 18px;
-    color: #e0e0e0; /* Texto cinza claro */
+    color: #e0e0e0; 
     margin-bottom: 25px;
 }
 
 .preco-antigo {
     text-decoration: line-through;
-    color: #ff4d4d; /* Vermelho para o preço antigo */
+    color: #ff4d4d; 
 }
 
 .preco-novo {
-    color: #00ff00; /* Verde neon para o novo preço */
+    color: #00ff00; 
     font-size: 24px;
     font-weight: bold;
 }
 
 .promo-btn {
-    background-color: #00ff00; /* Verde neon */
+    background-color: #00ff00; 
     color: #000;
     padding: 12px 30px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.7); /* Sombra neon */
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.7); 
     transition: 0.3s ease;
 }
 
 .promo-btn:hover {
-    background-color: #00cc00; /* Escurece o verde no hover */
-    box-shadow: 0px 0px 40px rgba(0, 255, 0, 1); /* Efeito de sombra mais intenso */
-    transform: scale(1.05); /* Aumenta levemente no hover */
+    background-color: #00cc00; 
+    box-shadow: 0px 0px 40px rgba(0, 255, 0, 1); 
+    transform: scale(1.05); 
 }
 
-/* Margens realistas */
+
 .mt-3 {
     margin-top: 20px;
 }
@@ -557,11 +557,11 @@
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #000; /* Cor de fundo opcional */
+    background: #000; 
 }
 
 .video-container video {
@@ -572,12 +572,12 @@
     height: 100%;
 }
 h2.mt-3 {
-    color: white; /* Define a cor branca */
-    font-family: 'Roboto', sans-serif; /* Escolha uma fonte moderna e estilizada */
-    font-size: 2.5rem; /* Ajuste o tamanho da fonte para um visual impactante */
-    font-weight: bold; /* Torne o texto mais proeminente */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adicione uma leve sombra para dar profundidade */
-    letter-spacing: 1px; /* Aumente o espaçamento entre as letras para um visual mais sofisticado */
+    color: white; 
+    font-family: 'Roboto', sans-serif; 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    letter-spacing: 1px; 
 }
 a.anchorjs-link {
     display: none;
@@ -759,7 +759,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'MARQUEZ') {
+    if (password === 'ALUNO1098') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;

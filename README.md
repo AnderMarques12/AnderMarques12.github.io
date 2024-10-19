@@ -85,7 +85,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -895,7 +895,7 @@ function toggleContextOptions() {
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
             const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const randomCount = Math.floor(Math.random() * 6) + 1; // Número aleatório de 1 a 6
+            const randomCount = Math.floor(Math.random() * 6) + 3; // Número aleatório de 1 a 6
             const itemsToChange = shuffledItems.slice(0, randomCount);
             const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
@@ -915,7 +915,7 @@ function toggleContextOptions() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 8000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
 

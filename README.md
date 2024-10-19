@@ -579,6 +579,9 @@ h2.mt-3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adicione uma leve sombra para dar profundidade */
     letter-spacing: 1px; /* Aumente o espaçamento entre as letras para um visual mais sofisticado */
 }
+a.anchorjs-link {
+    display: none;
+}
 
     </style>
 </head>

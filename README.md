@@ -85,7 +85,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 80%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -600,7 +600,7 @@ a.anchorjs-link {
             <div class="text-center px-4">
                 <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
                     <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">1000 ALUNOS</span> / 
+                    <span style="font-weight: bold;">1000 ALUNOS</span> 
                     <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
                 </p>
                 
@@ -759,7 +759,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO1098') {
+    if (password === 'MARQUEZ') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;

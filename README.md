@@ -367,14 +367,14 @@
 }
 
 #iframe-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 9999;
-        background-color: #000; /* Opcional, para criar um efeito de fundo antes de carregar o iframe */
-    }
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -12px;
+    z-index: 9999;
+}
 
     iframe {
         width: 100vw; 

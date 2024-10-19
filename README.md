@@ -372,7 +372,7 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -12px;
+    left: 0px;
     z-index: 9999;
 }
 

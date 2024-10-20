@@ -85,8 +85,8 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 80%;
-    left: 50%;
+    top: 81%;
+    left: 51%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -618,7 +618,7 @@ a.anchorjs-link {
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
-          <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
+          <source src="https://doublewhiteapp.com/3585079191-preview.mp4_1728018529513.mp4" type="video/mp4">
           
         </video>
       </div>
@@ -903,7 +903,7 @@ document.getElementById('autoModeToggle').addEventListener('click', function() {
 
     if (toggleButton.classList.contains('active')) {
         // Ativar modo automático
-        autoModeDoubleInterval = setInterval(stopScroll, 24000);  // Executa stopScroll a cada 6 segundos
+        autoModeDoubleInterval = setInterval(stopScroll, 21000);  // Executa stopScroll a cada 6 segundos
         alert("Modo Automático Ativado");
     } else {
         // Desativar modo automático

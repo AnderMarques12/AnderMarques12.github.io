@@ -903,7 +903,7 @@ document.getElementById('autoModeToggle').addEventListener('click', function() {
 
     if (toggleButton.classList.contains('active')) {
         // Ativar modo automático
-        autoModeDoubleInterval = setInterval(stopScroll, 21000);  // Executa stopScroll a cada 6 segundos
+        autoModeDoubleInterval = setInterval(stopScroll, 16000);  // Executa stopScroll a cada 6 segundos
         alert("Modo Automático Ativado");
     } else {
         // Desativar modo automático

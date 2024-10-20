@@ -85,7 +85,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -588,11 +588,11 @@ a.anchorjs-link {
     height: 25px;
     background-color: #ccc;
     border-radius: 25px;
+    top: 7px;
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .toggle-button.active {
     background-color: #4cd964;
 }
@@ -903,7 +903,7 @@ document.getElementById('autoModeToggle').addEventListener('click', function() {
 
     if (toggleButton.classList.contains('active')) {
         // Ativar modo automático
-        autoModeDoubleInterval = setInterval(stopScroll, 14000);  // Executa stopScroll a cada 6 segundos
+        autoModeDoubleInterval = setInterval(stopScroll, 24000);  // Executa stopScroll a cada 6 segundos
         alert("Modo Automático Ativado");
     } else {
         // Desativar modo automático

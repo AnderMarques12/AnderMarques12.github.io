@@ -582,6 +582,35 @@ h2.mt-3 {
 a.anchorjs-link {
     display: none;
 }
+.toggle-button {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-button.active {
+    background-color: #4cd964;
+}
+
+.toggle-button .toggle-knob {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s;
+}
+
+.toggle-button.active .toggle-knob {
+    left: 26px;
+}
 
     </style>
 </head>
@@ -688,20 +717,35 @@ a.anchorjs-link {
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
 
+
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
 <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
 
 <div class="context-options" id="contextOptions">
-<img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
-<span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
-<div id="result"></div>
-<span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
-<span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
-<div id="loading-animation" class="loading-hidden">
-<div class="spinner"></div>
+    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
+    <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz</span>
+    <div id="result"></div>
+    
+    <!-- Botão Hackear Mines -->
+    <span class="context-option" onclick="stopScroll();">
+        <i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines
+    </span>
+    
+    <!-- Botão Hackear Double -->
+    <span class="context-option closeContextOptions" onclick="closeContextOptions();">
+        <i class="fa fa-play" aria-hidden="true"></i> Hackear Double
+    </span>
+    
+    <i class="fa fa-cogs" aria-hidden="true"></i> MODO AUTOMÁTICO
+    <div class="toggle-button" id="autoModeToggle">
+        <div class="toggle-knob"></div>
 
+
+    <div id="loading-animation" class="loading-hidden">
+        <div class="spinner"></div>
+    </div>
 </div>
-                              
+              
 
                                     
 <div class="white-square">
@@ -851,7 +895,91 @@ function toggleContextOptions() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        
-        
+        let autoModeDoubleInterval;
 
+document.getElementById('autoModeToggle').addEventListener('click', function() {
+    const toggleButton = document.getElementById('autoModeToggle');
+    toggleButton.classList.toggle('active');  // Toggle the appearance
+
+    if (toggleButton.classList.contains('active')) {
+        // Ativar modo automático
+        autoModeDoubleInterval = setInterval(stopScroll, 14000);  // Executa stopScroll a cada 6 segundos
+        alert("Modo Automático Ativado");
+    } else {
+        // Desativar modo automático
+        clearInterval(autoModeDoubleInterval);
+        autoModeDoubleInterval = null;
+        alert("Modo Automático Desativado");
+    }
+});
+
+
+function stopScroll() {
+    // Exibe a animação de carregamento
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
+
+    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+    setTimeout(() => {
+        if (loadingAnimation) {
+            // Oculta a animação de carregamento
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
+        }
+
+        // Gera um valor percentual fixo acima de 90
+        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
+
+        // Seleciona o menu contextOptions
+        const contextOptions = document.getElementById('contextOptions');
+
+        if (contextOptions) {
+            // Remove qualquer assertividade anterior
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
+
+            // Cria um elemento para exibir a assertividade
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
+
+            // Adiciona a assertividade ao menu contextOptions
+            contextOptions.appendChild(assertividadeElement);
+
+            // Adiciona a imagem de 1 a 6 itens aleatórios no grid
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+            const randomCount = Math.floor(Math.random() * 6) + 3; // Número aleatório de 1 a 6
+            const itemsToChange = shuffledItems.slice(0, randomCount);
+            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+            itemsToChange.forEach(item => item.innerHTML += imageElement);
+        }
+
+        // Aguarda 5 segundos e então reverte as mudanças
+        setTimeout(() => {
+            if (contextOptions) {
+                // Remove assertividade
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) { 
+                    contextOptions.removeChild(assertividadeElement);
+                }
+
+                // Remove as imagens dos itens do grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
+    }, 5000); // Tempo de espera para a animação de carregamento (1 segundo)
+}
 
     </script>

@@ -667,43 +667,38 @@ a.anchorjs-link {
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
-               
-                <body class="page-template page-template-elementor_canvas page page-id-1147 elementor-default elementor-template-canvas elementor-kit-8 elementor-page elementor-page-1147">
-                    <div data-elementor-type="wp-page" data-elementor-id="1147" class="elementor elementor-1147" data-elementor-settings="[]">
-                                    <div class="elementor-section-wrap">
-                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-8cff68 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8cff68" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                    <div class="elementor-background-overlay"></div>
-                                    <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4413ff56" data-id="4413ff56" data-element_type="column">
-                    <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-2eeb4186 elementor-widget elementor-widget-heading" data-id="2eeb4186" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                    
-                        <div class="elementor-element elementor-element-9637017 elementor-widget elementor-widget-heading" data-id="9637017" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default"> <span style="color:#00ff40"><svg style="width:1.1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-          <path d="M7.702 1.368a.75.75 0 0 1 .597 0c2.098.91 4.105 1.99 6.004 3.223a.75.75 0 0 1-.194 1.348A34.27 34.27 0 0 0 8.341 8.25a.75.75 0 0 1-.682 0c-.625-.32-1.262-.62-1.909-.901v-.542a36.878 36.878 0 0 1 2.568-1.33.75.75 0 0 0-.636-1.357 38.39 38.39 0 0 0-3.06 1.605.75.75 0 0 0-.372.648v.365c-.773-.294-1.56-.56-2.359-.8a.75.75 0 0 1-.194-1.347 40.901 40.901 0 0 1 6.005-3.223ZM4.25 8.348c-.53-.212-1.067-.411-1.611-.596a40.973 40.973 0 0 0-.418 2.97.75.75 0 0 0 .474.776c.175.068.35.138.524.21a5.544 5.544 0 0 1-.58.681.75.75 0 1 0 1.06 1.06c.35-.349.655-.726.915-1.124a29.282 29.282 0 0 0-1.395-.617A5.483 5.483 0 0 0 4.25 8.5v-.152Z" />
-          <path d="M7.603 13.96c-.96-.6-1.958-1.147-2.989-1.635a6.981 6.981 0 0 0 1.12-3.341c.419.192.834.393 1.244.602a2.25 2.25 0 0 0 2.045 0 32.787 32.787 0 0 1 4.338-1.834c.175.978.315 1.969.419 2.97a.75.75 0 0 1-.474.776 29.385 29.385 0 0 0-4.909 2.461.75.75 0 0 1-.794 0Z" />
-        </svg>
-        HACKER DO BOUBLE COM BRANCO NA HORA EXATA/</span> <span style="color:#ff4d4d">+ HACKER DO MINES</span>
-        
-        </h2>		</div>
-                        </div>
-                        <div class="elementor-element elementor-element-33f902a elementor-widget elementor-widget-html" data-id="33f902a" data-element_type="widget" data-widget_type="html.default">
-                        <div class="elementor-widget-container">
-                    <div id="evideovsl-player" style="padding:56.2500% 0 0 0;position:relative;">
-              <iframe src=""
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0">
-              </iframe>
-              <script type="module" src="https://stream.evideovsl.com.br/evideovslplayer.js?1256700040"></script>
-            </div>		</div>
-                        </div>
-                        <div class="elementor-element elementor-element-6d35947 elementor-align-center elementor-widget elementor-widget-button" data-id="6d35947" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;tada&quot;}" data-widget_type="button.default">
-                        <div class="elementor-widget-container">
-                           
-                            </a>
-                </div>
-                </div>
+
+         <!-- Video 1 -->
+    <div class="video-container mb-3">
+    
+        <video width="100%" height="315" controls>
+            <source src="https://seusite.com/video1.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-container mb-3">
+       
+        <video width="100%" height="315" controls>
+            <source src="c:\Users\Ander\Downloads\IMG_5933 (1).mov" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-container mb-3">
+      
+        <video width="100%" height="315" controls>
+            <source src="https://seusite.com/video3.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+    </div>
+</div>
+
+
+
+
                     <h2 class="mt-3">COMPRE AQUI!</h2>
                     <div class="promo-banner mt-3">
                         <img src="https://i.ibb.co/8K8JzJb/fotor-20241015202813.png" alt="Promoção Especial">

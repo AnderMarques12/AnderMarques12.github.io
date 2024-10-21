@@ -85,8 +85,8 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 81%;
-    left: 51%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
     padding: 20px;
@@ -582,35 +582,6 @@ h2.mt-3 {
 a.anchorjs-link {
     display: none;
 }
-.toggle-button {
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 25px;
-    top: 7px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.toggle-button.active {
-    background-color: #4cd964;
-}
-
-.toggle-button .toggle-knob {
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    background-color: white;
-    border-radius: 50%;
-    top: 1px;
-    left: 1px;
-    transition: left 0.3s;
-}
-
-.toggle-button.active .toggle-knob {
-    left: 26px;
-}
 
     </style>
 </head>
@@ -618,7 +589,7 @@ a.anchorjs-link {
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
-          <source src="https://doublewhiteapp.com/3585079191-preview.mp4_1728018529513.mp4" type="video/mp4">
+          <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
           
         </video>
       </div>
@@ -648,7 +619,7 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
@@ -667,38 +638,43 @@ a.anchorjs-link {
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
-
-         <!-- Video 1 -->
-    <div class="video-container mb-3">
-    
-        <video width="100%" height="315" controls>
-            <source src="https://seusite.com/video1.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
-        </video>
-    </div>
-
-    <!-- Video 2 -->
-    <div class="video-container mb-3">
-       
-        <video width="100%" height="315" controls>
-            <source src="c:\Users\Ander\Downloads\IMG_5933 (1).mov" type="video/mp4">
-            Seu navegador não suporta o vídeo.
-        </video>
-    </div>
-
-    <!-- Video 3 -->
-    <div class="video-container mb-3">
-      
-        <video width="100%" height="315" controls>
-            <source src="https://seusite.com/video3.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
-        </video>
-    </div>
-</div>
-
-
-
-
+               
+                <body class="page-template page-template-elementor_canvas page page-id-1147 elementor-default elementor-template-canvas elementor-kit-8 elementor-page elementor-page-1147">
+                    <div data-elementor-type="wp-page" data-elementor-id="1147" class="elementor elementor-1147" data-elementor-settings="[]">
+                                    <div class="elementor-section-wrap">
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-8cff68 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8cff68" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-background-overlay"></div>
+                                    <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4413ff56" data-id="4413ff56" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-2eeb4186 elementor-widget elementor-widget-heading" data-id="2eeb4186" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                    
+                        <div class="elementor-element elementor-element-9637017 elementor-widget elementor-widget-heading" data-id="9637017" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default"> <span style="color:#00ff40"><svg style="width:1.1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+          <path d="M7.702 1.368a.75.75 0 0 1 .597 0c2.098.91 4.105 1.99 6.004 3.223a.75.75 0 0 1-.194 1.348A34.27 34.27 0 0 0 8.341 8.25a.75.75 0 0 1-.682 0c-.625-.32-1.262-.62-1.909-.901v-.542a36.878 36.878 0 0 1 2.568-1.33.75.75 0 0 0-.636-1.357 38.39 38.39 0 0 0-3.06 1.605.75.75 0 0 0-.372.648v.365c-.773-.294-1.56-.56-2.359-.8a.75.75 0 0 1-.194-1.347 40.901 40.901 0 0 1 6.005-3.223ZM4.25 8.348c-.53-.212-1.067-.411-1.611-.596a40.973 40.973 0 0 0-.418 2.97.75.75 0 0 0 .474.776c.175.068.35.138.524.21a5.544 5.544 0 0 1-.58.681.75.75 0 1 0 1.06 1.06c.35-.349.655-.726.915-1.124a29.282 29.282 0 0 0-1.395-.617A5.483 5.483 0 0 0 4.25 8.5v-.152Z" />
+          <path d="M7.603 13.96c-.96-.6-1.958-1.147-2.989-1.635a6.981 6.981 0 0 0 1.12-3.341c.419.192.834.393 1.244.602a2.25 2.25 0 0 0 2.045 0 32.787 32.787 0 0 1 4.338-1.834c.175.978.315 1.969.419 2.97a.75.75 0 0 1-.474.776 29.385 29.385 0 0 0-4.909 2.461.75.75 0 0 1-.794 0Z" />
+        </svg>
+        HACKER DO BOUBLE COM BRANCO NA HORA EXATA/</span> <span style="color:#ff4d4d">+ HACKER DO MINES</span>
+        
+        </h2>		</div>
+                        </div>
+                        <div class="elementor-element elementor-element-33f902a elementor-widget elementor-widget-html" data-id="33f902a" data-element_type="widget" data-widget_type="html.default">
+                        <div class="elementor-widget-container">
+                    <div id="evideovsl-player" style="padding:56.2500% 0 0 0;position:relative;">
+              <iframe src=""
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0">
+              </iframe>
+              <script type="module" src="https://stream.evideovsl.com.br/evideovslplayer.js?1256700040"></script>
+            </div>		</div>
+                        </div>
+                        <div class="elementor-element elementor-element-6d35947 elementor-align-center elementor-widget elementor-widget-button" data-id="6d35947" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;tada&quot;}" data-widget_type="button.default">
+                        <div class="elementor-widget-container">
+                           
+                            </a>
+                </div>
+                </div>
                     <h2 class="mt-3">COMPRE AQUI!</h2>
                     <div class="promo-banner mt-3">
                         <img src="https://i.ibb.co/8K8JzJb/fotor-20241015202813.png" alt="Promoção Especial">
@@ -712,35 +688,20 @@ a.anchorjs-link {
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
 
-
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
 <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
 
 <div class="context-options" id="contextOptions">
-    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
-    <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz</span>
-    <div id="result"></div>
-    
-    <!-- Botão Hackear Mines -->
-    <span class="context-option" onclick="stopScroll();">
-        <i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines
-    </span>
-    
-    <!-- Botão Hackear Double -->
-    <span class="context-option closeContextOptions" onclick="closeContextOptions();">
-        <i class="fa fa-play" aria-hidden="true"></i> Hackear Double
-    </span>
-    
-    <i class="fa fa-cogs" aria-hidden="true"></i> MODO AUTOMÁTICO
-    <div class="toggle-button" id="autoModeToggle">
-        <div class="toggle-knob"></div>
+<img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
+<span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
+<div id="result"></div>
+<span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
+<span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
+<div id="loading-animation" class="loading-hidden">
+<div class="spinner"></div>
 
-
-    <div id="loading-animation" class="loading-hidden">
-        <div class="spinner"></div>
-    </div>
 </div>
-              
+                              
 
                                     
 <div class="white-square">
@@ -890,91 +851,6 @@ function toggleContextOptions() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        
-        let autoModeDoubleInterval;
-
-document.getElementById('autoModeToggle').addEventListener('click', function() {
-    const toggleButton = document.getElementById('autoModeToggle');
-    toggleButton.classList.toggle('active');  // Toggle the appearance
-
-    if (toggleButton.classList.contains('active')) {
-        // Ativar modo automático
-        autoModeDoubleInterval = setInterval(stopScroll, 16000);  // Executa stopScroll a cada 6 segundos
-        alert("Modo Automático Ativado");
-    } else {
-        // Desativar modo automático
-        clearInterval(autoModeDoubleInterval);
-        autoModeDoubleInterval = null;
-        alert("Modo Automático Desativado");
-    }
-});
-
-
-function stopScroll() {
-    // Exibe a animação de carregamento
-    const loadingAnimation = document.getElementById('loading-animation');
-    if (loadingAnimation) {
-        loadingAnimation.classList.remove('loading-hidden');
-        loadingAnimation.classList.add('loading-visible');
-    }
-
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
-    setTimeout(() => {
-        if (loadingAnimation) {
-            // Oculta a animação de carregamento
-            loadingAnimation.classList.remove('loading-visible');
-            loadingAnimation.classList.add('loading-hidden');
-        }
-
-        // Gera um valor percentual fixo acima de 90
-        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
-
-        // Seleciona o menu contextOptions
-        const contextOptions = document.getElementById('contextOptions');
-
-        if (contextOptions) {
-            // Remove qualquer assertividade anterior
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
-
-            // Cria um elemento para exibir a assertividade
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
-
-            // Adiciona a assertividade ao menu contextOptions
-            contextOptions.appendChild(assertividadeElement);
-
-            // Adiciona a imagem de 1 a 6 itens aleatórios no grid
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
-            const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const randomCount = Math.floor(Math.random() * 4) + 1; // Número aleatório de 1 a 6
-            const itemsToChange = shuffledItems.slice(0, randomCount);
-            const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-            itemsToChange.forEach(item => item.innerHTML += imageElement);
-        }
-
-        // Aguarda 5 segundos e então reverte as mudanças
-        setTimeout(() => {
-            if (contextOptions) {
-                // Remove assertividade
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) { 
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                // Remove as imagens dos itens do grid
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
-    }, 5000); // Tempo de espera para a animação de carregamento (1 segundo)
-}
+       
 
     </script>

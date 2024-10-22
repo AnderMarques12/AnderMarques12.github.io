@@ -82,56 +82,8 @@
     display: none; 
 }
 
-.context-options {
-    display: none;
-    position: fixed;
-    top: 81%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    color: #ffffff;
-    z-index: 10000;
-}
 
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
 
-        .context-options .bot-title {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.context-options .context-option {
-    font-size: 14px;
-    display: block;
-    padding: 12px 20px;
-    margin-bottom: 5px;
-    background-color: rgb(25, 0, 255); 
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.1s;
-
-}
-
-.context-options .context-option:hover {
-    background-color: rgb(27 0 255 / 56%);
-    transform: scale(1.05);
-}
-
-.context-options .closeContextOptions:hover {
-    background-color: rgb(255 0 0 / 80%);
-
-}
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -613,7 +565,141 @@ a.anchorjs-link {
 .toggle-button.active .toggle-knob {
     left: 26px;
 }
+ /* Estilo Geral */
+ body {
+    background-color: #0d0d0d;
+    font-family: 'Courier New', Courier, monospace;
+    color: #33ff33;
+  }
 
+  .context-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    border: 1px solid #33ff33;
+  }
+
+  /* Estilo da Imagem */
+  .context-options img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 2px solid #33ff33;
+  }
+
+  .bot-title {
+    color: #33ff33;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 8px #33ff33;
+  }
+
+  .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-group label {
+    color: #33ff33;
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: block;
+    text-shadow: 0 0 5px #33ff33;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #33ff33;
+    border-radius: 5px;
+    background-color: #0d0d0d;
+    color: #33ff33;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .fa-cogs {
+    color: #33ff33;
+    margin-right: 10px;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #33ff33;
+  }
+
+  /* Botão de Toggle */
+  .toggle-button {
+    width: 60px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 15px;
+    position: relative;
+    margin: 10px 0 20px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    box-shadow: 0 0 10px #33ff33;
+  }
+
+  /* Efeito ao Ativar */
+  .toggle-button.active {
+    background-color: #33ff33;
+    box-shadow: 0 0 15px #33ff33;
+  }
+
+  .toggle-knob {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+  }
+
+  /* Movimento do Knob quando ativo */
+  .toggle-button.active .toggle-knob {
+    left: 32px;
+  }
+
+  .status-text {
+    color: #33ff33;
+    font-size: 1em;
+    margin-top: 10px;
+    text-shadow: 0 0 5px #33ff33;
+  }
+
+  /* Spinner de Carregamento */
+  .spinner {
+    border: 4px solid rgba(51, 255, 51, 0.2);
+    border-left-color: #33ff33;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #loading-animation {
+    display: none;
+    margin-top: 20px;
+  }
+
+  .loading-hidden {
+    display: none;
+  }
     </style>
 </head>
 
@@ -639,7 +725,6 @@ a.anchorjs-link {
             </div>
             
             <div class="register-form mt-4">
-                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
@@ -707,7 +792,7 @@ a.anchorjs-link {
                         <p>De <span class="preco-antigo">R$ 549,99</span> por <span class="preco-novo">R$ 279,99</span></p>
                         <p><strong>Garanta já a sua vaga com esse super desconto!</strong></p>
                         <p>Restam apenas 300 vagas disponíveis, não perca!</p>
-                        <a href="" class="promo-btn">Aproveitar Agora</a>
+                        <a href="https://pay.sumup.com/b2c/Q711USGD" class="promo-btn">Aproveitar Agora</a>
                     </div>
                     
 <div id="iframe-container">
@@ -715,33 +800,40 @@ a.anchorjs-link {
 
 
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
-<img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
-
-<div class="context-options" id="contextOptions">
+    <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker">
+  </div>
+  
+  <div class="context-options" id="contextOptions">
     <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz</span>
-    <div id="result"></div>
     
-    <!-- Botão Hackear Mines -->
-    <span class="context-option" onclick="stopScroll();">
-        <i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines
-    </span>
-    
-    <!-- Botão Hackear Double -->
-    <span class="context-option closeContextOptions" onclick="closeContextOptions();">
-        <i class="fa fa-play" aria-hidden="true"></i> Hackear Double
-    </span>
-    
-    <i class="fa fa-cogs" aria-hidden="true"></i> MODO AUTOMÁTICO
-    <div class="toggle-button" id="autoModeToggle">
-        <div class="toggle-knob"></div>
-
-
-    <div id="loading-animation" class="loading-hidden">
-        <div class="spinner"></div>
+    <div class="input-group">
+      <label>VALOR</label>
+      <input type="text" placeholder="Valor">
     </div>
-</div>
-              
+    
+    <div class="input-group">
+      <label>APOSTAR</label>
+      <input type="text" placeholder="%">
+    </div>
+    
+    <div class="input-group">
+      <label>META</label>
+      <input type="text" placeholder="Meta">
+    </div>
+    
+    <div>
+      <i class="fa fa-cogs" aria-hidden="true"></i> MODO AUTOMÁTICO
+      <div class="toggle-button" id="autoModeToggle" onclick="toggleAutoMode()">
+        <div class="toggle-knob"></div>
+      </div>
+      <div class="status-text" id="statusText">Desativado</div>
+    </div>
+  
+    <div id="loading-animation" class="loading-hidden">
+      <div class="spinner"></div>
+    </div>
+  </div>  
 
                                     
 <div class="white-square">
@@ -811,7 +903,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
+function toggleAutoMode() {
+    const toggleButton = document.getElementById('autoModeToggle');
+    const statusText = document.getElementById('statusText');
 
+    toggleButton.classList.toggle('active');
+
+    if (toggleButton.classList.contains('active')) {
+      statusText.textContent = "Ativado";
+      statusText.style.color = "#33ff33"; // Verde
+    } else {
+      statusText.textContent = "Desativado";
+      statusText.style.color = "#ff3333"; // Vermelho
+    }
+  }
 function closeContextOptions() {
     const loadingAnimation = document.getElementById('loading-animation');
     const contextOptions = document.getElementById('contextOptions');

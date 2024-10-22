@@ -568,7 +568,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 1000%;
+    width: 100%;
     height: 100%;
 }
 
@@ -650,7 +650,7 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>

@@ -707,7 +707,7 @@ a.anchorjs-link {
                         <p>De <span class="preco-antigo">R$ 549,99</span> por <span class="preco-novo">R$ 279,99</span></p>
                         <p><strong>Garanta já a sua vaga com esse super desconto!</strong></p>
                         <p>Restam apenas 300 vagas disponíveis, não perca!</p>
-                        <a href="https://pay.sumup.com/b2c/Q711USGD" class="promo-btn">Aproveitar Agora</a>
+                        <a href="" class="promo-btn">Aproveitar Agora</a>
                     </div>
                     
 <div id="iframe-container">

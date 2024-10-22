@@ -567,8 +567,8 @@
 .video-container video {
     position: absolute;
     top: 0px;
-    left: 65px;
-    width: 70%;
+    left: 0px;
+    width: 1000%;
     height: 100%;
 }
 
@@ -954,7 +954,7 @@ function stopScroll() {
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
             const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const randomCount = Math.floor(Math.random() * 4) + 1; // Número aleatório de 1 a 6
+            const randomCount = Math.floor(Math.random() * 5) + 3; // Número aleatório de 3 a 7
             const itemsToChange = shuffledItems.slice(0, randomCount);
             const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;

@@ -386,19 +386,7 @@
         height: 150vh;
         border: none; 
     }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 50px);
-            grid-template-rows: repeat(5, 50px);
-            gap: 23px;
-            height: 100%;
-            width: 100%;
-        }
-
-        .grid-item {
-            background-color: #00000000;
-            border: 6px solid #00000000;
-        }
+        
 
         #draggable-image {
     position: absolute;
@@ -423,25 +411,23 @@
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: -570px;
-    left: -169px;
+    top: 145px;
+    left: 919px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
-
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 95px);
-    grid-template-rows: repeat(5, 101px);
-    gap: 21px;
+    grid-template-columns: repeat(5, 93px);
+    grid-template-rows: repeat(5, 111px);
+    gap: 23px;
     height: 100%;
     width: 100%;
 }
-
 .grid-item {
     background-color: #ffffff00;
-    border: 11px solid #00000000;
+    border: 9px solid #00000000;
 }
 .loading-hidden {
     display: none; 
@@ -543,13 +529,13 @@ a.anchorjs-link {
   }
   .fa-cogs {
     color: #33ff33;
-    margin-right: 30px;
+    margin-right: 27px;
     font-size: 1.2em;
-    top: 361px;
+    left: 249px;
+    top: 364px;
     position: absolute;
     text-shadow: 0 0 5px #33ff33;
 }
-
 .toggle-button {
     width: 61px;
     height: 30px;
@@ -616,6 +602,18 @@ a.anchorjs-link {
   .loading-hidden {
     display: none;
   }
+  #modo-automatico {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+#texto-automatico {
+    font-size: 19px;
+    margin-left: 10px;
+    left: 8px;
+    top: 68px;
+    position: relative;
+}
     </style>
 </head>
 
@@ -652,7 +650,7 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
@@ -687,21 +685,22 @@ a.anchorjs-link {
     
     <div class="input-group">
       <label>VALOR</label>
-      <input type="text" placeholder="Valor">
+      <input type="text" placeholder="Valor das Entrada">
     </div>
     
     <div class="input-group">
       <label>APOSTAR</label>
-      <input type="text" placeholder="%">
+      <input type="text" placeholder="% acima que deve aposta">
     </div>
     
     <div class="input-group">
       <label>META</label>
-      <input type="text" placeholder="Meta">
+      <input type="text" placeholder="Meta para parar">
     </div>
     
     <div>
-      <i class="fa fa-cogs" aria-hidden="true"></i> MODO AUTOMÁTICO
+        <i class="fa fa-cogs" aria-hidden="true" id="modo-automatico"></i> <span id="texto-automatico">MODO AUTOMÁTICO</span>
+
       <div class="toggle-button" id="autoModeToggle" onclick="toggleAutoMode()">
         <div class="toggle-knob"></div>
       </div>
@@ -873,90 +872,94 @@ function toggleContextOptions() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
        
-        let autoModeDoubleInterval;
+        let autoModeInterval = null;
 
-document.getElementById('autoModeToggle').addEventListener('click', function() {
+function toggleAutoMode() {
     const toggleButton = document.getElementById('autoModeToggle');
-    toggleButton.classList.toggle('active');  // Toggle the appearance
+    const statusText = document.getElementById('statusText');
+
+    toggleButton.classList.toggle('active');
 
     if (toggleButton.classList.contains('active')) {
-        // Ativar modo automático
-        autoModeDoubleInterval = setInterval(stopScroll, 16000);  // Executa stopScroll a cada 6 segundos
-        alert("Modo Automático Ativado");
+        statusText.textContent = "Ativado";
+        statusText.style.color = "#33ff33"; // Verde
+        startAutoMode();  // Iniciar modo automático
     } else {
-        // Desativar modo automático
-        clearInterval(autoModeDoubleInterval);
-        autoModeDoubleInterval = null;
-        alert("Modo Automático Desativado");
+        statusText.textContent = "Desativado";
+        statusText.style.color = "#ff3333"; // Vermelho
+        stopAutoMode();  // Parar modo automático
     }
-});
+}
 
+function startAutoMode() {
+    autoModeInterval = setInterval(executeFunction, 8000); // Executa a cada 8 segundos
+}
+
+function stopAutoMode() {
+    if (autoModeInterval) {
+        clearInterval(autoModeInterval);
+        autoModeInterval = null;
+    }
+}
+
+function executeFunction() {
+    // Função que será executada automaticamente a cada 8 segundos
+    console.log('Executando função automática...');
+
+    // Aqui você pode adicionar as ações que deseja realizar
+    stopScroll(); // Executa a função stopScroll
+}
 
 function stopScroll() {
-    // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
 
-    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
     setTimeout(() => {
         if (loadingAnimation) {
-            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        // Gera um valor percentual fixo acima de 90
-        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
+        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%';
 
-        // Seleciona o menu contextOptions
         const contextOptions = document.getElementById('contextOptions');
-
         if (contextOptions) {
-            // Remove qualquer assertividade anterior
             const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
+            if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
 
-            // Cria um elemento para exibir a assertividade
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
+            assertividadeElement.style.color = 'green';
 
-            // Adiciona a assertividade ao menu contextOptions
             contextOptions.appendChild(assertividadeElement);
 
-            // Adiciona a imagem de 1 a 6 itens aleatórios no grid
             const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+            gridItems.forEach(item => item.innerHTML = '');
+
             const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
-            const randomCount = Math.floor(Math.random() * 5) + 3; // Número aleatório de 3 a 7
+            const randomCount = Math.floor(Math.random() * 6) + 1;
             const itemsToChange = shuffledItems.slice(0, randomCount);
             const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
-        // Aguarda 5 segundos e então reverte as mudanças
         setTimeout(() => {
+            const contextOptions = document.getElementById('contextOptions');
             if (contextOptions) {
-                // Remove assertividade
                 const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) { 
-                    contextOptions.removeChild(assertividadeElement);
-                }
+                if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
 
-                // Remove as imagens dos itens do grid
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
-    }, 5000); // Tempo de espera para a animação de carregamento (1 segundo)
+        }, 7000);
+    }, 5000);
 }
-    </script>
+</script>

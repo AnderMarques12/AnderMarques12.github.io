@@ -923,7 +923,8 @@ function stopScroll() {
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        const assertividade = (90 + Math.random() * 10).toFixed(2) + '%';
+        const assertividade = (Math.random() * 100).toFixed(2) + '%';
+
 
         const contextOptions = document.getElementById('contextOptions');
         if (contextOptions) {

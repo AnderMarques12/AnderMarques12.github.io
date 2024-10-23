@@ -140,12 +140,11 @@
         }
 
         html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; 
-        overflow-y: auto; 
-        height: 100%; 
-    }
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Desativa o scroll */
+    height: 100%;
+}
 
     .login-wrapper {
     display: flex;

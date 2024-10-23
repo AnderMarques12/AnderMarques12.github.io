@@ -82,8 +82,56 @@
     display: none; 
 }
 
+.context-options {
+    display: none;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #ffffff;
+    z-index: 10000;
+}
 
+        .context-options img {
+            width: 100px;
+            margin: 0 auto 20px;
+            display: block;
+        }
 
+        .context-options .bot-title {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.context-options .context-option {
+    font-size: 14px;
+    display: block;
+    padding: 12px 20px;
+    margin-bottom: 5px;
+    background-color: rgb(25, 0, 255); 
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
+
+}
+
+.context-options .context-option:hover {
+    background-color: rgb(27 0 255 / 56%);
+    transform: scale(1.05);
+}
+
+.context-options .closeContextOptions:hover {
+    background-color: rgb(255 0 0 / 80%);
+
+}
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -220,13 +268,13 @@
         }
         
         .btn-primary1:hover {
-            background-color: #ff000000;
+            background-color: #000000;
             color: #000;
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
             transform: scale(1.05);
         }
         .btn-primary2:hover {
-            background-color: #37ff0000;
+            background-color: #000000;
             color: #000;
             box-shadow: 0 0 30px rgb(44 255 0 / 80%);
             transform: scale(1.05);
@@ -434,70 +482,6 @@
         .student-count {
     display: block; 
 }
-.promo-banner {
-    background-color: rgba(0, 0, 0, 0.85); 
-    border: 2px solid rgba(255, 255, 255, 0.2); 
-    padding: 30px;
-    text-align: center;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4); 
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.promo-banner:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0px 0px 30px rgba(0, 255, 0, 0.7); 
-}
-
-.promo-banner img {
-    width: 130px;
-    border-radius: 50%; 
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); 
-}
-
-.promo-banner h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #00ff00; 
-}
-
-.promo-banner p {
-    font-size: 18px;
-    color: #e0e0e0; 
-    margin-bottom: 25px;
-}
-
-.preco-antigo {
-    text-decoration: line-through;
-    color: #ff4d4d; 
-}
-
-.preco-novo {
-    color: #00ff00; 
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.promo-btn {
-    background-color: #00ff00; 
-    color: #000;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.7); 
-    transition: 0.3s ease;
-}
-
-.promo-btn:hover {
-    background-color: #00cc00; 
-    box-shadow: 0px 0px 40px rgba(0, 255, 0, 1); 
-    transform: scale(1.05); 
-}
 
 
 .mt-3 {
@@ -518,13 +502,11 @@
 
 .video-container video {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
-
-
 h2.mt-3 {
     color: white; 
     font-family: 'Roboto', sans-serif; 
@@ -536,64 +518,7 @@ h2.mt-3 {
 a.anchorjs-link {
     display: none;
 }
-.toggle-button {
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 25px;
-    top: 7px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.toggle-button.active {
-    background-color: #4cd964;
-}
 
-.toggle-button .toggle-knob {
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    background-color: white;
-    border-radius: 50%;
-    top: 1px;
-    left: 1px;
-    transition: left 0.3s;
-}
-
-.toggle-button.active .toggle-knob {
-    left: 26px;
-}
- /* Estilo Geral */
- body {
-    background-color: #0d0d0d;
-    font-family: 'Courier New', Courier, monospace;
-    color: #33ff33;
-  }
-
-  .context-options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-    border: 1px solid #33ff33;
-  }
-
-  /* Estilo da Imagem */
-  .context-options img {
-    width: 120px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    border: 2px solid #33ff33;
-  }
 
   .bot-title {
     color: #33ff33;
@@ -706,7 +631,7 @@ a.anchorjs-link {
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
-          <source src="https://doublewhiteapp.com/3585079191-preview.mp4_1728018529513.mp4" type="video/mp4">
+          <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
           
         </video>
       </div>
@@ -725,6 +650,7 @@ a.anchorjs-link {
             </div>
             
             <div class="register-form mt-4">
+           
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
@@ -754,50 +680,11 @@ a.anchorjs-link {
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
-
-                <h2 class="mt-3">HACKER DO BRANCO</h2>
- <div class="video-container mb-3">
-   
-    <video width="100%" height="315" controls>
-        <source src="https://cdn.pixabay.com/video/2024/10/21/237498.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-    </video>
-</div>
-
-<h2 class="mt-3">HACKER MINES</h2>
-<div class="video-container mb-3">
-  
-    <video width="100%" height="315" controls>
-        <source src="https://cdn.pixabay.com/video/2024/10/21/237495.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-    </video>
-</div>
-
-<h2 class="mt-3">HACKER DOUBLE</h2>
-<div class="video-container mb-3">
-   
-    <video width="100%" height="315" controls>
-        <source src="https://cdn.pixabay.com/video/2024/10/21/237499.mov" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-    </video>
-</div>
-</div>
-
-
-
-                    <h2 class="mt-3">COMPRE AQUI!</h2>
-                    <div class="promo-banner mt-3">
-                        <img src="https://i.ibb.co/8K8JzJb/fotor-20241015202813.png" alt="Promoção Especial">
-                        <h2>Somente 300 Vagas!</h2>
-                        <p>De <span class="preco-antigo">R$ 549,99</span> por <span class="preco-novo">R$ 279,99</span></p>
-                        <p><strong>Garanta já a sua vaga com esse super desconto!</strong></p>
-                        <p>Restam apenas 300 vagas disponíveis, não perca!</p>
-                        <a href="" class="promo-btn">Aproveitar Agora</a>
-                    </div>
+               
+              
                     
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
-
 
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
     <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker">
@@ -834,6 +721,7 @@ a.anchorjs-link {
       <div class="spinner"></div>
     </div>
   </div>  
+                              
 
                                     
 <div class="white-square">
@@ -874,8 +762,6 @@ a.anchorjs-link {
 
     <div class="black-background"></div>
     <script>
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('background-video');
@@ -1082,5 +968,4 @@ function stopScroll() {
         }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 5000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
-
     </script>

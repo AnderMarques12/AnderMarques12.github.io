@@ -371,8 +371,8 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0px;
+    top: 0px;
+    left: -12px;
     z-index: 9999;
 }
 
@@ -490,23 +490,6 @@
 
 
 
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; 
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000; 
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 h2.mt-3 {
     color: white; 
     font-family: 'Roboto', sans-serif; 

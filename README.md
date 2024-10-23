@@ -85,7 +85,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 80%;
+    top: 59%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -96,17 +96,23 @@
     z-index: 10000;
 }
 
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
+.context-options img {
+    width: 84px;
+    margin: 0 auto 20px;
+    display: block;
+    top: 12;
+    left: 11;
+    position: fixed;
+}
 
-        .context-options .bot-title {
-    font-size: 16px;
+.context-options .bot-title {
+    font-size: 20px;
     text-align: center;
+    position: fixed;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #000000;
+    top: 33px;
+    left: 103px;
 }
 
 .context-options .context-option {
@@ -513,8 +519,10 @@ a.anchorjs-link {
 
   .input-group {
     width: 100%;
+    position: relative;
     margin-bottom: 15px;
-  }
+    top: 69px;
+}
 
   .input-group label {
     color: #33ff33;
@@ -533,26 +541,27 @@ a.anchorjs-link {
     color: #33ff33;
     font-family: 'Courier New', Courier, monospace;
   }
-
   .fa-cogs {
     color: #33ff33;
-    margin-right: 10px;
+    margin-right: 30px;
     font-size: 1.2em;
+    top: 361px;
+    position: absolute;
     text-shadow: 0 0 5px #33ff33;
-  }
+}
 
-  /* Botão de Toggle */
-  .toggle-button {
-    width: 60px;
+.toggle-button {
+    width: 61px;
     height: 30px;
     background-color: #333;
     border-radius: 15px;
     position: relative;
+    top: 30px;
     margin: 10px 0 20px;
     cursor: pointer;
     transition: background-color 0.4s ease;
     box-shadow: 0 0 10px #33ff33;
-  }
+}
 
   /* Efeito ao Ativar */
   .toggle-button.active {

@@ -408,20 +408,20 @@
         .white-square {
     width: 593px;
     height: 646px;
-    background-color: #ffffff00;
+    background-color: #ff000000;
     border: 2px solid #00000000;
     position: absolute;
-    top: 145px;
-    left: 919px;
+    top: 73px;
+    left: 131px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 93px);
-    grid-template-rows: repeat(5, 111px);
-    gap: 23px;
+    grid-template-columns: repeat(5, 95px);
+    grid-template-rows: repeat(5, 103px);
+    gap: 21px;
     height: 100%;
     width: 100%;
 }
@@ -892,7 +892,7 @@ function toggleAutoMode() {
         stopAutoMode();  // Parar modo automático
     }
 }
-
+3
 function startAutoMode() {
     autoModeInterval = setInterval(executeFunction, 15000); // Executa a cada 8 segundos
 }

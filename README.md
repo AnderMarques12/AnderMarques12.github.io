@@ -614,6 +614,7 @@ a.anchorjs-link {
     top: 68px;
     position: relative;
 }
+
     </style>
 </head>
 
@@ -700,7 +701,7 @@ a.anchorjs-link {
     
     <div>
         <i class="fa fa-cogs" aria-hidden="true" id="modo-automatico"></i> <span id="texto-automatico">MODO AUTOMÁTICO</span>
-
+       
       <div class="toggle-button" id="autoModeToggle" onclick="toggleAutoMode()">
         <div class="toggle-knob"></div>
       </div>
@@ -708,7 +709,8 @@ a.anchorjs-link {
     </div>
   
     <div id="loading-animation" class="loading-hidden">
-      <div class="spinner"></div>
+        <!-- Spinner aqui -->
+        <div class="spinner"></div>
     </div>
   </div>  
                               
@@ -892,7 +894,7 @@ function toggleAutoMode() {
 }
 
 function startAutoMode() {
-    autoModeInterval = setInterval(executeFunction, 8000); // Executa a cada 8 segundos
+    autoModeInterval = setInterval(executeFunction, 15000); // Executa a cada 8 segundos
 }
 
 function stopAutoMode() {
@@ -912,45 +914,60 @@ function executeFunction() {
 
 function stopScroll() {
     const loadingAnimation = document.getElementById('loading-animation');
+    
+    // Exibir a animação de carregamento (spinner)
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
 
+    // Esperar 5 segundos antes de mostrar os diamantes
     setTimeout(() => {
+        // Após 5 segundos, remover a animação de carregamento
         if (loadingAnimation) {
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-        const assertividade = (Math.random() * 100).toFixed(2) + '%';
+        // Gera a assertividade aleatória
+        const assertividade = (75 + Math.random() * 25).toFixed(2) + '%';
 
 
         const contextOptions = document.getElementById('contextOptions');
         if (contextOptions) {
+            // Remover assertividade anterior (se existir)
             const existingAssertividade = contextOptions.querySelector('.assertividade');
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
 
+            // Criar o novo elemento de assertividade
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
             assertividadeElement.className = 'assertividade';
             assertividadeElement.style.fontSize = '18px';
             assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green';
+
+            // Definir cor com base no valor de assertividade
+            const assertividadeValue = parseFloat(assertividade); // Converter para número
+            assertividadeValue >= 90 ? assertividadeElement.style.color = 'green' : assertividadeElement.style.color = 'red';
 
             contextOptions.appendChild(assertividadeElement);
 
+            // Limpar todos os itens do grid antes de adicionar os diamantes
             const gridItems = document.querySelectorAll('.grid-item');
             gridItems.forEach(item => item.innerHTML = '');
 
+            // Sortear aleatoriamente os itens do grid e escolher de 1 a 6 itens para exibir diamantes
             const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
             const randomCount = Math.floor(Math.random() * 6) + 1;
             const itemsToChange = shuffledItems.slice(0, randomCount);
             const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+
+            // Adicionar os diamantes aos itens sorteados
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
+        // Após 7 segundos, limpar a interface removendo a assertividade e os diamantes
         setTimeout(() => {
             const contextOptions = document.getElementById('contextOptions');
             if (contextOptions) {
@@ -960,7 +977,10 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        }, 7000);
-    }, 5000);
+        }, 8000);
+
+    }, 5000); // Aguardar 5 segundos para remover o spinner e mostrar os diamantes
 }
+
+
 </script>

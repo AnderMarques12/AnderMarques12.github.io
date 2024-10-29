@@ -78,10 +78,13 @@
             z-index: 0; /* Fica abaixo do botão */
         }
         iframe {
-        width: 100vw; 
-        height: 150vh;
-        border: none; 
-    }
+            border: none; /* Remove a borda do iframe */
+            width: 100vw; 
+            height: 150vh;
+            margin-top: 20px; /* Espaço acima do iframe */
+            z-index: 0; /* Fica abaixo do conteúdo */
+            position: relative; /* Permite interações com o iframe */
+        }
         @media (max-width: 600px) {
             .number-display {
                 font-size: 20px; /* Reduz o tamanho da fonte para telas menores */

@@ -101,11 +101,11 @@
     top: 2px;
     left: 490px;
 }
-        .betSpot2 {
-    margin: 17px;
+.betSpot2 {
+    margin: 9px;
     position: relative;
-    top: 12px;
-    left: 2px;
+    top: -77px;
+    left: -13px;
     max-width: 284px;
 }
 .betSpot3 {

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bet Spots</title>
+    <title>Hacker Bac Bo</title>
     <style>
         body {
             margin: 0;
@@ -93,7 +93,7 @@
         }
         iframe {
             border: none; /* Remove a borda do iframe */
-            width: 100vw; 
+            width: 100%; 
             height: 150vh;
             margin-top: 20px; /* Espaço acima do iframe */
             z-index: 0; /* Fica abaixo do conteúdo */

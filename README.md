@@ -15,6 +15,9 @@
             overflow: hidden; /* Impede rolagem */
             height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
         }
+        h1 {
+    display: none;
+}
         .container {
             display: flex;
             flex-direction: column;

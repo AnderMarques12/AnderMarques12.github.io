@@ -30,9 +30,23 @@
             max-width: 900px;
             margin-top: 20px; /* Espaço acima dos bet spots */
         }
-        .betSpot1, .betSpot2, .betSpot3 {
+        .betSpot1 {   
             position: relative;
-        }
+    top: -2px;
+    left: -78px;
+}
+
+                        
+                        .betSpot2 {   
+                            position: relative;
+    top: 14px;
+
+}
+                        .betSpot3 {   
+                            position: relative;
+    top: -2px;
+    left: 81px;
+}
         .fullSize {
             width: 100%;
             height: auto;

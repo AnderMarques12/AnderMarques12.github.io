@@ -66,7 +66,7 @@
         <button class="button">Clique Aqui</button>
         
         <div class="blaze-frame">
-            <iframe src="https://blaze.com/pt/games/bac-bo-ao-vivo" title="Frame da Blaze" style="border:none;width:100%;height:600px;"></iframe>
+            <iframe src="https://blaze.com/pt/games/bac-bo-ao-vivo" title="Frame da Blaze" style="border:none;width:100%;height:6002px;"></iframe>
         </div>
     </div>
 

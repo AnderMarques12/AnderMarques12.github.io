@@ -90,13 +90,14 @@
         }
 
         iframe {
-            border: none;
-            width: 100%; 
-            height: 150vh;
-            margin-top: 20px;
-            z-index: 0;
-            position: relative;
-        }
+    
+    width: 124%;
+    height: 94vh;
+    margin-top: 20px;
+    top: 450px;
+    z-index: 0;
+    position: absolute;
+}
 
         @media (max-width: 600px) {
             .number-display {

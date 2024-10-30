@@ -5,37 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacker Bac Bo</title>
     <style>
-      body {
-    background-color: black; /* Adiciona fundo preto */
-   
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    height: 100vh;
-    position: relative;
-}
+        body {
+            background-color: black; /* Fundo preto */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
         video {
-    position: fixed;
-    top: 7%;
-    left: 15%;
-    min-width: 34%;
-    min-height: 14%;
-    width: 11px;
-    height: 10px;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            object-fit: cover;
+        }
+
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
+            max-width: 900px; /* Tamanho máximo */
             position: relative;
-            padding-bottom: 20px;
             z-index: 1;
         }
 
@@ -44,14 +42,33 @@
             justify-content: space-between;
             width: 100%;
             max-width: 900px;
-            margin-top: 20px;
+            margin: 20px 0;
         }
 
         .betSpot {
             position: relative;
             transition: transform 0.5s;
             flex: 1;
-            max-width: 300px;
+            margin: 0 10px; /* Margem entre os betSpots */
+            overflow: hidden; /* Para esconder bordas */
+        }
+
+        .betSpot svg {
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)); /* Efeito de sombra */
+        }
+
+        .betSpot:hover {
+            transform: scale(1.05); /* Aumenta ao passar o mouse */
+        }
+
+        .number-display {
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 1px 1px 2px black;
         }
 
         .button {
@@ -79,25 +96,13 @@
             box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
         }
 
-        .number-display {
-            font-size: 24px;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-shadow: 1px 1px 2px black;
-        }
-
         iframe {
-    width: 103%;
-    height: 102vh;
-    margin-top: 20px;
-    top: 432px;
-    left: -4px;
-    z-index: 0;
-    position: absolute;
-}
+            width: 100%;
+            height: 500px; /* Altura fixa para o iframe */
+            margin-top: 20px;
+            z-index: 0;
+            border: none; /* Remove a borda padrão */
+        }
 
         @media (max-width: 600px) {
             .number-display {

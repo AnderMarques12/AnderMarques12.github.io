@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacker Bac Bo</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            height: 100vh;
-            position: relative;
-        }
-
+      body {
+    background-color: black; /* Adiciona fundo preto */
+   
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
         video {
     position: fixed;
-    top: 14%;
-    left: 50%;
-    min-width: 75%;
-    min-height: 43%;
-    width: auto;
-    height: auto;
+    top: 7%;
+    left: 15%;
+    min-width: 34%;
+    min-height: 14%;
+    width: 11px;
+    height: 10px;
     z-index: 0;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    
 }
         .container {
             display: flex;
@@ -90,11 +90,11 @@
         }
 
         iframe {
-    
-    width: 124%;
-    height: 94vh;
+    width: 103%;
+    height: 102vh;
     margin-top: 20px;
-    top: 450px;
+    top: 432px;
+    left: -4px;
     z-index: 0;
     position: absolute;
 }

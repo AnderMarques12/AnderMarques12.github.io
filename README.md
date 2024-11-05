@@ -218,7 +218,7 @@
     top: 0;
     left: 0;
     z-index: 1; 
-    background-color: #000000; 
+  
 }
 
         .custom-container {
@@ -575,6 +575,12 @@ color: #00ff00;
 </head>
 
 <body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+    </div>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">

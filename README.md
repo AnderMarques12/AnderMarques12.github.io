@@ -489,28 +489,32 @@ iframe {
             }
         }
 
+ 
         .white-square {
-    width: 755px;
-    height: 583px;
-    background-color: #f0000096;
+    width: 930px; /* Ajustado para incluir espaço */
+    height: 615px; /* Ajustado para incluir espaço */
+    background-color: #ffffff00; /* Branco com transparência */
+    border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 170px;
-    left: 60px;
+    top: 167px;
+    left: 30px;
     z-index: 10000;
-    overflow: hidden;
+    overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
 }
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 109px);
-    grid-template-rows: repeat(5, 0px);
-    gap: 117px;
+    grid-template-columns: repeat(5, 155px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 62px); /* 5 linhas de 100px */
+    gap: 36px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
+
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 25px solid #00000000; /* Borda preta */
+    border: 30px solid #00000000; /* Borda preta */
 }
 
 

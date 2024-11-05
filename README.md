@@ -218,7 +218,7 @@
     top: 0;
     left: 0;
     z-index: 1; 
-  
+    background-color: #000000; 
 }
 
         .custom-container {
@@ -567,7 +567,31 @@ color: #ff00f2;
 color: #00ff00;
 }
 
+.video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
 
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .student-count {
+    display: block; 
+}
 
 
 

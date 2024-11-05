@@ -215,10 +215,10 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    top: 450px;
-    left: 40px;
+    top: 0;
+    left: 0;
     z-index: 1; 
- 
+
 }
 
         .custom-container {
@@ -226,9 +226,9 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-           
+         
             border-radius: 10px;
-          
+           
         }
 
         .login-intro-img {
@@ -292,7 +292,7 @@
 
         .social-icons a {
             color: #ffffff;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             margin: 0 10px;
         }
 
@@ -354,7 +354,7 @@ iframe {
         #blackMenu {
             display: none;
             position: absolute;
-            top: 75%;
+            top: 50%;
             left: 50%;
             width: 60px;
             height: 60px;
@@ -489,7 +489,7 @@ iframe {
             }
         }
 
- 
+      
         .white-square {
     width: 930px; /* Ajustado para incluir espaço */
     height: 615px; /* Ajustado para incluir espaço */
@@ -507,14 +507,14 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 155px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 62px); /* 5 linhas de 100px */
-    gap: 36px; 
+    gap: 36px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
-    background-color: #ffffff00; 
-    border: 35px solid #00000000; 
+    background-color: #ffffff00; /* Cor de fundo dos quadrados */
+    border: 30px solid #00000000; /* Borda preta */
 }
 
 
@@ -567,31 +567,6 @@ color: #ff00f2;
 color: #00ff00;
 }
 
-.video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .controls {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1;
-        }
-        .student-count {
-    display: block; 
-}
 
 
 
@@ -609,11 +584,11 @@ color: #00ff00;
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                
+                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
             </div>
             <!-- Register Form -->
             <div class="register-form mt-4">
-             
+                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
                 <p class="text-center mb-4">Clique na plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">

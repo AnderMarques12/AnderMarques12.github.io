@@ -490,20 +490,19 @@ iframe {
         }
 
         .white-square {
-    width: 800px;
+    width: 755px;
     height: 583px;
-    background-color: #ffffff00;
+    background-color: #f0000096;
     position: absolute;
-    top: 165px;
+    top: 170px;
     left: 60px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
-
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 139px);
+    grid-template-columns: repeat(5, 109px);
     grid-template-rows: repeat(5, 0px);
     gap: 117px;
     height: 100%;

@@ -514,7 +514,7 @@ iframe {
 
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    border: 27px solid #00000000; /* Borda preta */
 }
 
 

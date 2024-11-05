@@ -354,7 +354,7 @@ iframe {
         #blackMenu {
             display: none;
             position: absolute;
-            top: 50%;
+            top: 75%;
             left: 50%;
             width: 60px;
             height: 60px;

@@ -215,8 +215,8 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    top: 250;
-    left: 0;
+    top: 450px;
+    left: 40px;
     z-index: 1; 
  
 }
@@ -292,7 +292,7 @@
 
         .social-icons a {
             color: #ffffff;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             margin: 0 10px;
         }
 
@@ -592,6 +592,7 @@ color: #00ff00;
         .student-count {
     display: block; 
 }
+
 
 
 

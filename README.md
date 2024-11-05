@@ -1,255 +1,789 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Bac Bo</title>
+    <title>Hacker Mines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
     <style>
-        body {
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            height: 100vh;
-            position: relative;
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+       
+
+.loading-hidden {
+    display: none;
+}
+
+.loading-visible {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.context-options {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #ffffff;
+    z-index: 10000; 
+}
+
+
+        .context-options img {
+            width: 100px;
+            margin: 0 auto 20px;
+            display: block;
         }
-        video {
-            position: fixed;
-            top: 7%;
-            min-width: 34%;
-            min-height: 14%;
-            z-index: 0;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
+
+        .context-options .bot-title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            position: relative;
-            padding-bottom: 20px;
-            z-index: 1;
+
+        .context-options .context-option {
+            display: block;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            background-color: rgb(255, 0, 0);
+            /* Preto transparente */
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            text-align: center;
         }
-        .betSpots {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            max-width: 900px;
+
+        .context-options .context-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .context-options .closeContextOptions:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+        .context-options .closeContextOptions:hover {
+            background-color: rgba(255, 0, 0, 1);
+            /* Fundo vermelho mais opaco ao passar o mouse */
+        }
+
+        .dev-by {
+            font-size: 14px;
+            text-align: center;
+            color: #00ff3d;
+            /* Texto branco */
             margin-top: 20px;
         }
-        .betSpot {
-            position: relative;
-            transition: transform 0.5s;
-            flex: 1;
-            max-width: 250px;
-            margin: 0 10px;
-            text-align: center;
-            z-index: 1; /* Ensure bet spots are on top */
-        }
-        .number-display {
-            font-size: 24px;
-            color: white;
-            text-shadow: 1px 1px 2px black;
+
+        .time {
+            font-size: 14px;
+         
+            color: #ffffff;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 10000;
+            background-color: rgba(0, 0, 0, 0.7);
+         
             padding: 5px;
+            
             border-radius: 5px;
-        }
-        .dice-container {
             display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            align-items: center;
+            gap: 5px;
         }
-        .dice {
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: white;
+            }
+        }
+
+        .percentage-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid white;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        .context-options .closeMenu-button {
+            background-color: #00000000;
+        
+            color: #ff0000;
+        
+            border: 2px solid #ff000000;
+         
+        }
+
+
+        .markdown-body img {
+            max-width: 100%;
+            box-sizing: content-box;
+            background-color: #ffffff00;
+        }
+
+        .px-3 {
+            padding-right: 0rem !important;
+            padding-left: 0rem !important;
+        }
+
+        .my-5 {
+            margin-top: -1rem !important;
+            margin-bottom: 4rem !important;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    background-color: #000000; 
+}
+
+        .custom-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-intro-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .register-form h6 {
+            color: #ffffff;
+        }
+
+        .register-form p {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group input {
+            background-color: #222222;
+            border: 1px solid #444444;
+            color: #ffffff;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-primary2 {
+            background-color: #000000;
+            display: flex;
+            border-color: #ffffff;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary3 {
+            background-color: #000000;
+            display: flex;
+            border-color: #ffffff;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary2:hover {
+            background-color: #ff0000;
+        }
+
+        .btn-primary3:hover {
+            background-color: #15ff00;
+        }
+
+        .btn-primary img {
+            width: 24px;
+          
+            margin-right: 8px;
+           
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        .social-icons a:hover {
+            color: #ff0000;
+        }
+
+        #iframe-container {
+    display: none; 
+    width: 100%;
+    height: 100vh; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; 
+}
+
+
+
+        .progress-bar {
+            width: 80%;
+            background-color: #1f1e1e;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 0;
+            height: 20px;
+            background-color: #ff0000;
+            animation: progress 5s linear forwards;
+        }
+
+        @keyframes progress {
+            to {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .login-wrapper {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .custom-container {
+                max-width: 100%;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        #blackMenu {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 10002;
+        }
+
+        
+        .context-options img {
+            width: 100px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .context-options .bot-title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .context-option11 {
+            display: block;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            background-color: rgb(25 0 255);
+
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            text-align: center;
+        }
+
+        .context-options .context-option1 {
+            display: block;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            background-color: rgb(25 0 255);
+      
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            text-align: center;
+        }
+
+        .context-options .context-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .context-options .context-option:hover {
+            background-color: rgba(0, 0, 0, 0);
+          
+        }
+
+        .context-options .closeContextOptions {
+            background: rgb(25 0 255);
+          
+        }
+
+        .context-options .closeContextOptions:hover {
+            background-color: rgba(255, 0, 0, 1);
+           
+        }
+
+        .dev-by {
+            font-size: 14px;
+            text-align: center;
+            color: #00ff3d;
+            /* Texto branco */
+            margin-top: 20px;
+        }
+
+      
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: white;
+            }
+        }
+
+        
+
+
+        .loading-animation {
             width: 40px;
             height: 40px;
-            border: 4px solid;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 5px;
-        }
-        .dot {
-            width: 8px;
-            height: 8px;
+            margin: auto;
+            border: 4px solid rgba(0, 255, 0, 0.2);
             border-radius: 50%;
-            position: absolute;
+            border-top-color: #00ff00;
+            animation: spin 1s ease-in-out infinite;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
-        .pulsate {
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-        .button {
-            margin: 20px 0;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 12px;
-            background: linear-gradient(45deg, #00f, #00d);
-            color: white;
-            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
-            box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(0, 0, 255, 1);
-        }
-        .button:active {
-            transform: translateY(1px);
-            box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-        }
+
+        .white-square {
+    width: 1800px;
+    height: 583px;
+    background-color: #ffffff00;
+    border: 1px solid #f40000;
+    position: absolute;
+    top: 150px;
+    left: 79px;
+    z-index: 10000;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 139px);
+    grid-template-rows: repeat(5, 1px);
+    gap: 117px;
+    height: 100%;
+    width: 100%;
+}
+.grid-item {
+    background-color: #ffffff00; /* Cor de fundo dos quadrados */
+    border: 45px solid #00000000; /* Borda preta */
+}
+
+
+        
+        #draggable-image {
+    position: absolute;
+    top: 550px; 
+    left: 46px; 
+    z-index: 10002; 
+    cursor: move; 
+}
+
+#draggable-image img {
+    width: 150px; 
+    height: auto;
+}
+.icon-small {
+        width: 230px;
+        height: 100px;
+        margin-right: 8px; 
+    }
+    .button-text {
+        font-size: 14px; 
+    }
+   
+.login-form {
+    display: none; 
+}
+
+.black-background {
+    display: none; 
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
+.bi-telegram::before {
+
+color: #00ccff;
+}
+.bi-instagram::before {
+
+color: #ff00f2;
+}
+.bi-whatsapp::before {
+
+color: #00ff00;
+}
+
+
+
+
+
     </style>
 </head>
+
 <body>
-    <video class="left-video" autoplay muted loop>
-        <source src="https://static.vecteezy.com/system/resources/previews/024/148/810/artificial-intelligence-network-ai-line-circuit-technology-data-transfer-abstract-5g-background-free-video.webm" type="video/webm">
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
+    <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
+        <div class="custom-container">
+            <div class="text-center px-4">
+                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
+            </div>
+            <!-- Register Form -->
+            <div class="register-form mt-4">
+                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
+                <p class="text-center mb-4">Clique na plataforma que deseja</p>
+                <form id="loginForm">
+                    <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
+                        Aguarde, carregando dados...
+                    </div>
+                    <div id="response"></div>
+                    <div class="form-group"></div>
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
+                        <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
+                       
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                   
+
+
+              
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
+                            class="bi bi-whatsapp"></i></a>
+                
+    </div>
+ 
+
+    <div id="iframe-container">
+        <iframe id="login-iframe" src=""></iframe>
+        <div id="draggable-image" class="iframe-button" onclick="toggleContextOptions()">
+           
+            <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
+        </div>
+        
+ 
+
+            
+        </div>
+        <div class="context-options" id="contextOptions">
+            <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
+            <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
+            <div id="result"></div>
+            
+
+            <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
+            
+
+           
+            
     
-    <video class="right-video" autoplay muted loop>
-        <source src="https://static.vecteezy.com/system/resources/previews/024/148/810/artificial-intelligence-network-ai-line-circuit-technology-data-transfer-abstract-5g-background-free-video.webm" type="video/webm">
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
-
-    <div class="container">
-        <div class="betSpots">
-            <div class="betSpot" id="betSpot1">
-                <svg class="svg" width="300" height="228" viewBox="0 0 300 228" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M250 0.75C277.2 0.75 299.25 22.8 299.25 50V178C299.25 205.2 277.2 227.25 250 227.25H0.75V217.669C45.8164 215.706 81.75 178.55 81.75 133V95C81.75 49.4504 45.8164 12.294 0.75 10.3315V0.75H250Z" fill="none" stroke="url(#grad1)" stroke-width="3" />
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#ff5722; stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#f44336; stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="number-display" id="display1"></div>
-                <div class="dice-container" id="dice1"></div>
-                <div class="number-display" style="font-size: 16px;">BANKER</div>
+            <!-- Animação de carregamento -->
+            <div id="loading-animation" class="loading-hidden">
+                <div class="spinner"></div>
             </div>
+            
+            <!-- Espaço para a imagem aleatória -->
+            <div id="image-container"></div>
+            <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
 
-            <div class="betSpot" id="betSpot2">
-                <svg class="svg" width="156" height="194" viewBox="0 0 156 194" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 193.25C35.336 193.25 0.75 158.664 0.75 116V78C0.75 35.336 35.336 0.75 78 0.75C120.664 0.75 155.25 35.336 155.25 78V116C155.25 158.664 120.664 193.25 78 193.25Z" fill="none" stroke="url(#grad2)" stroke-width="3" />
-                    <defs>
-                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#fbc02d; stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#f9a825; stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="number-display" id="display2"></div>
-                <div class="dice-container" id="dice2"></div>
-                <div class="number-display" style="font-size: 16px;">TIE</div>
-            </div>
 
-            <div class="betSpot" id="betSpot3">
-                <svg class="svg" width="300" height="228" viewBox="0 0 300 228" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.75 50C0.75 22.8 22.8 0.75 50 0.75H299.25V10.3315C254.184 12.294 218.25 49.4505 218.25 95V133C218.25 178.55 254.184 215.706 299.25 217.669V227.25H50C22.8 227.25 0.75 205.2 0.75 178V50Z" fill="none" stroke="url(#grad3)" stroke-width="3" />
-                    <defs>
-                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#00bcd4; stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#009688; stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="number-display" id="display3"></div>
-                <div class="dice-container" id="dice3"></div>
-                <div class="number-display" style="font-size: 16px;">PLAYER</div>
-            </div>
+            <div id="assertividade" class="assertivity-hidden"></div>
+
+
         </div>
 
-        <button class="button" onclick="generateRandomNumber()">HACKEAR BACBO</button>
-    </div>
+        <div class="white-square">
+            <div class="grid-container">
+                <!-- 25 quadrados -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+           
+        </div>
+        
+        
 
-    <audio id="hackSound" src="hack_sound.mp3" preload="auto"></audio>
 
+
+   
     <script>
-        function generateRandomNumber() {
-            const button = document.querySelector('.button');
-            button.textContent = "CARREGANDO...";
-            button.disabled = true;
+       function login(url) {
+        
+            document.getElementById('login-wrapper').style.display = 'none';
+         
+            document.getElementById('iframe-container').style.display = 'block';
+        
+            document.querySelector('.iframe-button').style.display = 'block';
+          
+            document.getElementById('login-iframe').src = url;
+        }
+      
 
-            setTimeout(() => {
-                const randomNum = Math.floor(Math.random() * (12 - 7 + 1)) + 7;
-                const betSpots = ['display1', 'display2', 'display3'];
-                const randomSpot = betSpots[Math.floor(Math.random() * betSpots.length)];
+let currentAssertividade = 44.23; 
 
-                const displayElement = document.getElementById(randomSpot);
-                displayElement.textContent = randomNum;
+function stopScroll() {
+   
+    const loadingAnimation = document.getElementById('loading-animation');
+    if (loadingAnimation) {
+        loadingAnimation.classList.remove('loading-hidden');
+        loadingAnimation.classList.add('loading-visible');
+    }
 
-                const die1 = Math.floor(Math.random() * 6) + 1;
-                const die2 = Math.floor(Math.random() * 6) + 1;
-
-                const diceContainer = document.getElementById(`dice${randomSpot.charAt(randomSpot.length - 1)}`);
-                const diceColor = getDiceColor(randomSpot);
-
-                diceContainer.innerHTML = `
-                    <div class="dice" style="border-color: ${diceColor};">
-                        <div class="dots">${createDots(die1, diceColor)}</div>
-                        <div class="number-display" style="color: ${diceColor}; font-weight: bold; font-size: 16px;">${die1}</div>
-                    </div>
-                    <div class="dice" style="border-color: ${diceColor};">
-                        <div class="dots">${createDots(die2, diceColor)}</div>
-                        <div class="number-display" style="color: ${diceColor}; font-weight: bold; font-size: 16px;">${die2}</div>
-                    </div>
-                `;
-
-                displayElement.classList.add('pulsate');
-
-                const betSpotElement = document.getElementById(randomSpot).closest('.betSpot');
-                betSpotElement.classList.add('pulsate');
-
-                setTimeout(() => {
-                    displayElement.classList.remove('pulsate');
-                    betSpotElement.classList.remove('pulsate');
-                    setTimeout(() => {
-                        displayElement.textContent = '';
-                        diceContainer.innerHTML = '';
-                    }, 1000);
-                }, 4000);
-
-                button.textContent = "HACKEAR BACBO";
-                button.disabled = false;
-            }, 2000);
+  
+    setTimeout(() => {
+        if (loadingAnimation) {
+           
+            loadingAnimation.classList.remove('loading-visible');
+            loadingAnimation.classList.add('loading-hidden');
         }
 
-        function getDiceColor(spot) {
-            if (spot === 'display1') return '#ff5722'; // Cor do BANKER
-            if (spot === 'display2') return '#fbc02d'; // Cor do TIE
-            return '#00bcd4'; // Cor do PLAYER
+       
+        const assertividade = '100%';
+
+       
+        const contextOptions = document.getElementById('contextOptions');
+
+        if (contextOptions) {
+            
+            const existingAssertividade = contextOptions.querySelector('.assertividade');
+            if (existingAssertividade) {
+                contextOptions.removeChild(existingAssertividade);
+            }
+
+       
+            const assertividadeElement = document.createElement('div');
+            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+            assertividadeElement.className = 'assertividade';
+            assertividadeElement.style.fontSize = '18px';
+            assertividadeElement.style.marginBottom = '10px';
+            assertividadeElement.style.color = 'green'; 
+
+         
+            contextOptions.appendChild(assertividadeElement);
+
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(item => item.innerHTML = ''); 
+            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+            const itemsToChange = shuffledItems.slice(0, 7);
+            const imageUrl = 'https://juntorico.com/mines/zs.png';
+            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+            itemsToChange.forEach(item => item.innerHTML += imageElement);
         }
 
-        function createDots(num, color) {
-            const dotPositions = [
-                [],
-                [[1, 1]],
-                [[0, 0], [2, 2]],
-                [[0, 0], [1, 1], [2, 2]],
-                [[0, 0], [0, 2], [2, 0], [2, 2]],
-                [[0, 0], [0, 2], [1, 1], [2, 0], [2, 2]],
-                [[0, 0], [0, 2], [1, 1], [2, 0], [2, 1], [2, 2]]
-            ];
+      
+        setTimeout(() => {
+            if (contextOptions) {
+           
+                const assertividadeElement = contextOptions.querySelector('.assertividade');
+                if (assertividadeElement) {
+                    contextOptions.removeChild(assertividadeElement);
+                }
 
-            return dotPositions[num - 1].map(pos => {
-                const dotStyle = {
-                    top: `${pos[0] * 10 + 8}px`,
-                    left: `${pos[1] * 10 + 8}px`,
-                    backgroundColor: color,
-                    visibility: 'visible'
-                };
-                return `<div class="dot" style="position: absolute; ${Object.entries(dotStyle).map(([k, v]) => `${k}: ${v};`).join(' ')}"></div>`;
-            }).join('');
+                
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+            }
+        }, 500000); 
+    }, 1000); 
+}
+
+
+
+
+        function toggleContextOptions() {      
+            var menu = document.getElementById('contextOptions');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
         }
+        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
+        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
+   
+
+       
+
+
+
+        
     </script>
-</body>
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

@@ -507,14 +507,14 @@ iframe {
     display: grid;
     grid-template-columns: repeat(5, 155px); /* 5 colunas de 100px */
     grid-template-rows: repeat(5, 62px); /* 5 linhas de 100px */
-    gap: 36px; /* Espaçamento entre os quadrados */
+    gap: 36px; 
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
-    background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 27px solid #00000000; /* Borda preta */
+    background-color: #ffffff00; 
+    border: 35px solid #00000000; 
 }
 
 

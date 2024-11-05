@@ -215,7 +215,7 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    top: 0;
+    top: 250;
     left: 0;
     z-index: 1; 
  
@@ -226,9 +226,9 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+           
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          
         }
 
         .login-intro-img {
@@ -608,11 +608,11 @@ color: #00ff00;
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
+                
             </div>
             <!-- Register Form -->
             <div class="register-form mt-4">
-                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
+             
                 <p class="text-center mb-4">Clique na plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">

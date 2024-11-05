@@ -512,7 +512,7 @@ iframe {
 }
 .grid-item {
     background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 45px solid #00000000; /* Borda preta */
+    border: 25px solid #00000000; /* Borda preta */
 }
 
 

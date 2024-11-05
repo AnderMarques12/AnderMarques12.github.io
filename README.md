@@ -496,7 +496,7 @@ iframe {
     border: 1px solid #f40000;
     position: absolute;
     top: 150px;
-    left: 79px;
+    left: 70px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;

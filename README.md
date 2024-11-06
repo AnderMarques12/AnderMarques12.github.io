@@ -492,8 +492,6 @@ iframe {
         .white-square {
     width: 500px;
     height: 615px;
-    background-color: #ffffff00;
-    border: 1px solid #ff0000;
     position: absolute;
     top: 168px;
     left: 172px;
@@ -512,7 +510,7 @@ iframe {
 }
 .grid-item {
     background-color: #ffffff00;
-    border: 4px solid #00000000;
+    border: 0px solid #00000000;
 }
 
 

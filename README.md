@@ -503,7 +503,7 @@ iframe {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 60px);
-    grid-template-rows: repeat(5, 58px);
+    grid-template-rows: repeat(5, 56px);
     gap: 42px;
     height: 100%;
     width: 100%;

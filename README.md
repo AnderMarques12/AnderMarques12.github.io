@@ -64,7 +64,7 @@
     color: #ffffff;
     z-index: 10000; 
 }
-}
+
 .video-background {
     top: 4px;
     left: 21px;

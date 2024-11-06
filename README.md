@@ -490,30 +490,29 @@ iframe {
 
       
         .white-square {
-    width: 930px; /* Ajustado para incluir espaço */
-    height: 615px; /* Ajustado para incluir espaço */
-    background-color: #ffffff00; /* Branco com transparência */
-    border: 1px solid #00000000; /* Borda preta */
+    width: 930px;
+    height: 615px;
+    background-color: #ffffff00;
+    border: 1px solid #00000000;
     position: absolute;
-    top: 167px;
-    left: 30px;
+    top: 169px;
+    left: 196px;
     z-index: 10000;
-    overflow: hidden; /* Garante que nada saia do quadrado */
+    overflow: hidden;
     pointer-events: none;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 155px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(5, 62px); /* 5 linhas de 100px */
-    gap: 36px; /* Espaçamento entre os quadrados */
+    grid-template-columns: repeat(5, 67px);
+    grid-template-rows: repeat(5, 58px);
+    gap: 41px;
     height: 100%;
     width: 100%;
 }
-
 .grid-item {
-    background-color: #ffffff00; /* Cor de fundo dos quadrados */
-    border: 30px solid #00000000; /* Borda preta */
+    background-color: #ffffff00;
+    border: 4px solid #00000000;
 }
 
 

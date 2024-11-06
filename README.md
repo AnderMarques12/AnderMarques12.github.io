@@ -65,11 +65,6 @@
     z-index: 10000; 
 }
 
-.video-background {
-    top: 4px;
-    left: 21px;
-    position: absolute;
-}
 
         .context-options img {
             width: 100px;
@@ -225,6 +220,7 @@
     z-index: 1; 
 
 }
+
 
         .custom-container {
             text-align: center;

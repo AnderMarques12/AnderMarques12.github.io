@@ -495,8 +495,8 @@ iframe {
     background-color: #ffffff00;
     border: 1px solid #ff0000;
     position: absolute;
-    top: 169px;
-    left: 196px;
+    top: 168px;
+    left: 172px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
@@ -504,9 +504,9 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 67px);
+    grid-template-columns: repeat(5, 60px);
     grid-template-rows: repeat(5, 58px);
-    gap: 41px;
+    gap: 42px;
     height: 100%;
     width: 100%;
 }

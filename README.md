@@ -222,15 +222,13 @@
 }
 
 
-        .custom-container {
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-         
-            border-radius: 10px;
-           
-        }
+.custom-container {
+    text-align: center;
+    max-width: 703px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
 
         .login-intro-img {
             max-width: 100%;
@@ -533,10 +531,10 @@ iframe {
     height: auto;
 }
 .icon-small {
-        width: 230px;
-        height: 100px;
-        margin-right: 8px; 
-    }
+    width: 649px;
+    height: 140px;
+    margin-right: 8px;
+}
     .button-text {
         font-size: 14px; 
     }
@@ -597,8 +595,8 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
-                        <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://br4bet.win/img/logo.4ce21240.png')">
+                        <img src="https://br4bet.win/img/logo.4ce21240.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>

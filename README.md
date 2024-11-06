@@ -490,10 +490,10 @@ iframe {
 
       
         .white-square {
-    width: 930px;
+    width: 500px;
     height: 615px;
     background-color: #ffffff00;
-    border: 1px solid #00000000;
+    border: 1px solid #ff0000;
     position: absolute;
     top: 169px;
     left: 196px;

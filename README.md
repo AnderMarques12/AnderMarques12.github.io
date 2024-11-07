@@ -15,6 +15,9 @@
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
        
 
+  
+
+/* Estilo da animação de carregamento */
 .loading-hidden {
     display: none;
 }
@@ -46,13 +49,13 @@
     100% { transform: rotate(360deg); }
 }
 
-
+/* Estilo do container de imagem */
 #image-container img {
     max-width: 100%;
     height: auto;
 }
 .context-options {
-    display: none; 
+    display: none; /* Inicialmente escondido */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -62,8 +65,9 @@
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
-    z-index: 10000; 
+    z-index: 10000; /* Garante que fique sobre outros elementos */
 }
+
 
 
         .context-options img {
@@ -115,16 +119,19 @@
 
         .time {
             font-size: 14px;
-         
+            /* Tamanho da fonte reduzido */
             color: #ffffff;
             position: fixed;
             top: 10px;
+            /* Distância do topo */
             right: 10px;
+            /* Distância da direita */
             z-index: 10000;
+            /* Certifique-se de que o relógio fique acima de outros elementos */
             background-color: rgba(0, 0, 0, 0.7);
-         
+            /* Fundo semi-transparente para melhor visibilidade */
             padding: 5px;
-            
+            /* Padding reduzido */
             border-radius: 5px;
             display: flex;
             align-items: center;
@@ -172,14 +179,17 @@
 
         .context-options .closeMenu-button {
             background-color: #00000000;
-        
+            /* Cor de fundo do botão */
             color: #ff0000;
-        
+            /* Cor do texto do botão */
             border: 2px solid #ff000000;
-         
+            /* Cor da borda do botão */
         }
 
+       
 
+
+        /* Seu CSS existente */
         .markdown-body img {
             max-width: 100%;
             box-sizing: content-box;
@@ -205,7 +215,7 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden; /* Evita barras de rolagem */
 }
 
 .login-wrapper {
@@ -217,18 +227,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; 
-
+    z-index: 1; /* Garante que fique abaixo do iframe */
+    background-color: #000000; /* Adiciona o fundo preto */
 }
 
-
-.custom-container {
-    text-align: center;
-    max-width: 703px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-}
+        .custom-container {
+            text-align: center;
+            max-width: 710px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
 
         .login-intro-img {
             max-width: 100%;
@@ -280,9 +291,9 @@
 
         .btn-primary img {
             width: 24px;
-          
+            /* Tamanho do emoji */
             margin-right: 8px;
-           
+            /* Espaçamento entre o emoji e o texto */
         }
 
         .social-icons {
@@ -300,22 +311,52 @@
         }
 
         #iframe-container {
-    display: none; 
+    display: none; /* Inicialmente escondido */
     width: 100%;
-    height: 100vh; 
-    position: absolute; 
+    height: 100vh; /* Usa 100% da altura da viewport */
+    position: absolute; /* Para que ocupe toda a tela */
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 9999; /* Garante que fique sobre outros elementos */
 }
 
 iframe {
     width: 100%;
     height: 100%;
-    border: none; 
+    border: none; /* Remove a borda */
 }
 
+.iframe-button {
+    display: block; /* Ajuste conforme necessário */
+    position: absolute;
+    top: 1990px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10001; /* Garante que fique sobre o iframe */
+}
 
+        .iframe-button:hover {
+            color: #000;
+            background-color: #ff0000;
+        }
+
+        .iframe-button:hover:before {
+            left: 100%;
+        }
+
+        .iframe-button:active {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+        }
+
+        
 
         .progress-bar {
             width: 80%;
@@ -365,6 +406,7 @@ iframe {
         }
 
         
+
         .context-options img {
             width: 100px;
             margin: 0 auto 20px;
@@ -383,7 +425,7 @@ iframe {
             padding: 12px 20px;
             margin-bottom: 10px;
             background-color: rgb(25 0 255);
-
+            /* Preto transparente */
             border-radius: 5px;
             color: #ffffff;
             cursor: pointer;
@@ -396,7 +438,7 @@ iframe {
             padding: 12px 20px;
             margin-bottom: 10px;
             background-color: rgb(25 0 255);
-      
+            /* Preto transparente */
             border-radius: 5px;
             color: #ffffff;
             cursor: pointer;
@@ -410,17 +452,17 @@ iframe {
 
         .context-options .context-option:hover {
             background-color: rgba(0, 0, 0, 0);
-          
+            /* Fundo mais claro ao passar o mouse */
         }
 
         .context-options .closeContextOptions {
             background: rgb(25 0 255);
-          
+            /* Fundo vermelho */
         }
 
         .context-options .closeContextOptions:hover {
             background-color: rgba(255, 0, 0, 1);
-           
+            /* Fundo vermelho mais opaco ao passar o mouse */
         }
 
         .dev-by {
@@ -431,7 +473,26 @@ iframe {
             margin-top: 20px;
         }
 
-      
+        .time {
+            font-size: 14px;
+            /* Tamanho da fonte reduzido */
+            color: #ffffff;
+            position: fixed;
+            top: 10px;
+            /* Distância do topo */
+            right: 10px;
+            /* Distância da direita */
+            z-index: 10000;
+            /* Certifique-se de que o relógio fique acima de outros elementos */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Fundo semi-transparente para melhor visibilidade */
+            padding: 5px;
+            /* Padding reduzido */
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
         @keyframes fadeIn {
             0% {
@@ -468,6 +529,8 @@ iframe {
         
 
 
+
+
         .loading-animation {
             width: 40px;
             height: 40px;
@@ -488,67 +551,94 @@ iframe {
             }
         }
 
-      
         .white-square {
-    width: 500px;
-    height: 615px;
+    width: 9px; /* Ajustado para incluir espaço */
+    height: 6px; /* Ajustado para incluir espaço */
+    background-color: #ffffff00; /* Branco com transparência */
+    border: 1px solid #00000000; /* Borda preta */
     position: absolute;
-    top: 168px;
-    left: 172px;
+    top: 167px;
+    left: 30px;
     z-index: 10000;
-    overflow: hidden;
+    overflow: hidden; /* Garante que nada saia do quadrado */
     pointer-events: none;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 60px);
-    grid-template-rows: repeat(5, 56px);
-    gap: 42px;
+    grid-template-columns: repeat(5, 157px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(5, 58px); /* 5 linhas de 100px */
+    gap: 38px; /* Espaçamento entre os quadrados */
     height: 100%;
     width: 100%;
 }
+
 .grid-item {
-    background-color: #ffffff00;
-    border: 0px solid #00000000;
+    background-color: #ffffff00; /* Cor de fundo dos quadrados */
+    border: 30px solid #00000000; /* Borda preta */
 }
 
 
-        
-        #draggable-image {
-    position: absolute;
-    top: 550px; 
-    left: 46px; 
-    z-index: 10002; 
-    cursor: move; 
+#draggable-image {
+    position: absolute; /* Permite o posicionamento com top e left */
+    top: 535px; /* Ajusta a posição vertical */
+    left: 46px; /* Ajusta a posição horizontal */
+    display: inline-block;
+    border: 5px solid green; /* Borda verde */
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+    animation: heartbeat 1s infinite; /* Animação do batimento cardíaco */
+    width: 100px; /* Largura menor da div */
+    height: 100px; /* Altura menor da div */
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda os limites da div */
 }
 
+/* Ajusta a imagem dentro da div */
 #draggable-image img {
-    width: 150px; 
-    height: auto;
+    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
+    height: 100%; /* Faz a imagem ocupar 100% da altura da div */
+    object-fit: cover; /* Ajusta a imagem para cobrir a div sem distorcer */
+}
+
+/* Define a animação do batimento cardíaco */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1); /* Aumenta o tamanho para criar o efeito de batimento */
+    }
+    40% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
 }
 .icon-small {
-    width: 649px;
-    height: 140px;
-    margin-right: 8px;
-}
-    .button-text {
-        font-size: 14px; 
+        width: 646px;
+        height: 140px;
+        margin-right: 8px; /* Adiciona espaço entre a imagem e o texto */
     }
-   
+    .button-text {
+        font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    }
+    /* Supondo que você conheça os seletores dos elementos que deseja ocultar */
 .login-form {
-    display: none; 
+    display: none; /* Esconde o formulário de login */
 }
 
 .black-background {
-    display: none; 
+    display: none; /* Esconde qualquer fundo preto */
 }
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden; /* Evita barras de rolagem */
 }
 .bi-telegram::before {
 
@@ -571,12 +661,6 @@ color: #00ff00;
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
-        </video>
-    </div>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
@@ -592,7 +676,7 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://br4bet.win/#/home?yqm=6swejvpp')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://br4bet.win/yfa05ib8q')">
                         <img src="https://br4bet.win/img/logo.4ce21240.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
@@ -610,12 +694,11 @@ color: #00ff00;
                             class="bi bi-whatsapp"></i></a>
                 
     </div>
- 
+    <!-- Iframe Container -->
 
     <div id="iframe-container">
         <iframe id="login-iframe" src=""></iframe>
-        <div id="draggable-image" class="iframe-button" onclick="toggleContextOptions()">
-           
+        <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
@@ -690,86 +773,51 @@ color: #00ff00;
    
     <script>
        function login(url) {
-        
+            // Oculta o login-wrapper
             document.getElementById('login-wrapper').style.display = 'none';
-         
+            // Mostra o iframe-container
             document.getElementById('iframe-container').style.display = 'block';
-        
-            document.querySelector('.iframe-button').style.display = 'block';
-          
+    
+            // Define a URL do iframe
             document.getElementById('login-iframe').src = url;
         }
       
 
-let currentAssertividade = 44.23; 
+       // Variável global para rastrear o valor da assertividade
+let currentAssertividade = 44.23; // Valor inicial
 
 function stopScroll() {
-   
+    // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
         loadingAnimation.classList.remove('loading-hidden');
         loadingAnimation.classList.add('loading-visible');
     }
 
-  
+    // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
     setTimeout(() => {
         if (loadingAnimation) {
-           
+            // Oculta a animação de carregamento
             loadingAnimation.classList.remove('loading-visible');
             loadingAnimation.classList.add('loading-hidden');
         }
 
-       
-        const assertividade = '100%';
+        // Exibe um alerta
+        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
 
-       
-        const contextOptions = document.getElementById('contextOptions');
+        
 
-        if (contextOptions) {
-            
-            const existingAssertividade = contextOptions.querySelector('.assertividade');
-            if (existingAssertividade) {
-                contextOptions.removeChild(existingAssertividade);
-            }
+      // Redireciona para o WhatsApp após 1 segundo do alerta
+      setTimeout(() => {
+            const phoneNumber = '+554299577743'; // Substitua pelo número de telefone desejado no formato internacional
+            const message = 'Como eu ativo o Robô na Plataforma Chinesa de graça??'; // Mensagem que será enviada
+            const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para a URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.location.href = whatsappUrl;
+        }, 1000); // Espera 1 segundo após o alerta antes de redirecionar para o WhatsApp
 
-       
-            const assertividadeElement = document.createElement('div');
-            assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-            assertividadeElement.className = 'assertividade';
-            assertividadeElement.style.fontSize = '18px';
-            assertividadeElement.style.marginBottom = '10px';
-            assertividadeElement.style.color = 'green'; 
-
-         
-            contextOptions.appendChild(assertividadeElement);
-
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => item.innerHTML = ''); 
-            const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
-            const itemsToChange = shuffledItems.slice(0, 7);
-            const imageUrl = 'https://juntorico.com/mines/zs.png';
-            const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-            itemsToChange.forEach(item => item.innerHTML += imageElement);
-        }
-
-      
-        setTimeout(() => {
-            if (contextOptions) {
-           
-                const assertividadeElement = contextOptions.querySelector('.assertividade');
-                if (assertividadeElement) {
-                    contextOptions.removeChild(assertividadeElement);
-                }
-
-                
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-            }
-        }, 7000); 
-    }, 1000); 
+    }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
-
-
 
 
         function toggleContextOptions() {      
@@ -782,9 +830,9 @@ function stopScroll() {
         }
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-   
-
-       
+       // script.js
+    
+     
 
 
 

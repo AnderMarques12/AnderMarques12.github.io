@@ -802,7 +802,7 @@ function stopScroll() {
         }
 
         // Exibe um alerta
-        alert('ERRO!! NENHUMA ENTRADA FEITA!! OU BANCA ABAIXO DE R$30!');
+        alert('ERRO!! NENHUMA ENTRADA FEITA NO MINES!! ');
 
         
 

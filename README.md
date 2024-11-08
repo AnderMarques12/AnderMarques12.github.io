@@ -83,8 +83,9 @@
 }
 
 .context-options {
+    display: none;
     position: fixed;
-    top: 85%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -153,8 +154,8 @@
     height: auto;
     width: 101vw;
     position: absolute;
-    top: 700px;
-    left: 10;
+    top: 39px;
+    left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -221,7 +222,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .btn-primary1 {
             background-color: #000000;
             border: 2px solid #ff0000;
@@ -234,8 +235,8 @@
             position: relative;
             overflow: hidden;
         }
-
-
+        
+        
         .btn-primary1::before {
             content: '';
             position: absolute;
@@ -258,14 +259,14 @@
             transform: rotate(45deg);
             transition: all 0.5s ease;
         }
-
+        
         .btn-primary1:hover::before {
             top: 0;
         }
         .btn-primary2:hover::before {
             top: 0;
         }
-
+        
         .btn-primary1:hover {
             background-color: #ff000000;
             color: #000;
@@ -380,7 +381,19 @@
         height: 150vh;
         border: none; 
     }
-       
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            grid-template-rows: repeat(5, 50px);
+            gap: 23px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .grid-item {
+            background-color: #00000000;
+            border: 6px solid #00000000;
+        }
 
         #draggable-image {
     position: absolute;
@@ -402,9 +415,11 @@
         .white-square {
     width: 593px;
     height: 646px;
+    background-color: #ffffff00;
+    border: 2px solid #00000000;
     position: absolute;
-    top: -626px;
-    left: 94px;
+    top: -570px;
+    left: -169px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
@@ -468,8 +483,8 @@
     display: block; 
 }
 .promo-banner {
-    background-color: rgb(0, 0, 0); 
-    border: 2px solid rgb(255, 255, 255); 
+    background-color: rgba(0, 0, 0, 0.85); 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
     padding: 30px;
     text-align: center;
     margin: 20px 0;
@@ -567,73 +582,33 @@ h2.mt-3 {
 a.anchorjs-link {
     display: none;
 }
-.toggle-container {
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-    }
-    .toggle-label {
-        margin-right: 10px;
-        font-weight: bold;
-    }
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 40px;
-        height: 20px;
-    }
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        transition: .4s;
-        border-radius: 20px;
-    }
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 16px;
-        width: 16px;
-        left: 2px;
-        bottom: 2px;
-        background-color: white;
-        transition: .4s;
-        border-radius: 50%;
-    }
-    input:checked + .slider {
-        background-color: #4CAF50;
-    }
-    input:checked + .slider:before {
-        transform: translateX(20px);
-    }
+
     </style>
 </head>
 
 <body>
     <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
+        <video autoplay="" loop="" muted="">
+          <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
+          
         </video>
-    </div>
+      </div>
       
 
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
-            
+            <div class="text-center px-4">
+                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
+                    <span style="font-weight: bold;">1000 ALUNOS</span> 
+                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
+                </p>
                 
+                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
+            </div>
             
             <div class="register-form mt-4">
-               
+                <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
                     <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
                         Aguarde, carregando dados...
@@ -644,7 +619,7 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
@@ -664,7 +639,26 @@ a.anchorjs-link {
                 </div>
                 
                
-            
+                <body class="page-template page-template-elementor_canvas page page-id-1147 elementor-default elementor-template-canvas elementor-kit-8 elementor-page elementor-page-1147">
+                    <div data-elementor-type="wp-page" data-elementor-id="1147" class="elementor elementor-1147" data-elementor-settings="[]">
+                                    <div class="elementor-section-wrap">
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-8cff68 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8cff68" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-background-overlay"></div>
+                                    <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4413ff56" data-id="4413ff56" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-2eeb4186 elementor-widget elementor-widget-heading" data-id="2eeb4186" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                    
+                        <div class="elementor-element elementor-element-9637017 elementor-widget elementor-widget-heading" data-id="9637017" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default"> <span style="color:#00ff40"><svg style="width:1.1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+          <path d="M7.702 1.368a.75.75 0 0 1 .597 0c2.098.91 4.105 1.99 6.004 3.223a.75.75 0 0 1-.194 1.348A34.27 34.27 0 0 0 8.341 8.25a.75.75 0 0 1-.682 0c-.625-.32-1.262-.62-1.909-.901v-.542a36.878 36.878 0 0 1 2.568-1.33.75.75 0 0 0-.636-1.357 38.39 38.39 0 0 0-3.06 1.605.75.75 0 0 0-.372.648v.365c-.773-.294-1.56-.56-2.359-.8a.75.75 0 0 1-.194-1.347 40.901 40.901 0 0 1 6.005-3.223ZM4.25 8.348c-.53-.212-1.067-.411-1.611-.596a40.973 40.973 0 0 0-.418 2.97.75.75 0 0 0 .474.776c.175.068.35.138.524.21a5.544 5.544 0 0 1-.58.681.75.75 0 1 0 1.06 1.06c.35-.349.655-.726.915-1.124a29.282 29.282 0 0 0-1.395-.617A5.483 5.483 0 0 0 4.25 8.5v-.152Z" />
+          <path d="M7.603 13.96c-.96-.6-1.958-1.147-2.989-1.635a6.981 6.981 0 0 0 1.12-3.341c.419.192.834.393 1.244.602a2.25 2.25 0 0 0 2.045 0 32.787 32.787 0 0 1 4.338-1.834c.175.978.315 1.969.419 2.97a.75.75 0 0 1-.474.776 29.385 29.385 0 0 0-4.909 2.461.75.75 0 0 1-.794 0Z" />
+        </svg>
+        HACKER DO BOUBLE COM BRANCO NA HORA EXATA/</span> <span style="color:#ff4d4d">+ HACKER DO MINES</span>
+        
+        </h2>		</div>
                         </div>
                         <div class="elementor-element elementor-element-33f902a elementor-widget elementor-widget-html" data-id="33f902a" data-element_type="widget" data-widget_type="html.default">
                         <div class="elementor-widget-container">
@@ -678,7 +672,7 @@ a.anchorjs-link {
                         <div class="elementor-element elementor-element-6d35947 elementor-align-center elementor-widget elementor-widget-button" data-id="6d35947" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;tada&quot;}" data-widget_type="button.default">
                         <div class="elementor-widget-container">
                            
-                           
+                            </a>
                 </div>
                 </div>
                     <h2 class="mt-3">COMPRE AQUI!</h2>
@@ -687,7 +681,8 @@ a.anchorjs-link {
                         <h2>Somente 300 Vagas!</h2>
                         <p>De <span class="preco-antigo">R$ 549,99</span> por <span class="preco-novo">R$ 279,99</span></p>
                         <p><strong>Garanta já a sua vaga com esse super desconto!</strong></p>
-                        <a href="" class="promo-btn">Aproveitar Agora</a>
+                        <p>Restam apenas 300 vagas disponíveis, não perca!</p>
+                        <a href="https://pay.sumup.com/b2c/Q711USGD" class="promo-btn">Aproveitar Agora</a>
                     </div>
                     
 <div id="iframe-container">
@@ -696,31 +691,17 @@ a.anchorjs-link {
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
 <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
 
-</div>
-
-
-
 <div class="context-options" id="contextOptions">
-    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
-    <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
-    <div id="result"></div>
-    <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
-    <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
+<img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
+<span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquesz </span>
+<div id="result"></div>
+<span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
+<span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
+<div id="loading-animation" class="loading-hidden">
+<div class="spinner"></div>
 
-    <!-- Novo toggle switch -->
-    <div class="toggle-container">
-        <span class="toggle-label">Ativar/Desativar</span>
-        <label class="switch">
-            <input type="checkbox" id="toggleSwitch" onchange="toggleFeature()">
-            <span class="slider"></span>
-        </label>
-    </div>
-
-    <div id="loading-animation" class="loading-hidden">
-        <div class="spinner"></div>
-    </div>
 </div>
-
+                              
 
                                     
 <div class="white-square">
@@ -761,6 +742,8 @@ a.anchorjs-link {
 
     <div class="black-background"></div>
     <script>
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('background-video');
@@ -813,9 +796,9 @@ function closeContextOptions() {
             if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
             if (existingImage) contextOptions.removeChild(existingImage);
 
-          const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Gera um número entre 1.00 e 100.00
-const assertividade = `${assertividadeValue}%`;
-
+            // Gera e exibe nova assertividade entre 1,00% e 100,00%
+            const assertividadeValue = (Math.random() * 99 + 1).toFixed(2); // Gera um número entre 1.00 e 100.00
+            const assertividade = `${assertividadeValue}%`;
 
             const assertividadeElement = document.createElement('div');
             assertividadeElement.textContent = `Assertividade: ${assertividade}`;
@@ -856,22 +839,19 @@ const assertividade = `${assertividadeValue}%`;
     }, 5000);
 }
 
-let intervalID;
 
-function toggleFeature() {
-    const toggleSwitch = document.getElementById("toggleSwitch");
-
-    if (toggleSwitch.checked) {
-        console.log("Ativado");
-        // Executa closeContextOptions() a cada 9 segundos
-        intervalID = setInterval(closeContextOptions, 9000);
-    } else {
-        console.log("Desativado");
-        // Para o intervalo
-        clearInterval(intervalID);
-    }
-}
-function stopScroll() {
+function toggleContextOptions() {      
+            var menu = document.getElementById('contextOptions');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
+        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
+       
+        function stopScroll() {
     // Exibe a animação de carregamento
     const loadingAnimation = document.getElementById('loading-animation');
     if (loadingAnimation) {
@@ -935,23 +915,9 @@ function stopScroll() {
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = '');
             }
-        
-        }, 12000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
     }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
 }
-
-function toggleContextOptions() {      
-            var menu = document.getElementById('contextOptions');
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
-        }
-        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
-        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-
-
 
 
     </script>

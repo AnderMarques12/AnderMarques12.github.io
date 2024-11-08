@@ -88,6 +88,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -417,8 +418,8 @@
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: -570px;
-    left: -169px;
+    top: 570px;
+    left: 169px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;

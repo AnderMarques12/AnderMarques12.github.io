@@ -85,10 +85,9 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 80%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;

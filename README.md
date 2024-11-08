@@ -85,8 +85,7 @@
 .context-options {
     display: none;
     position: fixed;
-    top: 75%;
-    top: 85%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
@@ -406,7 +405,7 @@
     height: 646px;
     position: absolute;
     top: -626px;
-    left: 94px;
+    left: 100px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;

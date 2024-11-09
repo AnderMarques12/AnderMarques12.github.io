@@ -117,26 +117,7 @@
             margin-top: 20px;
         }
 
-        .time {
-            font-size: 14px;
-            /* Tamanho da fonte reduzido */
-            color: #ffffff;
-            position: fixed;
-            top: 10px;
-            /* Distância do topo */
-            right: 10px;
-            /* Distância da direita */
-            z-index: 10000;
-            /* Certifique-se de que o relógio fique acima de outros elementos */
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fundo semi-transparente para melhor visibilidade */
-            padding: 5px;
-            /* Padding reduzido */
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+       
 
         @keyframes fadeIn {
             0% {
@@ -473,26 +454,6 @@ iframe {
             margin-top: 20px;
         }
 
-        .time {
-            font-size: 14px;
-            /* Tamanho da fonte reduzido */
-            color: #ffffff;
-            position: fixed;
-            top: 10px;
-            /* Distância do topo */
-            right: 10px;
-            /* Distância da direita */
-            z-index: 10000;
-            /* Certifique-se de que o relógio fique acima de outros elementos */
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fundo semi-transparente para melhor visibilidade */
-            padding: 5px;
-            /* Padding reduzido */
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
 
         @keyframes fadeIn {
             0% {
@@ -618,7 +579,7 @@ iframe {
     }
 }
 .icon-small {
-        width: 230px;
+        width: 330px;
         height: 100px;
         margin-right: 8px; /* Adiciona espaço entre a imagem e o texto */
     }
@@ -676,8 +637,8 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://juntorico.com/yn87wtgtl')">
-                        <img src="https://juntorico.com/img/logo.8152793b.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://br4bet.win/yfa05ib8q')">
+                        <img src="https://br4bet.win/img/logo.4ce21240.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>

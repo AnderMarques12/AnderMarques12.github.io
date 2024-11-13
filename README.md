@@ -418,20 +418,18 @@
             display: none;
         }
         
-    
-.white-square {
+        .white-square {
     width: 593px;
     height: 646px;
     background-color: #ff2d2d00;
     border: 2px solid #00000000;
     position: absolute;
-    top: 64px;
-    left: 100px;
+    top: 73px;
+    left: 121px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 95px);

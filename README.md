@@ -399,12 +399,12 @@
             border: 6px solid #00000000;
         }
 
-        #draggable-image img {
-    width: 79px;
-    top: 16px;
-    left: 900px;
-    height: auto;
-    position: fixed;
+        #draggable-image {
+    position: absolute;
+    top: 50px;
+    left: 33px;
+    z-index: 10002;
+    cursor: move;
 }
 
 #draggable-image img {

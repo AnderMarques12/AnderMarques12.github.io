@@ -418,14 +418,15 @@
             display: none;
         }
         
-        .white-square {
+    
+.white-square {
     width: 593px;
     height: 646px;
-    background-color: #ffffff00;
+    background-color: #ff2d2d00;
     border: 2px solid #00000000;
     position: absolute;
-    top: -570px;
-    left: -169px;
+    top: 64px;
+    left: 100px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;

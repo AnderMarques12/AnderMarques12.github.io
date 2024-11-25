@@ -637,8 +637,8 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://br4bet.win/yfa05ib8q')">
-                        <img src="https://br4bet.win/img/logo.4ce21240.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://brwinner.net/ysubdf3u2')">
+                        <img src="https://brwinner.net/img/logo.cc3a028d.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
                     </button>
@@ -648,7 +648,7 @@ color: #00ff00;
               
                 <!-- Social Icons -->
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
+                    <a href="https://www.instagram.com/marquesz.00/?hl=pt-br" target="_blank"><i
                             class="bi bi-instagram"></i></a>
                     <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i

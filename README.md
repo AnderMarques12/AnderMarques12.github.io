@@ -84,7 +84,7 @@
 
 .context-options {
     position: fixed;
-    top: 50%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -547,31 +547,29 @@ a.anchorjs-link {
     }
 }
  
-
 .white-square {
-    width: 593px;
-    height: 646px;
-    background-color: #ffffff00;
-    border: 2px solid #00000000;
+    width: 352px;
+    height: 408px;
+    border: 2px solid #ff000000;
     position: absolute;
-    top: 36PX;
-    left: 108PX;
+    top: 47px;
+    left: 19px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 95px);
-    grid-template-rows: repeat(5, 101px);
-    gap: 21px;
+    grid-template-columns: repeat(5, 64px);
+    grid-template-rows: repeat(5, 71px);
+    gap: 6px;
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00;
-    border: 7px solid #00000000;
+    border: 6px solid #00000000;
 }
     </style>
 </head>
@@ -579,7 +577,7 @@ a.anchorjs-link {
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
-          <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
+          <source src="https://app.doublewhiteapp.com/build/assets/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
           
         </video>
       </div>
@@ -615,7 +613,7 @@ a.anchorjs-link {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/double')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/mines')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -636,6 +634,20 @@ a.anchorjs-link {
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
 <img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
 
+<div class="context-options" id="contextOptions">
+    <video autoplay muted loop class="background-video" playsinline>
+        <source src="https://app.doublewhiteapp.com/build/assets/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+    </video>
+    <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
+    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
+    <div id="result"></div>
+    <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
+    <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
+    <div id="loading-animation" class="loading-hidden">
+        <div class="spinner"></div>
+    </div>
+</div>
 
 
                               
@@ -699,7 +711,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNONOVO') {
+    if (password === 'ALUNO11') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -711,6 +723,189 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
+
+function closeContextOptions() { 
+    const loadingAnimation = document.getElementById('loading-animation');
+    const contextOptions = document.getElementById('contextOptions');
+    const loadingOverlay = document.getElementById('loading-overlay');
+
+    // Exibe o overlay (se aplicável) como no stopScroll
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex';
+    }
+
+    setTimeout(() => {
+        // Após exibir o overlay, removê-lo
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+
+        // Exibe a animação de carregamento
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-hidden');
+            loadingAnimation.classList.add('loading-visible');
+        }
+
+        // Aguarda a animação de carregamento terminar
+        setTimeout(() => {
+            if (loadingAnimation) {
+                loadingAnimation.classList.remove('loading-visible');
+                loadingAnimation.classList.add('loading-hidden');
+            }
+
+            // Remove conteúdo existente e atualiza com novo conteúdo
+            if (contextOptions) {
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                const existingImage = contextOptions.querySelector('.random-image');
+                
+                if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
+                if (existingImage) contextOptions.removeChild(existingImage);
+
+               // Gerar assertividade entre 1% e 100%
+const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
+const assertividade = `${assertividadeValue}%`;
+
+const assertividadeElement = document.createElement('div');
+assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+assertividadeElement.className = 'assertividade';
+assertividadeElement.style.fontSize = '18px';
+assertividadeElement.style.marginBottom = '10px';
+
+// Alterar a cor com base na assertividade
+if (parseFloat(assertividadeValue) >= 90) {
+    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
+} else {
+    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
+}
+
+contextOptions.appendChild(assertividadeElement);
+
+                // Lista de URLs de imagens
+                const imageUrls = [
+                    'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                    'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
+                    'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
+                ];
+
+                const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+                const imageElement = document.createElement('img');
+                imageElement.src = imageUrl;
+                imageElement.alt = 'Random Image';
+                imageElement.style.width = '100px';
+                imageElement.style.height = 'auto';
+                imageElement.className = 'random-image';
+
+                contextOptions.appendChild(imageElement);
+
+                // Remove conteúdo após 7 segundos
+                setTimeout(() => {
+                    if (contextOptions) {
+                        const assertividadeElement = contextOptions.querySelector('.assertividade');
+                        const randomImageElement = contextOptions.querySelector('.random-image');
+                        if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
+                        if (randomImageElement) contextOptions.removeChild(randomImageElement);
+                    }
+                }, 7000);
+            }
+        }, 1000);
+    }, 4000);
+}
+
+
+
+function toggleContextOptions() {      
+            var menu = document.getElementById('contextOptions');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
+        var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
+       
+        function stopScroll() {
+    // Exibe a animação do overlay (risco verde)
+    const loadingOverlay = document.getElementById('loading-overlay');
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex'; // Torna o overlay visível
+    }
+
+    // A animação do "sniper" vai durar 2 segundos para cada ciclo de movimento
+    // Aqui vamos fazer a animação durar 4 segundos para ser repetida 2 vezes (com efeito completo)
+    setTimeout(() => {
+        // Após 4 segundos, esconde o overlay
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none'; // Esconde o overlay
+        }
+
+        // Exibe a animação de carregamento
+        const loadingAnimation = document.getElementById('loading-animation');
+        if (loadingAnimation) {
+            loadingAnimation.classList.remove('loading-hidden');
+            loadingAnimation.classList.add('loading-visible');
+        }
+
+        // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
+        setTimeout(() => {
+            if (loadingAnimation) {
+                // Oculta a animação de carregamento
+                loadingAnimation.classList.remove('loading-visible');
+                loadingAnimation.classList.add('loading-hidden');
+            }
+
+            // Gera um valor percentual fixo acima de 90
+            const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
+
+            // Seleciona o menu contextOptions
+            const contextOptions = document.getElementById('contextOptions');
+
+            if (contextOptions) {
+                // Remove qualquer assertividade anterior
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                // Cria um elemento para exibir a assertividade
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '14px';
+                assertividadeElement.style.marginBottom = '0px';
+                assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
+
+                // Adiciona a assertividade ao menu contextOptions
+                contextOptions.appendChild(assertividadeElement);
+
+                // Adiciona a imagem de 1 a 6 itens aleatórios no grid
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
+                const shuffledItems = Array.from(gridItems).sort(() => 0.5 - Math.random());
+                const randomCount = Math.floor(Math.random() * 6) + 3; // Número aleatório de 1 a 6
+                const itemsToChange = shuffledItems.slice(0, randomCount);
+                const imageUrl = 'https://jon.bet/static/media/diamond.eac6e969.svg';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+            // Aguarda 5 segundos e então reverte as mudanças
+            setTimeout(() => {
+                if (contextOptions) {
+                    // Remove assertividade
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) { 
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    // Remove as imagens dos itens do grid
+                    const gridItems = document.querySelectorAll('.grid-item');
+                    gridItems.forEach(item => item.innerHTML = '');
+                }
+            }, 8000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+    }, 8000); // Tempo de espera para a animação do "sniper" (4 segundos)
+}
 
 
 

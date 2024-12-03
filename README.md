@@ -1,4 +1,3 @@
-
 <html lang="en">
 
 <head>
@@ -85,7 +84,7 @@
 
 .context-options {
     position: fixed;
-    top: 51%;
+    top: 81%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -762,24 +761,18 @@ function closeContextOptions() {
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
 
-               // Gerar assertividade entre 1% e 100%
-const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
-const assertividade = `${assertividadeValue}%`;
+                // Gera assertividade entre 90% e 100%
+                const assertividadeValue = (90 + Math.random() * 10).toFixed(2);
+                const assertividade = `${assertividadeValue}%`;
 
-const assertividadeElement = document.createElement('div');
-assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-assertividadeElement.className = 'assertividade';
-assertividadeElement.style.fontSize = '18px';
-assertividadeElement.style.marginBottom = '10px';
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.color = 'green'; // Sempre verde
 
-// Alterar a cor com base na assertividade
-if (parseFloat(assertividadeValue) >= 90) {
-    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
-} else {
-    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
-}
-
-contextOptions.appendChild(assertividadeElement);
+                contextOptions.appendChild(assertividadeElement);
 
                 // Lista de URLs de imagens
                 const imageUrls = [

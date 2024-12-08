@@ -895,7 +895,7 @@ a.anchorjs-link {
                 Seu navegador não suporta a reprodução de vídeos.
             </video>
             <img id="myImage" src="https://i.ibb.co/PTDLjSK/Imagem-do-Whats-App-de-2024-09-20-s-01-59-39-8325f58c-fotor-202409202130.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines [2.0]</span>
            
             <div id="result"></div>
             

@@ -778,18 +778,24 @@ function closeContextOptions() {
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
 
-                // Gera assertividade entre 90% e 100%
-                const assertividadeValue = (90 + Math.random() * 10).toFixed(2);
-                const assertividade = `${assertividadeValue}%`;
+               // Gerar assertividade entre 1% e 100%
+const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
+const assertividade = `${assertividadeValue}%`;
 
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-                assertividadeElement.style.color = 'green'; // Sempre verde
+const assertividadeElement = document.createElement('div');
+assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+assertividadeElement.className = 'assertividade';
+assertividadeElement.style.fontSize = '18px';
+assertividadeElement.style.marginBottom = '10px';
 
-                contextOptions.appendChild(assertividadeElement);
+// Alterar a cor com base na assertividade
+if (parseFloat(assertividadeValue) >= 90) {
+    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
+} else {
+    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
+}
+
+contextOptions.appendChild(assertividadeElement);
 
                 // Lista de URLs de imagens
                 const imageUrls = [
@@ -818,9 +824,11 @@ function closeContextOptions() {
                     }
                 }, 7000);
             }
-        }, 3000);
+        }, 1000);
     }, 4000);
 }
+
+
 
 
 

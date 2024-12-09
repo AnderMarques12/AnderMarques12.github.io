@@ -592,7 +592,7 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://br4bet.win/#/home?yqm=6swejvpp')">
+                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://brwinner.net/ysubdf3u2')">
                         <img src="https://br4bet.win/img/logo.4ce21240.png" alt="Logo" class="icon-small">
                        
                         <i class="fa fa-arrow-right"></i>
@@ -747,7 +747,7 @@ function stopScroll() {
             gridItems.forEach(item => item.innerHTML = ''); 
             const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
             const itemsToChange = shuffledItems.slice(0, 7);
-            const imageUrl = 'https://juntorico.com/mines/zs.png';
+            const imageUrl = 'https://brwinner.net/mines/zs.png';
             const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
             itemsToChange.forEach(item => item.innerHTML += imageElement);
         }

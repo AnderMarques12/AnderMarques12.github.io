@@ -490,21 +490,22 @@ iframe {
 
       
         .white-square {
-    width: 500px;
+    width: 497px;
     height: 615px;
     position: absolute;
-    top: 168px;
-    left: 172px;
+    top: 135px;
+    left: 198px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 60px);
-    grid-template-rows: repeat(5, 56px);
-    gap: 42px;
+    display: grid
+;
+    grid-template-columns: repeat(5, 53px);
+    grid-template-rows: repeat(5, 49px);
+    gap: 40px;
     height: 100%;
     width: 100%;
 }

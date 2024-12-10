@@ -51,133 +51,7 @@
     max-width: 100%;
     height: auto;
 }
-.context-options {
-    display: none; 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    color: #ffffff;
-    z-index: 10000; 
-}
 
-
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        .context-options .bot-title {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .context-options .context-option {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(255, 0, 0);
-            /* Preto transparente */
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
-
-        .context-options .context-option:last-child {
-            margin-bottom: 0;
-        }
-
-        .context-options .closeContextOptions:hover {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-        .context-options .closeContextOptions:hover {
-            background-color: rgba(255, 0, 0, 1);
-            /* Fundo vermelho mais opaco ao passar o mouse */
-        }
-
-        .dev-by {
-            font-size: 14px;
-            text-align: center;
-            color: #00ff3d;
-            /* Texto branco */
-            margin-top: 20px;
-        }
-
-        .time {
-            font-size: 14px;
-         
-            color: #ffffff;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 10000;
-            background-color: rgba(0, 0, 0, 0.7);
-         
-            padding: 5px;
-            
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent;
-            }
-
-            50% {
-                border-color: white;
-            }
-        }
-
-        .percentage-animation {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: .15em solid white;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        .context-options .closeMenu-button {
-            background-color: #00000000;
-        
-            color: #ff0000;
-        
-            border: 2px solid #ff000000;
-         
-        }
 
 
         .markdown-body img {
@@ -256,33 +130,72 @@
 
         .btn-primary2 {
             background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
+            border: 2px solid #00ff37;
+            color: #fff;
+            font-family: 'M PLUS 1 Code', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 255, 13, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-
-        .btn-primary3 {
+        
+        .btn-primary1 {
             background-color: #000000;
-            display: flex;
-            border-color: #ffffff;
-            align-items: center;
-            justify-content: center;
+            border: 2px solid #ff0000;
+            color: #fff;
+            font-family: 'M PLUS 1 Code', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        
+        .btn-primary1::before {
+            content: '';
+            position: absolute;
+            top: -200%;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: rgba(255, 0, 0, 0.5);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+        .btn-primary2::before {
+            content: '';
+            position: absolute;
+            top: -200%;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: rgba(0, 255, 42, 0.541);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+        
+        .btn-primary1:hover::before {
+            top: 0;
+        }
+        .btn-primary2:hover::before {
+            top: 0;
+        }
+        
+        .btn-primary1:hover {
+            background-color: #ff000000;
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
         .btn-primary2:hover {
-            background-color: #ff0000;
-        }
-
-        .btn-primary3:hover {
-            background-color: #15ff00;
-        }
-
-        .btn-primary img {
-            width: 24px;
-          
-            margin-right: 8px;
-           
+            background-color: #37ff0000;
+            color: #000;
+            box-shadow: 0 0 30px rgb(44 255 0 / 80%);
+            transform: scale(1.05);
         }
 
         .social-icons {
@@ -365,105 +278,71 @@ iframe {
         }
 
         
-        .context-options img {
-            width: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
+.context-options {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #ffffff;
+    z-index: 10000;
+    overflow: hidden;
+}
 
-        .context-options .bot-title {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
+.context-options .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
-        .context-option11 {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(25 0 255);
+.context-options * {
+    position: relative;
+    z-index: 1;
+}
 
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
+.context-options img {
+    width: 80px;
+    margin: 4px auto 8px;
+    display: block;
+    TOP: 7PX;
+    POSITION: RELATIVE;
+}
 
-        .context-options .context-option1 {
-            display: block;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: rgb(25 0 255);
-      
-            border-radius: 5px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            text-align: center;
-        }
 
-        .context-options .context-option:last-child {
-            margin-bottom: 0;
-        }
+.context-options .bot-title {
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    color: #ffffff;
+    top: -10px;
+    /* width: 31px; */
+    margin: 91px auto 20px;
+    display: block;
+    TOP: -103PX;
+    POSITION: RELATIVE;
+}
 
-        .context-options .context-option:hover {
-            background-color: rgba(0, 0, 0, 0);
-          
-        }
-
-        .context-options .closeContextOptions {
-            background: rgb(25 0 255);
-          
-        }
-
-        .context-options .closeContextOptions:hover {
-            background-color: rgba(255, 0, 0, 1);
-           
-        }
-
-        .dev-by {
-            font-size: 14px;
-            text-align: center;
-            color: #00ff3d;
-            /* Texto branco */
-            margin-top: 20px;
-        }
-
-      
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent;
-            }
-
-            50% {
-                border-color: white;
-            }
-        }
+.context-options .context-option {
+    font-size: 19px;
+    display: block;
+    padding: 12px 19px;
+    margin-bottom: 8px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #ffffff;
+    border-radius: -3px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
+}
 
         
 
@@ -529,9 +408,11 @@ iframe {
     height: auto;
 }
 .icon-small {
-    width: 649px;
-    height: 140px;
-    margin-right: 8px;
+    width: 101%;
+    height: 140%;
+    position: relative;
+    top: -14px;
+    margin-right: 16px;
 }
     .button-text {
         font-size: 14px; 
@@ -564,9 +445,188 @@ color: #ff00f2;
 color: #00ff00;
 }
 
+.loading-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 103%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.loading-overlay::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -9%;
+    width: 122%;
+    height: 5px;
+    background-color: green;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+/* Animação para o movimento do risco (subindo e descendo) */
+@keyframes moveUpDown {
+    0% {
+        top: 20%; /* Começa um pouco acima do meio */
+    }
+    50% {
+        top: 50%; /* Vai até o meio */
+    }
+    100% {
+        top: 60%; /* Vai um pouco abaixo do meio */
+    }
+}
+ 
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; 
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .social-icons a.instagram {
+    color: #C13584; 
+
+}
+
+.social-icons a.instagram:hover {
+    color: #e1306c; 
+    text-shadow: 0 0 15px rgba(225, 48, 108, 0.8);
+}
+
+.social-icons a.telegram {
+    color: #0088cc; 
+
+}
+
+.social-icons a.telegram:hover {
+    color: #00acee; 
+    text-shadow: 0 0 15px rgba(0, 172, 238, 0.8);
+}
+
+.social-icons a.whatsapp {
+    color: #25D366; 
+
+}
+
+.social-icons a.whatsapp:hover {
+    color: #128C7E; 
+    text-shadow: 0 0 15px rgba(18, 140, 126, 0.8);
+}
 
 
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
 
+.social-icons a {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+.social-icons a:hover {
+    color: #ff0000; 
+    transform: scale(1.2); 
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 51, 0.5); 
+}
+
+
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff; 
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.social-icons a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: #ff0000; 
+}
+
+.social-icons a:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.4s ease;
+}
+
+.social-icons a:hover::before {
+    transform: translateX(-50%) scale(1);
+}
+    .custom-container {
+    text-align: center;
+    max-width: 388px;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 23px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+
+        .login-intro-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 7px;
+        }
+
+        .register-form h6 {
+            color: #ffffff;
+        }
+
+        .register-form p {
+            color: rgb(255, 255, 255);
+        }
+        .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
 
     </style>
 </head>
@@ -574,15 +634,13 @@ color: #00ff00;
 <body>
     <div class="video-background">
         <video autoplay loop muted playsinline>
-            <source src="https://cdn.pixabay.com/video/2023/03/04/153079-804706258_large.mp4" type="video/mp4">
+            <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
             Seu navegador não suporta o vídeo.
         </video>
     </div>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
-            <div class="text-center px-4">
-                <img class="login-intro-img" src="https://i.ibb.co/23PtfVv/fotor-2024071913022.png" alt="Perfil">
-            </div>
+           
             <!-- Register Form -->
             <div class="register-form mt-4">
                 <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
@@ -593,12 +651,14 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary2 w-100" type="button" onclick="login('https://brwinner.net/ysubdf3u2')">
-                        <img src="https://br4bet.win/img/logo.4ce21240.png" alt="Logo" class="icon-small">
-                       
-                        <i class="fa fa-arrow-right"></i>
+                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://tudo.win/ylmoprp9g')" style="height: 100px;">
+                        <img src="https://tudo.win/img/logo.9a9db648.png" alt="Logo" class="icon-small">
+                        
                     </button>
-                   
+                </div>
+     
+             
+                 
 
 
               
@@ -620,38 +680,6 @@ color: #00ff00;
             <img src="https://i.ibb.co/CJQhCxk/pngtree-mysterious-computer-hacker-character-illustration-png-image-3963985-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
- 
-
-            
-        </div>
-        <div class="context-options" id="contextOptions">
-            <img id="myImage" src="https://i.ibb.co/0jPZbc1/fotor-2024071913022.png" alt="Imagem Atual">
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Marquez Mines</span>
-            <span class="context-option closeMenu-button" onclick="closeMenu();"><i class="fas fa-times"></i></span>
-            <div id="result"></div>
-            
-
-            <span class="context-option" onclick="stopScroll();"><i class="fas fa-pause"></i> Hackear Mines</span>
-            
-
-           
-            
-    
-            <!-- Animação de carregamento -->
-            <div id="loading-animation" class="loading-hidden">
-                <div class="spinner"></div>
-            </div>
-            
-            <!-- Espaço para a imagem aleatória -->
-            <div id="image-container"></div>
-            <span class="time"><i class="fas fa-clock"></i><span class="time-text"></span></span>
-
-
-            <div id="assertividade" class="assertivity-hidden"></div>
-
-
-        </div>
-
         <div class="white-square">
             <div class="grid-container">
                 <!-- 25 quadrados -->
@@ -684,12 +712,79 @@ color: #00ff00;
            
         </div>
         
+
+            
+        </div>
+        <div class="context-options" id="contextOptions">
+            <video autoplay muted loop class="background-video" playsinline>
+                <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
+            
+            <div id="result"></div>
+            <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
+        
+            <div id="loading-animation" class="loading-hidden">
+                <div class="spinner"></div>
+            </div>
+        
+
+       
         
 
 
 
    
     <script>
+           // Função para abrir o contexto ao dar dois cliques
+    function openContextOptions() {
+        const contextOptions = document.getElementById('contextOptions');
+        contextOptions.style.display = 'block'; // Mostra o elemento
+    }
+
+    // Adiciona o evento de dois cliques para mouse
+    document.addEventListener('dblclick', (event) => {
+        const target = event.target;
+        if (target.closest('.background-video') || target.closest('.context-options')) {
+            openContextOptions();
+        }
+    });
+
+    // Adiciona suporte para toque duplo em dispositivos móveis
+    let lastTouchTime = 0;
+
+    document.addEventListener('touchstart', (event) => {
+        const currentTime = new Date().getTime();
+        const timeSinceLastTouch = currentTime - lastTouchTime;
+
+        if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) { // Intervalo para toque duplo
+            const target = event.target;
+            if (target.closest('.background-video') || target.closest('.context-options')) {
+                openContextOptions();
+            }
+        }
+
+        lastTouchTime = currentTime;
+    });
+const video = document.querySelector('.background-video');
+video.addEventListener('ended', () => {
+    video.play(); // Força o replay caso o loop falhe
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('background-video');
+
+            // Tenta reproduzir o vídeo quando a página é carregada
+            video.play().then(() => {
+                // Sucesso, o vídeo está sendo reproduzido
+            }).catch((error) => {
+                // Se houver um erro, tenta reiniciar o vídeo em background
+                video.muted = true;
+                video.play();
+            });
+        });
        function login(url) {
         
             document.getElementById('login-wrapper').style.display = 'none';

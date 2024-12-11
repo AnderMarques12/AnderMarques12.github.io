@@ -382,7 +382,7 @@ iframe {
 .grid-container {
     display: grid
 ;
-    grid-template-columns: repeat(5, 53px);
+    grid-template-columns: repeat(5, 52px);
     grid-template-rows: repeat(5, 49px);
     gap: 40px;
     height: 100%;
@@ -852,7 +852,7 @@ function stopScroll() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 500000);
+            }, 8000);
         }, 5000);
     }
 

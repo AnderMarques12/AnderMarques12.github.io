@@ -383,7 +383,7 @@ iframe {
     display: grid
 ;
     grid-template-columns: repeat(5, 52px);
-    grid-template-rows: repeat(5, 49px);
+    grid-template-rows: repeat(5, 50px);
     gap: 40px;
     height: 100%;
     width: 100%;

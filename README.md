@@ -121,34 +121,36 @@
 
 
 .context-options .bot-title {
-    font-size: 19px;
+    font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
     color: #ffffff;
     top: -10px;
-    /* width: 31px; */
-    margin: 91px auto 20px;
-    display: block;
-    TOP: -103PX;
-    POSITION: RELATIVE;
 }
 
 .context-options .context-option {
-    font-size: 19px;
+    font-size: 14px;
     display: block;
-    padding: 12px 19px;
+    padding: 11px 22px;
     margin-bottom: 8px;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid #ffffff;
-    border-radius: -3px;
-    color: #ffffff;
+    background-color: rgb(255 255 255);
+    border-radius: 6px;
+    color: #000000;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s;
 }
 
+.context-options .context-option:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
 
+.context-options .closeContextOptions:hover {
+    background-color: rgb(255 0 0 / 80%);
+
+}
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -165,17 +167,17 @@
     }
 
     .login-wrapper {
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 557px;
+    top: 39px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
+
     .custom-container {
     text-align: center;
     max-width: 388px;
@@ -584,9 +586,15 @@ a.anchorjs-link {
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-            
+                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
+                    <span style="font-weight: bold;">1000 ALUNOS</span> 
+                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
+                </p>
                 
-          
+                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
+            </div>
+            
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
@@ -605,7 +613,7 @@ a.anchorjs-link {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/double')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/mines')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -632,13 +640,15 @@ a.anchorjs-link {
         Seu navegador não suporta a reprodução de vídeos.
     </video>
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
-    
+    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
     <div id="result"></div>
     <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
     <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
+</div>
+
 
                               
 
@@ -680,36 +690,7 @@ a.anchorjs-link {
 
 </div>                 
     <script>
-    // Função para abrir o contexto ao dar dois cliques
-    function openContextOptions() {
-        const contextOptions = document.getElementById('contextOptions');
-        contextOptions.style.display = 'block'; // Mostra o elemento
-    }
 
-    // Adiciona o evento de dois cliques para mouse
-    document.addEventListener('dblclick', (event) => {
-        const target = event.target;
-        if (target.closest('.background-video') || target.closest('.context-options')) {
-            openContextOptions();
-        }
-    });
-
-    // Adiciona suporte para toque duplo em dispositivos móveis
-    let lastTouchTime = 0;
-
-    document.addEventListener('touchstart', (event) => {
-        const currentTime = new Date().getTime();
-        const timeSinceLastTouch = currentTime - lastTouchTime;
-
-        if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) { // Intervalo para toque duplo
-            const target = event.target;
-            if (target.closest('.background-video') || target.closest('.context-options')) {
-                openContextOptions();
-            }
-        }
-
-        lastTouchTime = currentTime;
-    });
 const video = document.querySelector('.background-video');
 video.addEventListener('ended', () => {
     video.play(); // Força o replay caso o loop falhe
@@ -730,7 +711,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO101') {
+    if (password === 'ALUNO320') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -741,6 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Senha incorreta. Tente novamente.');
     }
 }
+
 
 function closeContextOptions() { 
     const loadingAnimation = document.getElementById('loading-animation');
@@ -779,18 +761,24 @@ function closeContextOptions() {
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
 
-                // Gera assertividade entre 90% e 100%
-                const assertividadeValue = (90 + Math.random() * 10).toFixed(2);
-                const assertividade = `${assertividadeValue}%`;
+               // Gerar assertividade entre 1% e 100%
+const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
+const assertividade = `${assertividadeValue}%`;
 
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-                assertividadeElement.style.color = 'green'; // Sempre verde
+const assertividadeElement = document.createElement('div');
+assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+assertividadeElement.className = 'assertividade';
+assertividadeElement.style.fontSize = '18px';
+assertividadeElement.style.marginBottom = '10px';
 
-                contextOptions.appendChild(assertividadeElement);
+// Alterar a cor com base na assertividade
+if (parseFloat(assertividadeValue) >= 90) {
+    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
+} else {
+    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
+}
+
+contextOptions.appendChild(assertividadeElement);
 
                 // Lista de URLs de imagens
                 const imageUrls = [
@@ -819,7 +807,7 @@ function closeContextOptions() {
                     }
                 }, 7000);
             }
-        }, 3000);
+        }, 1000);
     }, 4000);
 }
 

@@ -181,7 +181,7 @@
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 364px;
+    top: 522px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -1025,7 +1025,7 @@ function toggleContextOptions() {
                 const assertividadeElement = document.createElement('div');
                 assertividadeElement.textContent = `Assertividade: ${assertividade}`;
                 assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '14px';
+                assertividadeElement.style.fontSize = '18px';
                 assertividadeElement.style.marginBottom = '0px';
                 assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
 

@@ -706,7 +706,7 @@ a.anchorjs-link {
 <div id="loading-overlay" class="loading-overlay"></div>
 
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
-<img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
+<img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Hacker"></div>
 
 <div class="context-options" id="contextOptions">
     <video autoplay muted loop class="background-video" playsinline>

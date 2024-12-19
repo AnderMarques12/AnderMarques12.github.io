@@ -522,7 +522,7 @@ a.anchorjs-link {
     left: 0;
     width: 103%;
     height: 110%;
-    background-color: rgba(0, 0, 0, 0.932);
+    background-color: rgba(0, 0, 0, 0.795);
     display: none;
     justify-content: center;
     align-items: center;
@@ -933,7 +933,7 @@ function closeContextOptions() {
 
                 // Lista de URLs de imagens
                 const imageUrls = [
-                    'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
+                    'https://i.ibb.co/6HbYRpT/Captura-de-tela-2024-08-29-210805.png',
                     'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
                     'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
                 ];

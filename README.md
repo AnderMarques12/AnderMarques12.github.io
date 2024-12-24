@@ -348,10 +348,9 @@ iframe {
 
 
 #draggable-image img {
-    width: 141px;
+    width: 105px;
     height: auto;
-    left: 12px;
-    TOP: 498PX;
+    TOP: 512PX;
     POSITION: FIXED;
 }
 .icon-small {
@@ -567,33 +566,7 @@ color: #00ff00;
     position: relative;
     margin-bottom: 30px;
 }
-.white-square {
-    width: 497px;
-    height: 615px;
-    position: absolute;
-    top: 32px;
-    left: 11px;
-    z-index: 10000;
-    overflow: hidden;
-    pointer-events: none;
-}
 
-.grid-container {
-    display: grid
-;
-    grid-template-columns: repeat(5, 52px);
-    grid-template-rows: repeat(5, 50px);
-    gap: 40px;
-    height: 100%;
-    width: 100%;
-}
-.grid-item {
-    background-color: #ffffff00;
-    border: 0px solid #00000000;
-}
-
-
-        
     </style>
 </head>
 
@@ -641,38 +614,7 @@ color: #00ff00;
         </div>
         
       
-        <div class="white-square">
-            <div class="grid-container">
-                <!-- 25 quadrados -->
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                
-           
-        </div>
-        
+
             
         </div>
         <div class="context-options" id="contextOptions">
@@ -759,61 +701,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let currentAssertividade = 44.23; 
 function stopScroll() {
-        const loadingOverlay = document.getElementById('loading-overlay');
-        const loadingAnimation = document.getElementById('loading-animation');
-        const contextOptions = document.getElementById('contextOptions');
+    const loadingOverlay = document.getElementById('loading-overlay');
 
-        // Mostrar o overlay de carregamento
+    // Mostrar o overlay de carregamento
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex';
+    }
+
+    setTimeout(() => {
+        // Esconder o overlay de carregamento
         if (loadingOverlay) {
-            loadingOverlay.style.display = 'flex';
+            loadingOverlay.style.display = 'none';
         }
 
-        setTimeout(() => {
-            // Esconder o overlay de carregamento
-            if (loadingOverlay) {
-                loadingOverlay.style.display = 'none';
-            }
+        // Substituir os diamantes por um alerta
+        alert('ERRO! NENHUMA ENTRADA FOI FEITA NO MINES!! FAÇA UMA ENTRADA DE QUALQUER VALOR ANTES.');
 
-            // Lógica principal após o carregamento
-            const assertividade = '100%';
+    }, 5000);
+}
 
-            if (contextOptions) {
-                const existingAssertividade = contextOptions.querySelector('.assertividade');
-                if (existingAssertividade) {
-                    contextOptions.removeChild(existingAssertividade);
-                }
-
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-                assertividadeElement.style.color = 'green';
-
-                contextOptions.appendChild(assertividadeElement);
-
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-                const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
-                const itemsToChange = shuffledItems.slice(0, 7);
-                const imageUrl = 'https://brwinner.net/mines/zs.png';
-                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-                itemsToChange.forEach(item => item.innerHTML += imageElement);
-            }
-
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
-                    const gridItems = document.querySelectorAll('.grid-item');
-                    gridItems.forEach(item => item.innerHTML = '');
-                }
-            }, 8000);
-        }, 5000);
-    }
 
 
 

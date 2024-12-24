@@ -348,9 +348,10 @@ iframe {
 
 
 #draggable-image img {
-    width: 105px;
+    width: 141px;
     height: auto;
-    TOP: 512PX;
+    left: 12px;
+    TOP: 498PX;
     POSITION: FIXED;
 }
 .icon-small {
@@ -810,7 +811,7 @@ function stopScroll() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 888000);
+            }, 8000);
         }, 5000);
     }
 

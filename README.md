@@ -570,8 +570,8 @@ color: #00ff00;
     width: 497px;
     height: 615px;
     position: absolute;
-    top: 181px;
-    left: 198px;
+    top: 32px;
+    left: 11px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
@@ -810,7 +810,7 @@ function stopScroll() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 8000);
+            }, 888000);
         }, 5000);
     }
 

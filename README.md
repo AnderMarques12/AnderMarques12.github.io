@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
-
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
        
@@ -87,11 +85,24 @@
     overflow: hidden; 
 }
 
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 136vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
 
 .custom-container {
-    position: fixed;
-    top: 150px;
+    text-align: center;
+    max-width: 703px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
 }
+
         .login-intro-img {
             max-width: 100%;
             height: auto;
@@ -129,8 +140,31 @@
             overflow: hidden;
         }
         
- 
-       
+        .btn-primary1 {
+            background-color: #000000;
+            border: 2px solid #ff0000;
+            color: #fff;
+            font-family: 'M PLUS 1 Code', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        
+        .btn-primary1::before {
+            content: '';
+            position: absolute;
+            top: -200%;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: rgba(255, 0, 0, 0.5);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
         .btn-primary2::before {
             content: '';
             position: absolute;
@@ -143,9 +177,19 @@
             transition: all 0.5s ease;
         }
         
-      
+        .btn-primary1:hover::before {
+            top: 0;
+        }
+        .btn-primary2:hover::before {
+            top: 0;
+        }
         
-      
+        .btn-primary1:hover {
+            background-color: #ff000000;
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
         .btn-primary2:hover {
             background-color: #37ff0000;
             color: #000;
@@ -153,7 +197,9 @@
             transform: scale(1.05);
         }
 
- 
+        .social-icons {
+            margin-top: 20px;
+        }
 
         .social-icons a {
             color: #ffffff;
@@ -169,21 +215,16 @@
     display: none; 
     width: 100%;
     height: 100vh; 
+    position: absolute; 
+    top: 0;
+    left: 0;
     z-index: 9999;
 }
 
-
 iframe {
-    
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* Ocupa a largura total */
-  height: 100%; /* Ocupa a altura total */
-  z-index: 999; /* Fica acima de outros elementos */
-  background-color: #fff; /* Ajuste conforme necessário */
-  overflow: hidden; /* Impede rolagem interna */
-  touch-action: none; /* Impede interações indesejadas */
+    width: 100%;
+    height: 100%;
+    border: none; 
 }
 
 
@@ -210,19 +251,15 @@ iframe {
 
         @media (max-width: 768px) {
             .login-wrapper {
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    height: 135vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
+                flex-direction: column;
+                padding: 20px;
+            }
 
-           
+            .custom-container {
+                max-width: 100%;
+                width: 100%;
+                padding: 10px;
+            }
         }
 
         #blackMenu {
@@ -240,19 +277,18 @@ iframe {
         }
 
         
-        .context-options {
+.context-options {
     position: fixed;
-    top: 71%;
+    top: 77%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    
+    font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
     z-index: 10000;
     overflow: hidden;
-    display: none; 
 }
 
 .context-options .background-video {
@@ -268,6 +304,8 @@ iframe {
 .context-options * {
     position: relative;
     z-index: 1;
+    TOP: 0PX;
+    LEFT: -2PX;
 }
 
 .context-options img {
@@ -292,6 +330,7 @@ iframe {
     TOP: -103PX;
     POSITION: RELATIVE;
 }
+
 .context-options .context-option {
     display: inline-flex;
     align-items: center;
@@ -313,6 +352,7 @@ iframe {
 }
 
 
+        
 
 
         .loading-animation {
@@ -336,29 +376,53 @@ iframe {
         }
 
       
+        .white-square {
+    width: 497px;
+    height: 615px;
+    position: absolute;
+    top: 181px;
+    left: 198px;
+    z-index: 10000;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.grid-container {
+    display: grid
+;
+    grid-template-columns: repeat(5, 52px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 40px;
+    height: 100%;
+    width: 100%;
+}
+.grid-item {
+    background-color: #ffffff00;
+    border: 0px solid #00000000;
+}
+
 
         
-        #draggable-image {
+#draggable-image {
     position: absolute;
-    top: 19PX;
-    left: 11px;
+    top: 468px;
+    left: 21px;
     z-index: 10002;
     cursor: move;
 }
 
 
+
 #draggable-image img {
-    width: 105px;
+    width: 150px; 
     height: auto;
-    TOP: 512PX;
-    POSITION: FIXED;
 }
 .icon-small {
-    width: 414PX;
-    height: 228PX;
+    width: 100%;
+    height: 100%;
     position: relative;
-    top: 6px;
-    
+    top: 0px;
+    margin-right: 16px;
 }
     .button-text {
         font-size: 14px; 
@@ -494,7 +558,6 @@ color: #00ff00;
 .social-icons {
     margin-top: 20px;
     text-align: center;
-    POSITION: RELATIVE;
 }
 
 .social-icons a {
@@ -547,7 +610,15 @@ color: #00ff00;
 .social-icons a:hover::before {
     transform: translateX(-50%) scale(1);
 }
-
+    .custom-container {
+    text-align: center;
+    max-width: 388px;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 23px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
 
         .login-intro-img {
             max-width: 100%;
@@ -573,7 +644,7 @@ color: #00ff00;
 <body>
     <div class="video-background">
         <video autoplay loop muted playsinline>
-            <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
+            <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
             Seu navegador não suporta o vídeo.
         </video>
     </div>
@@ -590,16 +661,23 @@ color: #00ff00;
                     </div>
                     <div id="response"></div>
                     <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://tudo.win/y8eqmzssp')" style="height: 250px;">
-                        <img src="https://minespro.oficialvenda.com.br/wp-content/uploads/2023/02/Mines-Pro-Logo.png" alt="Logo" class="icon-small">
+                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://ricobet.net.br/yjeeeviwq')" style="height: 100px;">
+                        <img src="https://ricobet.net.br/img/logo.798396dd.png" alt="Logo" class="icon-small">
                         
                     </button>
-            
+               
+     
+             
+                 
+
+
+              
+                <!-- Social Icons -->
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/hack.da.blaze_/?hl=pt-br" target="_blank"><i
+                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
                             class="bi bi-instagram"></i></a>
-                    <a href="https://t.me/hackermarquesz" target="_blank"><i class="bi bi-telegram"></i></a>
-                    <a href="https://wa.me/5542998134733?text=Boa%20tarde%20estou%20com%20problema%20no%20hack3r,%20pode%20me%20ajuda?" target="_blank"><i
+                    <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
                             class="bi bi-whatsapp"></i></a>
                 
     </div>
@@ -613,7 +691,38 @@ color: #00ff00;
             <img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Imagem Pequena">
         </div>
         
-      
+        <div class="white-square">
+            <div class="grid-container">
+                <!-- 25 quadrados -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+           
+        </div>
+        
 
             
         </div>
@@ -622,10 +731,10 @@ color: #00ff00;
                 <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
                 Seu navegador não suporta a reprodução de vídeos.
             </video>
-            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez </span>
+            <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez</span>
             
             <div id="result"></div>
-            <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> HACKEAR MINES</span>
+            <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i>  HACKEAR MINES</span>
         
             <div id="loading-animation" class="loading-hidden">
                 <div class="spinner"></div>
@@ -701,24 +810,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let currentAssertividade = 44.23; 
 function stopScroll() {
-    const loadingOverlay = document.getElementById('loading-overlay');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const loadingAnimation = document.getElementById('loading-animation');
+        const contextOptions = document.getElementById('contextOptions');
 
-    // Mostrar o overlay de carregamento
-    if (loadingOverlay) {
-        loadingOverlay.style.display = 'flex';
-    }
-
-    setTimeout(() => {
-        // Esconder o overlay de carregamento
+        // Mostrar o overlay de carregamento
         if (loadingOverlay) {
-            loadingOverlay.style.display = 'none';
+            loadingOverlay.style.display = 'flex';
         }
 
-        // Substituir os diamantes por um alerta
-        alert('ERRO! NENHUMA ENTRADA FOI FEITA NO MINES!! FAÇA UMA ENTRADA DE QUALQUER VALOR ANTES.');
+        setTimeout(() => {
+            // Esconder o overlay de carregamento
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
 
-    }, 5000);
-}
+            // Lógica principal após o carregamento
+            const assertividade = '100%';
+
+            if (contextOptions) {
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.color = 'green';
+
+                contextOptions.appendChild(assertividadeElement);
+
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 7);
+                const imageUrl = 'https://brwinner.net/mines/zs.png';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+            setTimeout(() => {
+                if (contextOptions) {
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    const gridItems = document.querySelectorAll('.grid-item');
+                    gridItems.forEach(item => item.innerHTML = '');
+                }
+            }, 8000);
+        }, 5000);
+    }
 
 
 

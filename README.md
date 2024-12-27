@@ -387,12 +387,13 @@ iframe {
     width: 497px;
     height: 615px;
     position: absolute;
-    top: 215px;
+    top: 181px;
     left: 198px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
+
 .grid-container {
     display: grid
 ;
@@ -816,37 +817,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let currentAssertividade = 44.23; 
 function stopScroll() {
-    const loadingOverlay = document.getElementById('loading-overlay');
-    const loadingAnimation = document.getElementById('loading-animation');
-    const contextOptions = document.getElementById('contextOptions');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const loadingAnimation = document.getElementById('loading-animation');
+        const contextOptions = document.getElementById('contextOptions');
 
-    // Mostrar o overlay de carregamento
-    if (loadingOverlay) {
-        loadingOverlay.style.display = 'flex';
+        // Mostrar o overlay de carregamento
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'flex';
+        }
+
+        setTimeout(() => {
+            // Esconder o overlay de carregamento
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
+
+            // Lógica principal após o carregamento
+            const assertividade = '100%';
+
+            if (contextOptions) {
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.color = 'green';
+
+                contextOptions.appendChild(assertividadeElement);
+
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.1 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 1);
+                const imageUrl = 'https://brwinner.net/mines/zs.png';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+            setTimeout(() => {
+                if (contextOptions) {
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    const gridItems = document.querySelectorAll('.grid-item');
+                    gridItems.forEach(item => item.innerHTML = '');
+                }
+            }, 8000);
+        }, 5000);
     }
 
-    setTimeout(() => {
-        // Esconder o overlay de carregamento
-        if (loadingOverlay) {
-            loadingOverlay.style.display = 'none';
-        }
 
-        // Adicionar imagem de diamante
-        const gridItems = document.querySelectorAll('.grid-item');
-        if (gridItems.length > 0) {
-            const firstItem = gridItems[0];
-            const imageUrl = 'https://ricobet.net.br/mines/zs.png'; // URL da imagem de diamante
-            firstItem.innerHTML = `<img src="${imageUrl}" alt="Diamante" style="width: 100%; height: auto;">`;
-        }
-
-        // Remover após 8 segundos
-        setTimeout(() => {
-            if (gridItems.length > 0) {
-                gridItems[0].innerHTML = '';
-            }
-        }, 8000);
-    }, 5000);
-}
 
 
 
@@ -869,4 +896,3 @@ function stopScroll() {
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-

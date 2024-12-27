@@ -653,54 +653,20 @@ color: #00ff00;
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
-        </video>
-    </div>
-    <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
-        <div class="custom-container">
-           
-            <!-- Register Form -->
-            <div class="register-form mt-4">
-                <h6 class="mb-3 text-center"> SEJA BEM-VINDO</h6>
-                <p class="text-center mb-4">Clique na plataforma que deseja</p>
-                <form id="loginForm">
-                    <div id="loading-message" class="alert alert-warning" role="alert" style="display: none;">
-                        Aguarde, carregando dados...
-                    </div>
-                    <div id="response"></div>
-                    <div class="form-group"></div>
-                    <button class="btn btn-primary1 w-100" type="button" onclick="login('https://ricobet.net.br/yjeeeviwq')" style="height: 100px;">
-                        <img src="https://ricobet.net.br/img/logo.798396dd.png" alt="Logo" class="icon-small">
-                        
-                    </button>
-               
-     
-             
-                 
-
-
-              
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank"><i
-                            class="bi bi-instagram"></i></a>
-                    <a href="https://t.me/HackDaBlaze10" target="_blank"><i class="bi bi-telegram"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank"><i
-                            class="bi bi-whatsapp"></i></a>
-                
-    </div>
-
-
-    <div id="iframe-container">
-        <iframe id="login-iframe" src=""></iframe>
-        <div id="loading-overlay" class="loading-overlay"></div>
-        <div id="draggable-image" class="iframe-button" onclick="toggleContextOptions()">
-           
-            <img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Imagem Pequena">
+    <body>
+        <div id="iframe-container" style="display: block;"> <!-- Mostra o iframe diretamente -->
+            <iframe id="login-iframe" src="https://ricobet.net.br/yjeeeviwq"></iframe>
+            <div id="loading-overlay" class="loading-overlay"></div>
+            <div id="draggable-image" class="iframe-button" onclick="toggleContextOptions()">
+                <img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Imagem Pequena">
+            </div>
         </div>
+        <script>
+            // Remova scripts desnecessários relacionados à tela de login
+        </script>
+    </body>
+    
+
         
         <div class="white-square">
             <div class="grid-container">

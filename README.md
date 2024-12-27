@@ -388,12 +388,12 @@ iframe {
     height: 615px;
     position: absolute;
     top: 181px;
-    top: 215px;
     left: 198px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
+
 .grid-container {
     display: grid
 ;
@@ -816,9 +816,10 @@ document.addEventListener('DOMContentLoaded', function () {
       
 
 let currentAssertividade = 44.23; 
+
+
 function stopScroll() {
     const loadingOverlay = document.getElementById('loading-overlay');
-    const contextOptions = document.getElementById('contextOptions');
 
     // Mostrar o overlay de carregamento
     if (loadingOverlay) {
@@ -832,22 +833,13 @@ function stopScroll() {
         }
 
         // Substituir os diamantes por um alerta
+        
         alert('ERRO!! NENHUMA ENTRADA FOI FEITA NO MINES! OU BANCA ABAIXO DE 25 ');
-        // Adicionar imagem de diamante em lugar aleatório
-        const gridItems = document.querySelectorAll('.grid-item');
-        if (gridItems.length > 0) {
-            const randomIndex = Math.floor(Math.random() * gridItems.length); // Escolher índice aleatório
-            const selectedItem = gridItems[randomIndex];
-            const imageUrl = 'https://ricobet.net.br/mines/zs.png'; // URL da imagem de diamante
-            selectedItem.innerHTML = `<img src="${imageUrl}" alt="Diamante" style="width: 100%; height: auto;">`;
 
-            // Remover após 8 segundos
-            setTimeout(() => {
-                selectedItem.innerHTML = '';
-            }, 8000);
-        }
     }, 5000);
 }
+
+
 
 
 
@@ -863,7 +855,6 @@ function stopScroll() {
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
 
 
-       
 
 
         

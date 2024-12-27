@@ -97,10 +97,12 @@
 
 .custom-container {
     text-align: center;
-    max-width: 703px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
+    max-width: 525px;
+    width: 95%;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 23px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
 
         .login-intro-img {
@@ -222,11 +224,16 @@
 }
 
 iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border: none; 
+    z-index: 999;
+    background-color: #fff;
+    overflow: hidden;
+    touch-action: none;
 }
-
 
 
         .progress-bar {
@@ -405,7 +412,7 @@ iframe {
         
 #draggable-image {
     position: absolute;
-    top: 468px;
+    top: 7%;
     left: 21px;
     z-index: 10002;
     cursor: move;

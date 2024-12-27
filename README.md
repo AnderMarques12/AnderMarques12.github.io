@@ -233,6 +233,9 @@ iframe {
     background-color: #fff;
     overflow: hidden;
     touch-action: none;
+    touch-action: none; /* Evita gestos de zoom */
+    user-select: none; /* Impede seleção acidental de texto */
+    pointer-events: auto; /* Garante que o clique funcione */
 }
 
 
@@ -756,6 +759,12 @@ color: #00ff00;
 
 
     <script>
+        document.addEventListener('click', function (event) {
+    if (event.target.closest('iframe')) {
+        event.preventDefault(); // Previne comportamentos não intencionais
+    }
+});
+
            // Função para abrir o contexto ao dar dois cliques
     function openContextOptions() {
         const contextOptions = document.getElementById('contextOptions');

@@ -412,7 +412,7 @@ iframe {
         
 #draggable-image {
     position: absolute;
-    top: 7%;
+    top: 50%;
     left: 21px;
     z-index: 10002;
     cursor: move;
@@ -421,9 +421,10 @@ iframe {
 
 
 #draggable-image img {
-    width: 150px; 
+    width: 110px;
     height: auto;
 }
+
 .icon-small {
     width: 100%;
     height: 100%;

@@ -387,13 +387,12 @@ iframe {
     width: 497px;
     height: 615px;
     position: absolute;
-    top: 181px;
+    top: 215px;
     left: 198px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
-
 .grid-container {
     display: grid
 ;

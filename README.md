@@ -388,12 +388,12 @@ iframe {
     height: 615px;
     position: absolute;
     top: 181px;
+    top: 215px;
     left: 198px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
-
 .grid-container {
     display: grid
 ;
@@ -434,7 +434,7 @@ iframe {
     .button-text {
         font-size: 14px; 
     }
-   
+
 .login-form {
     display: none; 
 }
@@ -499,7 +499,7 @@ color: #00ff00;
         top: 60%; /* Vai um pouco abaixo do meio */
     }
 }
- 
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
@@ -688,7 +688,7 @@ color: #00ff00;
                             class="bi bi-whatsapp"></i></a>
                 
     </div>
- 
+
 
     <div id="iframe-container">
         <iframe id="login-iframe" src=""></iframe>
@@ -753,7 +753,7 @@ color: #00ff00;
 
 
 
-   
+
     <script>
            // Função para abrir o contexto ao dar dois cliques
     function openContextOptions() {
@@ -817,63 +817,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let currentAssertividade = 44.23; 
 function stopScroll() {
-        const loadingOverlay = document.getElementById('loading-overlay');
-        const loadingAnimation = document.getElementById('loading-animation');
-        const contextOptions = document.getElementById('contextOptions');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const contextOptions = document.getElementById('contextOptions');
 
-        // Mostrar o overlay de carregamento
-        if (loadingOverlay) {
-            loadingOverlay.style.display = 'flex';
-        }
-
-        setTimeout(() => {
-            // Esconder o overlay de carregamento
-            if (loadingOverlay) {
-                loadingOverlay.style.display = 'none';
-            }
-
-            // Lógica principal após o carregamento
-            const assertividade = '100%';
-
-            if (contextOptions) {
-                const existingAssertividade = contextOptions.querySelector('.assertividade');
-                if (existingAssertividade) {
-                    contextOptions.removeChild(existingAssertividade);
-                }
-
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-                assertividadeElement.style.color = 'green';
-
-                contextOptions.appendChild(assertividadeElement);
-
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-                const shuffledItems = Array.from(gridItems).sort(() => 0.1 - Math.random());
-                const itemsToChange = shuffledItems.slice(0, 1);
-                const imageUrl = 'https://brwinner.net/mines/zs.png';
-                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-                itemsToChange.forEach(item => item.innerHTML += imageElement);
-            }
-
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
-                    const gridItems = document.querySelectorAll('.grid-item');
-                    gridItems.forEach(item => item.innerHTML = '');
-                }
-            }, 8000);
-        }, 5000);
+    // Mostrar o overlay de carregamento
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex';
     }
 
+    setTimeout(() => {
+        // Esconder o overlay de carregamento
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
 
+        // Substituir os diamantes por um alerta
+        alert('ERRO!! NENHUMA ENTRADA FOI FEITA NO MINES! OU BANCA ABAIXO DE 25 ');
+        // Adicionar imagem de diamante em lugar aleatório
+        const gridItems = document.querySelectorAll('.grid-item');
+        if (gridItems.length > 0) {
+            const randomIndex = Math.floor(Math.random() * gridItems.length); // Escolher índice aleatório
+            const selectedItem = gridItems[randomIndex];
+            const imageUrl = 'https://ricobet.net.br/mines/zs.png'; // URL da imagem de diamante
+            selectedItem.innerHTML = `<img src="${imageUrl}" alt="Diamante" style="width: 100%; height: auto;">`;
+
+            // Remover após 8 segundos
+            setTimeout(() => {
+                selectedItem.innerHTML = '';
+            }, 8000);
+        }
+    }, 5000);
+}
 
 
 
@@ -887,10 +861,9 @@ function stopScroll() {
         }
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-   
+
 
        
-
 
 
         

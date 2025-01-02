@@ -418,11 +418,10 @@ img, svg {
     width: 100%;
 }
 
-        .grid-item {
-            background-color: #00000000;
-            border: 6px solid #00000000;
-        }
-
+.grid-item {
+    background-color: #ffffff00;
+    border: 10px solid #00000000;
+}
   
 
         #draggable-image img {
@@ -695,7 +694,7 @@ a.anchorjs-link {
     height: 448px;
     position: absolute;
     top: 110px;
-    left: 4px;
+    left: 7px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;

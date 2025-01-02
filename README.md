@@ -552,31 +552,7 @@ a.anchorjs-link {
     }
 }
  
-.white-square {
-    width: 593px;
-    height: 646px;
-    background-color: #ffffff00;
-    border: 2px solid #00000000;
-    position: absolute;
-    top: 36PX;
-    left: 108PX;
-    z-index: 10000;
-    overflow: hidden;
-    pointer-events: none;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 95px);
-    grid-template-rows: repeat(5, 101px);
-    gap: 21px;
-    height: 100%;
-    width: 100%;
-}
 
-.grid-item {
-    background-color: #ffffff00;
-    border: 7px solid #00000000;
-}
 #modoAutomatico {
     display: inline-flex;
     align-items: center;
@@ -718,8 +694,8 @@ a.anchorjs-link {
     width: 402px;
     height: 448px;
     position: absolute;
-    top: 150px;
-    left: 7px;
+    top: 110px;
+    left: 4px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;

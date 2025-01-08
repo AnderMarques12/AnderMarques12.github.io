@@ -46,6 +46,9 @@
         color: rgb(0, 195, 255) !important; /* Força o vermelho, ignorando outros estilos */
         font-weight: bold;
     }
+    .highlight {
+    background-color: #f8f8f800;
+}
         .cta-button {
             display: inline-block;
             margin: 20px 0;

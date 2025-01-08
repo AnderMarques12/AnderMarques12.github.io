@@ -43,9 +43,9 @@
             margin: 15px 0;
         }
         .highlight {
-            color: rgb(0, 195, 255); /* Palavras-chave em vermelho */
-            font-weight: bold;
-        }
+        color: rgb(0, 195, 255) !important; /* Força o vermelho, ignorando outros estilos */
+        font-weight: bold;
+    }
         .cta-button {
             display: inline-block;
             margin: 20px 0;

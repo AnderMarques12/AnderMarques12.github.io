@@ -10,18 +10,26 @@
         h1 {
         display: none;
     }
-           body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #000; /* Fundo preto */
-        color: #fff; /* Texto branco */
-    }
-    .logo {
-        background-color: #000; /* Fundo preto no contêiner */
-        text-align: center;
-        padding: 20px;
-    }
+    body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%; /* Garante que o container não ultrapasse a largura */
+    margin: 0 auto;
+    padding: 0 10px; /* Adiciona um espaçamento interno */
+}
+
+.logo img {
+    max-width: 80%; /* Ajusta para não ultrapassar a largura da tela */
+    height: auto;
+    margin: 0 auto;
+}
     .logo img {
         max-width: 100%;
         height: auto;

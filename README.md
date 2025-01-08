@@ -7,13 +7,25 @@
     <title>ACESSO AO HACKER DO MINES</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000; /* Fundo preto */
-            color: #fff; /* Texto branco */
-        }
+           body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Fundo preto */
+        color: #fff; /* Texto branco */
+    }
+    .logo {
+        background-color: #000; /* Fundo preto no contêiner */
+        text-align: center;
+        padding: 20px;
+    }
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        background-color: transparent; /* Certifica transparência */
+    }
         .container {
             text-align: center;
             padding: 20px;

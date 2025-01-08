@@ -7,6 +7,21 @@
     <title>ACESSO AO HACKER DO MINES</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        @media (max-width: 768px) {
+    .content h1, .content p, .footer-text {
+        font-size: 6vw;
+        line-height: 1.4; /* Melhora a legibilidade */
+    }
+
+    .cta-button, .purchase-button {
+        font-size: 5vw;
+        padding: 10px 20px;
+    }
+
+    .social-icons .social-link {
+        font-size: 8vw; /* Aumenta os ícones em telas pequenas */
+    }
+}
         h1 {
         display: none;
     }
@@ -131,6 +146,13 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    background-color: #000000;
+}
     </style>
     <script>
         function showVideoSection() {

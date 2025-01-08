@@ -7,6 +7,9 @@
     <title>ACESSO AO HACKER DO MINES</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        h1 {
+        display: none;
+    }
            body {
         margin: 0;
         padding: 0;

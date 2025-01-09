@@ -176,7 +176,13 @@
     </div>
 
     <div id="video-section" class="video-section">
-        <h2>VEJA OS ACESSOS QUE VOCÊ VAI TER - MODO AUTOMÁTICO</h2>
+        <h2>VEJA OS ACESSOS QUE VOCÊ VAI RECEBER! 
+            • MODO AUTOMATICO
+            • HACKER DOUBLE
+            • HACLER MINES
+            • DISCORD -LIVE AO VIVO
+            • GRUPO NO WHATSAPP 
+        </h2>
         <video controls>
             <source src="seu-video.mp4" type="video/mp4">
             Seu navegador não suporta o elemento de vídeo.
